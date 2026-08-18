@@ -173,3 +173,95 @@ body {
 .footer strong {
   color: #c8d4e0;
 }
+
+/* ===========================
+   Part 2: components & responsive
+   =========================== */
+
+/* ---------- Form Fields ---------- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.form-group label .required {
+  color: var(--error-color);
+  margin-left: 3px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: var(--default-font);
+  font-size: 0.95rem;
+  color: var(--heading-color);
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9aa7b5;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(47, 140, 255, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ---------- Inline Error States ---------- */
+.error-message {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.form-group:has(.error-message) input,
+.form-group:has(.error-message) select,
+.form-group:has(.error-message) textarea {
+  border-color: var(--error-color);
+}
+
+/* ---------- Checkbox Group ---------- */
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.checkbox-group a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
