@@ -55,7 +55,7 @@ Threat matrix: all rows N/A per design — no RED tasks; verification is manual 
 
 ## Phase 5: Embed & Submission (PR 5)
 
-- [ ] 5.1 Extend `js/app.js` (part 2): honeypot silent drop; 5s cooldown; `buildEmbed()` — labels from config ("Tecnología"/"1-3 meses"), 1024/field + 4096 desc chunking + truncation note, es-CR `Intl.DateTimeFormat('es-CR', {timeZone:'America/Costa_Rica'})` + ISO field
-- [ ] 5.2 Extend `js/app.js`: `submitForm()` — placeholder/empty webhook → error, no request; 2xx only → "¡Propuesta enviada con éxito!"; 4xx/5xx/network → error, never false success; button disabled in flight
-- [ ] 5.3 Verify: honeypot filled → silent; 2 submits <5s → blocked; >5s → proceeds; embed shows labels; >4096 desc truncated; live webhook 204 → success; bad URL → error
-- [ ] 5.4 Verify dead code: grep `js/app.js` for mobile-menu handler, `fieldLabels`, `safeSetInnerHTML` → zero matches
+- [x] 5.1 Extend `js/app.js` (part 2): honeypot silent drop; 5s cooldown; `buildEmbed()` — labels from config ("Tecnología"/"1-3 meses"), 1024/field + 4096 desc chunking + truncation note, es-CR `Intl.DateTimeFormat('es-CR', {timeZone:'America/Costa_Rica'})` + ISO field
+- [x] 5.2 Extend `js/app.js`: `submitForm()` — placeholder/empty webhook → error, no request; 2xx only → "¡Propuesta enviada con éxito!"; 4xx/5xx/network → error, never false success; button disabled in flight
+- [x] 5.3 Verify: honeypot filled → silent; 2 submits <5s → blocked; >5s → proceeds; embed shows labels; >4096 desc truncated; live webhook 204 → success; bad URL → error
+- [x] 5.4 Verify dead code: grep `js/app.js` for mobile-menu handler, `fieldLabels`, `safeSetInnerHTML` → zero matches
