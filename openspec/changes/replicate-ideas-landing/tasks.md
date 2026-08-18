@@ -43,8 +43,9 @@ Threat matrix: all rows N/A per design — no RED tasks; verification is manual 
 
 ## Phase 3: Stylesheet — Components & Responsive (PR 3)
 
-- [ ] 3.1 Extend `css/style.css` (part 2, ~300 lines): form fields, buttons, inline errors, success/error messages, breakpoints
-- [ ] 3.2 Verify: mobile viewport responsive; error/success styling visible
+- [x] 3.1 Extend `css/style.css` (part 2, ~390 lines): form fields, buttons, inline errors, success/error messages, breakpoints
+- [x] 3.2 Verify: mobile viewport responsive; error/success styling visible
+- [x] 3.3 (amendment) Style privacy page classes in `css/style.css`: .privacy-content, .privacy-section, .back-link, .highlight, .update-date
 
 ## Phase 4: Config & Form Core (PR 4)
 
