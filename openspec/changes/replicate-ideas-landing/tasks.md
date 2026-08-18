@@ -38,8 +38,8 @@ Threat matrix: all rows N/A per design — no RED tasks; verification is manual 
 
 ## Phase 2: Stylesheet — Base & Layout (PR 2)
 
-- [ ] 2.1 Create `css/style.css` (part 1, ~300 lines): reset, variables, typography, navbar, hero, footer
-- [ ] 2.2 Verify: desktop render shows navbar/hero/form/footer styled per reference
+- [x] 2.1 Create `css/style.css` (part 1, ~300 lines): reset, variables, typography, navbar, hero, footer
+- [x] 2.2 Verify: desktop render shows navbar/hero/form/footer styled per reference
 
 ## Phase 3: Stylesheet — Components & Responsive (PR 3)
 
