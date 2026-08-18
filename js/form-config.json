@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "title": "Contáctanos",
+    "description": "Cuéntanos sobre tu proyecto y te responderemos en menos de 24 horas."
+  },
+  "form": {
+    "title": "Formulario de contacto",
+    "subtitle": "Todos los campos marcados con * son obligatorios."
+  },
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "Inovatry Solutions",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp"
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".txt", ".csv", ".png", ".jpg", ".jpeg", ".gif", ".webp"],
+  "fields": [
+    { "id": "website", "label": "Sitio web", "type": "honeypot", "required": false },
+    { "id": "name", "label": "Nombre de Proyecto", "type": "text", "placeholder": "Nombre de tu proyecto", "required": true, "autocomplete": "name", "validation": { "minLength": 2, "errorMessage": "Por favor ingresa el nombre del proyecto." } },
+    { "id": "proponente", "label": "Propuesta por", "type": "text", "placeholder": "Nombre de quien propone", "required": true, "autocomplete": "name", "validation": { "minLength": 2, "errorMessage": "Ingresa el nombre de quien propone." } },
+    { "id": "service", "label": "Sector del proyecto", "type": "select", "required": true, "validation": { "errorMessage": "Selecciona un sector." }, "options": [
+      { "value": "", "label": "Selecciona un sector", "disabled": true, "selected": true },
+      { "value": "tech", "label": "Tecnología" }, { "value": "health", "label": "Salud" }, { "value": "finance", "label": "Finanzas" },
+      { "value": "education", "label": "Educación" }, { "value": "retail", "label": "Comercio" }, { "value": "other", "label": "Otro" }
+    ] },
+    { "id": "budget", "label": "Propuesta de Tiempo", "type": "select", "required": false, "validation": { "errorMessage": "Selecciona un rango de tiempo." }, "options": [
+      { "value": "", "label": "Selecciona un rango de tiempo", "disabled": true, "selected": true },
+      { "value": "1-3", "label": "1-3 meses" }, { "value": "3-6", "label": "3-6 meses" },
+      { "value": "6-12", "label": "6-12 meses" }, { "value": "12+", "label": "Más de 12 meses" }
+    ] },
+    { "id": "message", "label": "Descripción del Proyecto", "type": "textarea", "placeholder": "Cuéntanos en qué podemos ayudarte...", "required": true, "fullWidth": true, "validation": { "minLength": 10, "errorMessage": "Por favor escribe una descripción del proyecto." } },
+    { "id": "attachments", "label": "Archivos adjuntos (opcional)", "type": "file", "required": false, "fullWidth": true, "maxFiles": 5, "validation": { "errorMessage": "Archivo no válido o excede el tamaño máximo." } },
+    { "id": "email", "label": "Correo electrónico", "type": "email", "placeholder": "tucorreo@ejemplo.com", "required": true, "fullWidth": true, "autocomplete": "email", "validation": { "errorMessage": "Por favor ingresa tu correo electrónico.", "formatMessage": "Ingresa un correo electrónico válido." } },
+    { "id": "privacy", "label": "He leído y acepto la", "linkText": "Política de Privacidad", "href": "privacy.html", "type": "checkbox", "required": true, "fullWidth": true, "validation": { "errorMessage": "Debes aceptar la política de privacidad." } }
+  ]
+}
