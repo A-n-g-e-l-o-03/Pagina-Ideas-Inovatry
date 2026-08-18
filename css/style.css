@@ -105,3 +105,71 @@ body {
   margin: 0 auto;
   font-weight: 300;
 }
+
+/* ---------- Form Section (layout) ---------- */
+.form-section {
+  flex: 1;
+  padding: 50px 24px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-container {
+  background: var(--surface-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 44px 48px 48px;
+  width: 100%;
+  max-width: 820px;
+  transition: box-shadow var(--transition);
+}
+
+.form-container:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.form-container .form-title {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 6px;
+}
+
+.form-container .form-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 32px;
+}
+
+/* ---------- Form Grid (layout) ---------- */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+}
+
+.form-grid .full-width {
+  grid-column: 1 / -1;
+}
+
+/* ---------- Submit Wrapper (layout) ---------- */
+.submit-wrapper {
+  margin-top: 28px;
+  text-align: center;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--dark-bg);
+  color: var(--text-color);
+  text-align: center;
+  padding: 24px;
+  font-size: 0.88rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer strong {
+  color: #c8d4e0;
+}
