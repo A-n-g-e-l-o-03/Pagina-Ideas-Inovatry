@@ -265,3 +265,80 @@ body {
 .checkbox-group a:hover {
   text-decoration: underline;
 }
+
+/* ---------- Form Status Messages ---------- */
+.form-message {
+  display: none;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  margin-bottom: 24px;
+}
+
+.form-message.success {
+  display: block;
+  background: rgba(39, 174, 96, 0.1);
+  border: 1px solid var(--success-color);
+  color: #1e7a44;
+}
+
+.form-message.error {
+  display: block;
+  background: rgba(231, 76, 60, 0.08);
+  border: 1px solid var(--error-color);
+  color: var(--error-color);
+}
+
+/* ---------- Submit Button ---------- */
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 42px;
+  font-family: var(--nav-font);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--accent-color) 0%, #1f6fd1 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.btn-submit:hover {
+  box-shadow: 0 6px 18px rgba(47, 140, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-submit .spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.btn-submit.is-loading .spinner {
+  display: inline-block;
+}
+
+.btn-submit.is-loading .btn-text {
+  opacity: 0.85;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
