@@ -1,0 +1,8 @@
+# Local webhook config overrides — NEVER commit a real Discord webhook token.
+# The committed js/form-config.json keeps a placeholder; the real URL is
+# injected at deploy time (see README). Local overrides stay local.
+js/form-config.local.json
+
+# OS / editor junk
+Thumbs.db
+.DS_Store
