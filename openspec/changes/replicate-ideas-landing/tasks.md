@@ -49,9 +49,9 @@ Threat matrix: all rows N/A per design — no RED tasks; verification is manual 
 
 ## Phase 4: Config & Form Core (PR 4)
 
-- [ ] 4.1 Create `js/form-config.json`: `webhook` placeholder, `maxTotalBytes: 8388608`, `allowedTypes`, 8 fields (name/proponente min 2, service, budget, message min 10, attachments max 5, email, consent → `privacy.html`)
-- [ ] 4.2 Create `js/app.js` (part 1): `loadConfig()` — failure shows visible error block, never empty form; `renderForm()`; `validateField()` on blur/change, errors clear when valid; `validateFiles()` type + ≤8MB total
-- [ ] 4.3 Verify: config 404 → error block; empty required fields → inline errors; `usuario@sin-formato` blocked; 10MB total blocked; `.exe` blocked
+- [x] 4.1 Create `js/form-config.json`: `webhook` placeholder, `maxTotalBytes: 8388608`, `allowedTypes`, 8 fields (name/proponente min 2, service, budget, message min 10, attachments max 5, email, consent → `privacy.html`)
+- [x] 4.2 Create `js/app.js` (part 1): `loadConfig()` — failure shows visible error block, never empty form; `renderForm()`; `validateField()` on blur/change, errors clear when valid; `validateFiles()` type + ≤8MB total
+- [x] 4.3 Verify: config 404 → error block; empty required fields → inline errors; `usuario@sin-formato` blocked; 10MB total blocked; `.exe` blocked
 
 ## Phase 5: Embed & Submission (PR 5)
 
