@@ -30,11 +30,11 @@ Threat matrix: all rows N/A per design — no RED tasks; verification is manual 
 
 ## Phase 1: Scaffold & HTML (PR 1)
 
-- [ ] 1.1 Download `images/logo.webp` from reference site; fail fast if unreachable
-- [ ] 1.2 Create `index.html`: `lang="es"`, CSP meta (`script-src 'self' 'unsafe-inline'`; `connect-src 'self' https://discord.com`; Google Fonts), navbar (logo + brand), hero ("Contáctanos", <24h), form container, footer (© 2026 Inovatry Solutions)
-- [ ] 1.3 Create `privacy.html`: lists name, proponente, sector, timeline, description, email + contact info + "← Volver al formulario"
-- [ ] 1.4 Update `README.md`: deploy note — rotate webhook, inject real URL at deploy, never commit token
-- [ ] 1.5 Verify: all assets load from `self`; Spanish copy; logo missing → brand text only, no errors; privacy link opens
+- [x] 1.1 Download `images/logo.webp` from reference site; fail fast if unreachable
+- [x] 1.2 Create `index.html`: `lang="es"`, CSP meta (`script-src 'self' 'unsafe-inline'`; `connect-src 'self' https://discord.com`; Google Fonts), navbar (logo + brand), hero ("Contáctanos", <24h), form container, footer (© 2026 Inovatry Solutions)
+- [x] 1.3 Create `privacy.html`: lists name, proponente, sector, timeline, description, email + contact info + "← Volver al formulario"
+- [x] 1.4 Update `README.md`: deploy note — rotate webhook, inject real URL at deploy, never commit token
+- [x] 1.5 Verify: all assets load from `self`; Spanish copy; logo missing → brand text only, no errors; privacy link opens
 
 ## Phase 2: Stylesheet — Base & Layout (PR 2)
 
