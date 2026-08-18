@@ -179,11 +179,6 @@ body {
    =========================== */
 
 /* ---------- Form Fields ---------- */
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
 .form-group label {
   font-size: 0.95rem;
   font-weight: 500;
@@ -193,7 +188,6 @@ body {
 
 .form-group label .required {
   color: var(--error-color);
-  margin-left: 3px;
 }
 
 .form-group input,
@@ -208,11 +202,6 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   transition: border-color var(--transition), box-shadow var(--transition);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #9aa7b5;
 }
 
 .form-group input:focus,
@@ -275,15 +264,18 @@ body {
   margin-bottom: 24px;
 }
 
-.form-message.success {
+.form-message.success,
+.form-message.error {
   display: block;
+}
+
+.form-message.success {
   background: rgba(39, 174, 96, 0.1);
   border: 1px solid var(--success-color);
   color: #1e7a44;
 }
 
 .form-message.error {
-  display: block;
   background: rgba(231, 76, 60, 0.08);
   border: 1px solid var(--error-color);
   color: var(--error-color);
@@ -331,10 +323,6 @@ body {
 
 .btn-submit.is-loading .spinner {
   display: inline-block;
-}
-
-.btn-submit.is-loading .btn-text {
-  opacity: 0.85;
 }
 
 @keyframes spin {
@@ -387,7 +375,6 @@ body {
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  white-space: nowrap;
 }
 
 .file-list {
