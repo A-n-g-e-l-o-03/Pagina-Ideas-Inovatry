@@ -1,4 +1,4 @@
-/* Inovatry Solutions — formulario config-driven (PR 4). Contrato CSS: css/style.css parte 2. */
+/* Inovatry Solutions — formulario config-driven. Contrato CSS: css/style.css parte 2. */
 'use strict';
 
 const state = { config: null, files: [], lastSubmitAt: 0 };
@@ -295,7 +295,7 @@ function formatBytes(bytes) {
   return (mb % 1 === 0 ? mb : mb.toFixed(1)) + ' MB';
 }
 
-/* ---------- Puerta de envío (PR 5: submitForm() continúa aquí) ---------- */
+/* ---------- Puerta de envío ---------- */
 function honeypotFilled() {
   const hp = el('field-website');
   return hp && hp.value.trim() !== '';
@@ -303,6 +303,82 @@ function honeypotFilled() {
 
 function cooldownActive() {
   return Date.now() - state.lastSubmitAt < COOLDOWN_MS;
+}
+
+/* ---------- Embed de Discord (PR 5) ---------- */
+const WEBHOOK_PLACEHOLDER = 'REEMPLAZAR_AL_DEPLOYAR';
+const DISCORD = { fieldValue: 1024, description: 4096, maxFields: 25 };
+
+function chunkText(text, max) {
+  const parts = [];
+  for (let i = 0; i < text.length; i += max) parts.push(text.slice(i, i + max));
+  return parts;
+}
+
+function optionLabel(field, value) {
+  const opt = (field.options || []).find(function (o) { return o.value === value; });
+  return opt ? opt.label : value;
+}
+
+function collectData() {
+  const data = {};
+  state.config.fields.forEach(function (field) {
+    if (field.type === 'honeypot' || field.type === 'file') return;
+    const control = el('field-' + field.id);
+    data[field.id] = field.type === 'checkbox' ? control.checked : control.value;
+  });
+  return data;
+}
+
+function buildEmbed(data) {
+  const now = new Date();
+  const esCr = new Intl.DateTimeFormat('es-CR', {
+    timeZone: 'America/Costa_Rica',
+    year: 'numeric', month: 'long', day: 'numeric',
+    hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+  }).format(now);
+  const fields = [
+    { name: 'Enviado', value: esCr, inline: false },
+    { name: 'Enviado (ISO)', value: now.toISOString(), inline: false }
+  ];
+  let description = String(data.message || '').trim();
+
+  state.config.fields.forEach(function (field) {
+    if (field.type === 'honeypot' || field.type === 'file' || field.type === 'textarea') return;
+    let value = field.type === 'checkbox' ? (data[field.id] ? 'Sí' : '') : String(data[field.id] || '').trim();
+    if (!value) return;
+    if (field.type === 'select') value = optionLabel(field, value);
+    const label = field.label + (field.linkText ? ' ' + field.linkText : '');
+    const parts = chunkText(value, DISCORD.fieldValue);
+    for (let i = 0; i < parts.length && fields.length < DISCORD.maxFields; i++) {
+      fields.push({ name: parts.length > 1 ? label + ' (' + (i + 1) + '/' + parts.length + ')' : label, value: parts[i], inline: false });
+    }
+  });
+
+  if (description.length > DISCORD.description) {
+    const rest = description.slice(DISCORD.description);
+    description = description.slice(0, DISCORD.description);
+    const parts = chunkText(rest, DISCORD.fieldValue);
+    let shown = 0;
+    for (let i = 0; i < parts.length && fields.length < DISCORD.maxFields; i++) {
+      fields.push({ name: 'Descripción (cont. ' + (i + 1) + ')', value: parts[i], inline: false });
+      shown += parts[i].length;
+    }
+    const omitted = rest.length - shown;
+    if (omitted > 0) {
+      const last = fields[fields.length - 1];
+      const note = '\n… (mensaje truncado: ' + omitted + ' caracteres omitidos)';
+      if (last && last.name.indexOf('Descripción (cont.') === 0) {
+        last.value = last.value.slice(0, DISCORD.fieldValue - note.length) + note;
+      }
+    }
+  }
+
+  return {
+    title: 'Nueva propuesta de idea',
+    description: description,
+    fields: fields
+  };
 }
 
 function validateAll() {
@@ -332,7 +408,7 @@ function validateAll() {
 
 function handleSubmit(event) {
   event.preventDefault();
-  if (honeypotFilled()) return; // bot: silencio total (PR 5 muestra éxito simulado)
+  if (honeypotFilled()) return; // bot: silencio total, sin feedback (spec)
   const msg = el('formMessage');
   msg.textContent = '';
   msg.className = 'form-message';
