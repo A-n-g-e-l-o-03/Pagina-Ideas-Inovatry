@@ -381,6 +381,54 @@ function buildEmbed(data) {
   };
 }
 
+/* ---------- Envío (PR 5) ---------- */
+function webhookConfigured() {
+  const url = state.config.webhook.url;
+  return !!url && url.indexOf(WEBHOOK_PLACEHOLDER) === -1;
+}
+
+function postWithFiles(url, payload) {
+  const fd = new FormData();
+  fd.append('payload_json', JSON.stringify(payload));
+  state.files.forEach(function (file, i) { fd.append('files[' + i + ']', file, file.name); });
+  return fetch(url, { method: 'POST', body: fd });
+}
+
+async function submitForm() {
+  if (!webhookConfigured()) {
+    showMessage('El formulario aún no está configurado para recibir envíos. Inténtalo más tarde.', 'error');
+    return;
+  }
+  const btn = el('submitBtn');
+  btn.disabled = true;
+  btn.classList.add('is-loading');
+  try {
+    const payload = {
+      username: state.config.webhook.username,
+      avatar_url: state.config.webhook.avatarUrl,
+      embeds: [buildEmbed(collectData())]
+    };
+    const res = state.files.length
+      ? await postWithFiles(state.config.webhook.url, payload)
+      : await fetch(state.config.webhook.url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    state.lastSubmitAt = Date.now();
+    el('contactForm').reset();
+    state.files = [];
+    renderFileList();
+    showMessage('¡Propuesta enviada con éxito!', 'success');
+  } catch (err) {
+    showMessage('No se pudo enviar la propuesta. Intenta de nuevo en unos momentos.', 'error');
+  } finally {
+    btn.disabled = false;
+    btn.classList.remove('is-loading');
+  }
+}
+
 function validateAll() {
   let firstInvalid = null;
   state.config.fields.forEach(function (field) {
@@ -420,7 +468,7 @@ function handleSubmit(event) {
     showMessage('Revisa los campos marcados en rojo.', 'error');
     return;
   }
-  // PR 5: submitForm() envía el embed + archivos a state.config.webhook.url
+  submitForm(); // honeypot y cooldown ya descartados arriba
 }
 
 loadConfig();
