@@ -342,3 +342,109 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* ---------- File Upload ---------- */
+.file-upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 28px 20px;
+  background: var(--white);
+  border: 2px dashed var(--border-color);
+  border-radius: 10px;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.file-upload-wrapper:hover,
+.file-upload-wrapper.dragover {
+  border-color: var(--accent-color);
+  background: rgba(47, 140, 255, 0.04);
+}
+
+.file-upload-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  font-family: var(--nav-font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  background: rgba(47, 140, 255, 0.08);
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.file-upload-btn:hover {
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+.file-input-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.file-list {
+  list-style: none;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+}
+
+.file-item:last-child {
+  margin-bottom: 0;
+}
+
+.file-item-info {
+  color: var(--heading-color);
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.file-item-size {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.file-item-remove {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(231, 76, 60, 0.1);
+  color: var(--error-color);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.file-item-remove:hover {
+  background: var(--error-color);
+  color: var(--white);
+}
+
+.file-item-remove:focus-visible {
+  outline: 2px solid var(--error-color);
+  outline-offset: 2px;
+}
