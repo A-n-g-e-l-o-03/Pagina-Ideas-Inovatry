@@ -1,0 +1,58 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Tech stack: Plain static HTML/CSS/JS — no framework, no build tooling.
+  Architecture: Single-page landing (contact/proposal form) replicating
+    ideas.inovatrysolutions.com; form submits via fetch to a Discord webhook.
+  Testing: No automated test runner detected at init (static site).
+  Style: Vanilla ES (no transpilation), semantic HTML, responsive CSS.
+
+strict_tdd: false
+
+testing:
+  detected: 2026-08-18
+  runner:
+    command: ""
+    framework: none
+  layers:
+    unit: false
+    integration: false
+    e2e: false
+  coverage:
+    available: false
+    command: ""
+  quality:
+    linter: false
+    type_checker: false
+    formatter: false
+  notes: |
+    No test runner exists (no package.json / manifest). Strict TDD is disabled
+    until a runner is added. Verification for this project is manual: browser
+    smoke test of the form flow plus a live Discord webhook post check.
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+    - Scope each change to the single-page surface area
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Keep the design framework-free unless a dependency is explicitly approved
+    - Document architecture decisions with rationale
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+  apply:
+    guidelines:
+      - Follow existing code patterns (vanilla HTML/CSS/JS)
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: ""
+    coverage_threshold: 0
+    notes: Manual browser smoke test + live Discord webhook post check
+  archive:
+    - Warn before merging destructive deltas
