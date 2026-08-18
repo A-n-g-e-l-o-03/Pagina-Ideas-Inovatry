@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inovatry Solutions — Formulario de Contacto</title>
+  <meta name="description" content="Completa nuestro formulario de contacto y nos pondremos en contacto contigo.">
+
+  <!-- Security: CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://discord.com; img-src 'self' https://inovatrysolutions.com data:;">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <img src="images/logo.webp" alt="Logotipo de Inovatry Solutions">
+      <span>Inovatry Solutions</span>
+    </a>
+
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <h1>Contáctanos</h1>
+    <p>Cuéntanos sobre tu proyecto y te responderemos en menos de 24 horas.</p>
+  </section>
+
+  <!-- ========== FORM SECTION ========== -->
+  <section class="form-section">
+    <div class="form-container">
+
+      <!-- Dynamic messages -->
+      <div id="formMessage" class="form-message"></div>
+
+      <h2 class="form-title">Formulario de contacto</h2>
+      <p class="form-subtitle">Todos los campos marcados con <span style="color:#e74c3c;">*</span> son obligatorios.</p>
+
+      <form id="contactForm" novalidate>
+        <div class="form-grid">
+          <!-- Fields are auto-generated from js/form-config.json -->
+        </div>
+
+        <!-- Submit -->
+        <div class="submit-wrapper">
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span class="btn-text">Enviar propuesta</span>
+            <span class="spinner"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p>&copy; 2026 <strong>Inovatry Solutions</strong>. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script src="js/app.js"></script>
+</body>
+</html>
