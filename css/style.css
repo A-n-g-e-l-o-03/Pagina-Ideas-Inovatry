@@ -521,3 +521,59 @@ body {
   opacity: 0.75;
   margin-top: 28px;
 }
+
+/* ---------- Responsive Breakpoints ---------- */
+@media (max-width: 720px) {
+  .hero {
+    padding: 44px 20px 40px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-section {
+    padding: 36px 16px 56px;
+  }
+
+  .form-container,
+  .form-section .privacy-content {
+    padding: 32px 24px 36px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.55rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .form-container,
+  .form-section .privacy-content {
+    padding: 26px 18px 30px;
+    border-radius: 10px;
+  }
+
+  .file-upload-wrapper {
+    padding: 20px 14px;
+  }
+
+  .file-item {
+    flex-wrap: wrap;
+  }
+}
