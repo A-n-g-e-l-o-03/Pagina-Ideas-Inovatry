@@ -1,0 +1,49 @@
+/* ===========================
+   INOVATRY SOLUTIONS — Form Styles (part 1: base & layout)
+   Palette matches inovatrysolutions.com
+   =========================== */
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --bg-color: #f4f7fb;
+  --surface-color: #fafbfc;
+  --heading-color: #152a45;
+  --text-color: #5c6b7a;
+  --accent-color: #2F8CFF;
+  --hero-color: #3d6a94;
+  --dark-bg: #1a2838;
+  --dark-surface: #243447;
+  --white: #ffffff;
+  --border-color: #dce3ed;
+  --error-color: #e74c3c;
+  --success-color: #27ae60;
+  --shadow: 0 4px 20px rgba(21, 42, 69, 0.08);
+  --shadow-hover: 0 8px 32px rgba(21, 42, 69, 0.14);
+  --radius: 12px;
+  --transition: 0.3s ease;
+
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Montserrat", sans-serif;
+}
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--default-font);
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
