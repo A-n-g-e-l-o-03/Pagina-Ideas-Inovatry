@@ -1,10 +1,10 @@
 {
   "phaseId": "23-dep",
-  "variant": "kubernetes",
   "phaseName": "DEP — Kubernetes",
   "phaseGroup": "operaciones",
   "order": 23,
   "schemaVersion": 1,
+  "variant": "kubernetes",
   "hero": {
     "title": "DEP — Kubernetes",
     "description": "El DEP (Deployment Specification) define cómo el MVP llega a producción de forma repetible, segura y reversible. No es \"hacer deploy\" — es GitOps, progressive delivery, verificación y rollback. Se genera tras verify y antes de operar.",
@@ -94,7 +94,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí el pipeline de deploy del MVP: ¿qué se construye, d"
+      "placeholder": "Describí el pipeline de deploy del MVP: ¿qué se construye, dónde se versiona..."
     },
     {
       "id": "p04",

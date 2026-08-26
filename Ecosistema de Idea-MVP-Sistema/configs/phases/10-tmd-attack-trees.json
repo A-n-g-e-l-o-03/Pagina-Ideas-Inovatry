@@ -1,10 +1,10 @@
 {
   "phaseId": "10-tmd",
-  "variant": "attack-trees",
   "phaseName": "TMD — Attack Trees",
   "phaseGroup": "validacion",
   "order": 10,
   "schemaVersion": 1,
+  "variant": "attack-trees",
   "hero": {
     "title": "TMD — Attack Trees",
     "description": "El TMD (Threat Model Document) responde: ¿cómo puede ser atacado el MVP y qué hacemos al respecto? Es el análisis estructurado de amenazas antes de que el atacante lo haga por vos. Se genera en fase design SDD y alimenta a SRD, IAM y SAD. Sin TMD, la seguridad es reactiva y anecdótica.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p06",
+      "id": "p01",
       "sectionId": "attack_trees",
       "label": "P6. ¿Tenés attack trees para las 2-3 amenazas más críticas?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p07",
+      "id": "p02",
       "sectionId": "attack_trees",
       "label": "P7. Para el attack tree más crítico: ¿cuál es el camino de menor costo para el atacante? ¿Qué mitigación corta ese camino con mejor ROI?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Para el attack tree más crítico: ¿cuál es el camino de menor"
+      "placeholder": "Para el attack tree más crítico: ¿cuál es el camino de menor costo para el..."
     },
     {
-      "id": "p08",
+      "id": "p03",
       "sectionId": "attack_trees",
       "label": "P8. ¿Hacés sensitivity analysis (qué pasa si una mitigación falla o un supuesto es falso)?",
       "type": "radio",

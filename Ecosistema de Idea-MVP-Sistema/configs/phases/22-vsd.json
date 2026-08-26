@@ -1,13 +1,13 @@
 {
   "phaseId": "22-vsd",
-  "variant": "compliance",
   "phaseName": "VSD — Compliance",
   "phaseGroup": "validacion",
   "order": 22,
   "schemaVersion": 1,
+  "variant": "compliance",
   "hero": {
     "title": "VSD — Compliance",
-    "description": "El VSD (Validation Specification Document) es la validación final: demuestra con evidencia que el MVP cumple lo que prometió (RDD), que es técnicamente sólido y que satisface obligaciones externas. Es el gate antes de liberar. Se ejecuta en fase `verify` del SDD, cierra el ciclo de validación junto a ATD y STD.",
+    "description": "El VSD (Validation Specification Document) es la validación final: demuestra con evidencia que el MVP cumple lo que prometió (RDD), que es técnicamente sólido y que satisface obligaciones externas. Es el gate antes de liberar. Se ejecuta en fase verify del SDD, cierra el ciclo de validación junto a ATD y STD.",
     "badge": "4 preguntas"
   },
   "form": {
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué evidencia de compliance genera automáticamente el pipel"
+      "placeholder": "¿Qué evidencia de compliance genera automáticamente el pipeline del MVP..."
     },
     {
       "id": "p03",

@@ -1,10 +1,10 @@
 {
   "phaseId": "03-brd",
-  "variant": "regulatorio",
   "phaseName": "BRD — Regulatorio",
   "phaseGroup": "rdd",
   "order": 3,
   "schemaVersion": 1,
+  "variant": "regulatorio",
   "hero": {
     "title": "BRD — Regulatorio",
     "description": "El BRD (Business Requirements Document) traduce la necesidad de negocio en requisitos que la organización necesita satisfacer, en lenguaje de negocio (no de producto ni de sistema). Responde: ¿por qué la empresa debe invertir en esto, qué gana, qué arriesga y qué exige el entorno? Se genera en paralelo al PRD, tras el IDD, y ambos alimentan al RDD. Sin BRD, el MVP puede ser buen producto pero mala inversión.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p13",
+      "id": "p01",
       "sectionId": "regulatorio",
       "label": "P13. ¿Qué marco regulatorio aplica al MVP?",
       "type": "radio",
@@ -61,16 +61,16 @@
       ]
     },
     {
-      "id": "p14",
+      "id": "p02",
       "sectionId": "regulatorio",
       "label": "P14. ¿Qué obligaciones de auditoría, retención de datos, consentimiento o trazabilidad impone el regulador sobre el MVP? ¿Quién es el owner de compliance?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué obligaciones de auditoría, retención de datos, consenti"
+      "placeholder": "¿Qué obligaciones de auditoría, retención de datos, consentimiento o..."
     },
     {
-      "id": "p15",
+      "id": "p03",
       "sectionId": "regulatorio",
       "label": "P15. ¿El riesgo regulatorio de NO hacer el MVP es mayor que el de hacerlo?",
       "type": "radio",
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "id": "p16",
+      "id": "p04",
       "sectionId": "regulatorio",
       "label": "P16. ¿Existe proceso de aprobación legal/compliance antes de salir a producción?",
       "type": "radio",

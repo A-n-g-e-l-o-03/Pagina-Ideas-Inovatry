@@ -1,10 +1,10 @@
 {
   "phaseId": "18-sod",
-  "variant": "event-driven",
   "phaseName": "SOD — Event-Driven",
   "phaseGroup": "mcp",
   "order": 18,
   "schemaVersion": 1,
+  "variant": "event-driven",
   "hero": {
     "title": "SOD — Event-Driven",
     "description": "El SOD (Software Orchestration Document) orquesta cómo se construye, testea, despliega y verifica el MVP de forma automatizada y trazable. Es el \"director de orquesta\" del ciclo SDD: define stages, agentes, gates, rollback y métricas DORA. Sin SOD, el delivery es manual, frágil y no repetible.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p05",
+      "id": "p01",
       "sectionId": "event_driven",
       "label": "P5. ¿La orquestación del MVP es event-driven (servicios reaccionan a eventos)?",
       "type": "radio",
@@ -55,13 +55,13 @@
       ]
     },
     {
-      "id": "p06",
+      "id": "p02",
       "sectionId": "event_driven",
       "label": "P6. Si es event-driven: describí el event bus, patrón saga, idempotencia, dead letter y observabilidad del flujo orquestado.",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si es event-driven: describí el event bus, patrón saga, idem"
+      "placeholder": "Si es event-driven: describí el event bus, patrón saga, idempotencia, dead..."
     }
   ],
   "webhook": {

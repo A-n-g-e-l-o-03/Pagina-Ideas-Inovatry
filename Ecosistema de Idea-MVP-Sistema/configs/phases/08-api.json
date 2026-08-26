@@ -1,10 +1,10 @@
 {
   "phaseId": "08-api",
-  "variant": "rest",
   "phaseName": "API — REST",
   "phaseGroup": "tecnico",
   "order": 8,
   "schemaVersion": 1,
+  "variant": "rest",
   "hero": {
     "title": "API — REST",
     "description": "El API Design Document define el contrato entre el MVP y sus consumidores (frontend, otros servicios, terceros). Es un contrato versionado y testeable: romperlo sin avisar es romper a tus clientes. Se genera en fase design SDD y alimenta implementación y contract testing.",
@@ -67,7 +67,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Listá los 5-7 recursos/ endpoints core del MVP con verbo, pa"
+      "placeholder": "Listá los 5-7 recursos/ endpoints core del MVP con verbo, path, payload de..."
     },
     {
       "id": "p03",
@@ -181,7 +181,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué error devuelve el MVP cuando algo falla? ¿Hay formato e"
+      "placeholder": "¿Qué error devuelve el MVP cuando algo falla? ¿Hay formato estándar (RFC 7807..."
     }
   ],
   "webhook": {

@@ -1,10 +1,10 @@
 {
   "phaseId": "02-prd",
-  "variant": "plataforma",
   "phaseName": "PRD — Plataforma",
   "phaseGroup": "rdd",
   "order": 2,
   "schemaVersion": 1,
+  "variant": "plataforma",
   "hero": {
     "title": "PRD — Plataforma",
     "description": "El PRD (Product Requirements Document) traduce la idea validada en el IDD a un producto gestionable. Responde: ¿qué vamos a construir, para quién, por qué lo elegirían y cómo sabemos que funciona? Se genera siempre tras el IDD y antes del RDD, y alimenta directamente al diseño de requisitos. Cada lente mira el mismo producto desde un ángulo distinto; juntos evitan que el MVP sea deseable pero inviable, o viable pero nadie lo quiera.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p19",
+      "id": "p01",
       "sectionId": "plataforma",
       "label": "P19. ¿El MVP será plataforma/golden path para otros equipos?",
       "type": "radio",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "id": "p20",
+      "id": "p02",
       "sectionId": "plataforma",
       "label": "P20. ¿El MVP es un producto de datos (dashboards, ML features, data APIs, analytics self-serve)?",
       "type": "radio",
@@ -88,13 +88,13 @@
       ]
     },
     {
-      "id": "p21",
+      "id": "p03",
       "sectionId": "plataforma",
       "label": "P21. Si marcaste plataforma o data, ¿qué developer experience o data contract debe cumplir el MVP desde el día 1 para no bloquear a sus consumidores?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si marcaste plataforma o data, ¿qué developer experience o d"
+      "placeholder": "Si marcaste plataforma o data, ¿qué developer experience o data contract debe..."
     }
   ],
   "webhook": {

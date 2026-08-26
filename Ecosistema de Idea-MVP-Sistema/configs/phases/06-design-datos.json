@@ -1,13 +1,13 @@
 {
   "phaseId": "06-design",
-  "variant": "datos",
   "phaseName": "Design — Datos",
   "phaseGroup": "diseno",
   "order": 6,
   "schemaVersion": 1,
+  "variant": "datos",
   "hero": {
     "title": "Design — Datos",
-    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase `design` del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
+    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase design del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
     "badge": "3 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p09",
+      "id": "p01",
       "sectionId": "datos",
       "label": "P9. ¿Qué estrategia de persistencia usa el MVP?",
       "type": "radio",
@@ -61,16 +61,16 @@
       ]
     },
     {
-      "id": "p10",
+      "id": "p02",
       "sectionId": "datos",
       "label": "P10. ¿Cómo se maneja consistencia y migración? Describí: transacciones (saga vs. 2PC), estrategia de migración de datos legacy y si hay CDC (change data capture).",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Cómo se maneja consistencia y migración? Describí: transacc"
+      "placeholder": "¿Cómo se maneja consistencia y migración? Describí: transacciones (saga vs...."
     },
     {
-      "id": "p11",
+      "id": "p03",
       "sectionId": "datos",
       "label": "P11. ¿Hay database per service o DB compartida?",
       "type": "radio",

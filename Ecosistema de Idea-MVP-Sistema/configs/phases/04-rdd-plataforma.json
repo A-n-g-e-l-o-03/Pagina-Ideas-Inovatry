@@ -1,10 +1,10 @@
 {
   "phaseId": "04-rdd",
-  "variant": "plataforma",
   "phaseName": "RDD — Plataforma",
   "phaseGroup": "rdd",
   "order": 4,
   "schemaVersion": 1,
+  "variant": "plataforma",
   "hero": {
     "title": "RDD — Plataforma",
     "description": "El RDD (Requirements Design Document) es la especificación de comportamiento que el diseño y el testing implementan y verifican. Traduce el PRD/BRD en requisitos trazables, sin ambigüedad, listos para SDD spec. Es el contrato entre producto y tecnología.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p16",
+      "id": "p01",
       "sectionId": "plataforma",
       "label": "P16. ¿El MVP expone golden paths, self-service o contratos multi-tenant para otros equipos?",
       "type": "radio",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "id": "p17",
+      "id": "p02",
       "sectionId": "plataforma",
       "label": "P17. ¿El MVP tiene requisitos de pipelines, modelos ML, features, governance o SLAs de datos?",
       "type": "radio",
@@ -88,13 +88,13 @@
       ]
     },
     {
-      "id": "p18",
+      "id": "p03",
       "sectionId": "plataforma",
       "label": "P18. Si aplica plataforma o data, ¿qué SLA o contrato no podés romper sin avisar a consumidores? ¿Cómo versionás ese contrato?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica plataforma o data, ¿qué SLA o contrato no podés ro"
+      "placeholder": "Si aplica plataforma o data, ¿qué SLA o contrato no podés romper sin avisar a..."
     }
   ],
   "webhook": {

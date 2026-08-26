@@ -1,10 +1,10 @@
 {
   "phaseId": "14-agd",
-  "variant": "code-agent",
   "phaseName": "AGD — Code Agent",
   "phaseGroup": "mcp",
   "order": 14,
   "schemaVersion": 1,
+  "variant": "code-agent",
   "hero": {
     "title": "AGD — Code Agent",
     "description": "El AGD (Agent Design Document) diseña agentes de IA que generan, testean o revisan código. No son prompts sueltos — son sistemas con stack, patrones, quality gates y criterios de evaluación. Se genera en fase design SDD cuando el proceso de desarrollo será asistido o ejecutado por agentes.",
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí el workflow del Code Agent: ¿qué input recibe (spec"
+      "placeholder": "Describí el workflow del Code Agent: ¿qué input recibe (spec, diseño,..."
     },
     {
       "id": "p03",

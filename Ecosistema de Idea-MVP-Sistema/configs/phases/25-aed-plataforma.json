@@ -1,10 +1,10 @@
 {
   "phaseId": "25-aed",
-  "variant": "plataforma",
   "phaseName": "AED — Plataforma",
   "phaseGroup": "tecnico",
   "order": 25,
   "schemaVersion": 1,
+  "variant": "plataforma",
   "hero": {
     "title": "AED — Plataforma",
     "description": "El AED (Architecture Evolution Document) planifica cómo evoluciona la arquitectura del MVP sin reescribirlo. Es el roadmap técnico: deuda, modernización, capacidad, descomposición y governance. Se genera tras operar el MVP y alimenta decisiones de inversión técnica.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p06",
+      "id": "p01",
       "sectionId": "plataforma",
       "label": "P6. ¿El MVP evoluciona como plataforma (golden paths, self-service para otros equipos)?",
       "type": "radio",
@@ -55,13 +55,13 @@
       ]
     },
     {
-      "id": "p07",
+      "id": "p02",
       "sectionId": "plataforma",
       "label": "P7. Si aplica plataforma: ¿qué golden paths ofrece, cómo es el self-service, cómo se gestiona multi-tenancy y fleet, y cómo medís DX (time-to-first-deploy, NPS de plataforma)?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica plataforma: ¿qué golden paths ofrece, cómo es el s"
+      "placeholder": "Si aplica plataforma: ¿qué golden paths ofrece, cómo es el self-service, cómo..."
     }
   ],
   "webhook": {

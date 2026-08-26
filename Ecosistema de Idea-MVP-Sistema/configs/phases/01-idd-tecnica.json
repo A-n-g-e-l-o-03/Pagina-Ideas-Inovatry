@@ -1,13 +1,13 @@
 {
   "phaseId": "01-idd",
-  "variant": "tecnica",
   "phaseName": "IDD — Técnica",
   "phaseGroup": "idd",
   "order": 1,
   "schemaVersion": 1,
+  "variant": "tecnica",
   "hero": {
     "title": "IDD — Técnica",
-    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo IDEA → IDD → PRD/BRD. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
     "badge": "3 preguntas"
   },
   "form": {
@@ -22,16 +22,16 @@
   },
   "fields": [
     {
-      "id": "p18",
+      "id": "p01",
       "sectionId": "tecnica",
       "label": "P18. ¿Qué trabajo manual repetitivo elimina el MVP del toolchain actual? Listá herramientas involucradas y pasos que hoy requieren intervención humana.",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué trabajo manual repetitivo elimina el MVP del toolchain "
+      "placeholder": "¿Qué trabajo manual repetitivo elimina el MVP del toolchain actual? Listá..."
     },
     {
-      "id": "p19",
+      "id": "p02",
       "sectionId": "tecnica",
       "label": "P19. ¿Qué deuda técnica o fricción de toolchain ataca el MVP?",
       "type": "radio",
@@ -70,7 +70,7 @@
       ]
     },
     {
-      "id": "p20",
+      "id": "p03",
       "sectionId": "tecnica",
       "label": "P20. ¿El MVP introduce nueva deuda técnica a cambio de velocidad?",
       "type": "radio",

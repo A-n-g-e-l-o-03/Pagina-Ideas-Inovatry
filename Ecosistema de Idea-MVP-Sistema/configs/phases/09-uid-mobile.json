@@ -1,10 +1,10 @@
 {
   "phaseId": "09-uid",
-  "variant": "mobile",
   "phaseName": "UID — Mobile",
   "phaseGroup": "diseno",
   "order": 9,
   "schemaVersion": 1,
+  "variant": "mobile",
   "hero": {
     "title": "UID — Mobile",
     "description": "El UID (UI Design Document) define cómo el usuario ve y toca el MVP. No es \"hacerlo lindo\" — es usabilidad, accesibilidad, performance percibida y consistencia. Se genera en fase design SDD y debe estar conectado al PRD Usuario (02-a) y al journey mapeado.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p06",
+      "id": "p01",
       "sectionId": "mobile",
       "label": "P6. ¿El MVP tiene app móvil?",
       "type": "radio",
@@ -61,16 +61,16 @@
       ]
     },
     {
-      "id": "p07",
+      "id": "p02",
       "sectionId": "mobile",
       "label": "P7. Si aplica mobile: ¿qué capacidades nativas necesita (offline-first, push, biometrics, cámara, geolocalización, deep linking) y cómo se degrada sin ellas?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica mobile: ¿qué capacidades nativas necesita (offline"
+      "placeholder": "Si aplica mobile: ¿qué capacidades nativas necesita (offline-first, push,..."
     },
     {
-      "id": "p08",
+      "id": "p03",
       "sectionId": "mobile",
       "label": "P8. ¿App store compliance y platform guidelines (HIG/Material) están contemplados?",
       "type": "radio",

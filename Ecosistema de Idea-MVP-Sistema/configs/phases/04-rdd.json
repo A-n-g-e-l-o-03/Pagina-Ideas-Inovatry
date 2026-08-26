@@ -1,10 +1,10 @@
 {
   "phaseId": "04-rdd",
-  "variant": "funcional",
   "phaseName": "RDD — Funcional",
   "phaseGroup": "rdd",
   "order": 4,
   "schemaVersion": 1,
+  "variant": "funcional",
   "hero": {
     "title": "RDD — Funcional",
     "description": "El RDD (Requirements Design Document) es la especificación de comportamiento que el diseño y el testing implementan y verifican. Traduce el PRD/BRD en requisitos trazables, sin ambigüedad, listos para SDD spec. Es el contrato entre producto y tecnología.",
@@ -28,7 +28,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Listá todos los actores del MVP (usuarios humanos, sistemas "
+      "placeholder": "Listá todos los actores del MVP (usuarios humanos, sistemas externos,..."
     },
     {
       "id": "p02",
@@ -70,7 +70,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Elegí el caso de uso más crítico del MVP y describí: happy p"
+      "placeholder": "Elegí el caso de uso más crítico del MVP y describí: happy path, 2 caminos..."
     },
     {
       "id": "p04",
@@ -112,7 +112,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué entidades clave tienen máquina de estados (ej: pedido, "
+      "placeholder": "¿Qué entidades clave tienen máquina de estados (ej: pedido, suscripción,..."
     },
     {
       "id": "p06",

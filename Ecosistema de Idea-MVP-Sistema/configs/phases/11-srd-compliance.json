@@ -1,10 +1,10 @@
 {
   "phaseId": "11-srd",
-  "variant": "compliance",
   "phaseName": "SRD — Compliance",
   "phaseGroup": "validacion",
   "order": 11,
   "schemaVersion": 1,
+  "variant": "compliance",
   "hero": {
     "title": "SRD — Compliance",
     "description": "El SRD (Security Requirements Document) traduce amenazas (TMD) en requisitos de seguridad verificables con owner, prioridad y test. Es el \"qué debe cumplir\" antes del \"cómo se implementa\" (SAD). Sin SRD, los controles son ad-hoc y no auditables.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p10",
+      "id": "p01",
       "sectionId": "compliance",
       "label": "P10. ¿El MVP debe cumplir un framework de compliance específico?",
       "type": "radio",
@@ -61,16 +61,16 @@
       ]
     },
     {
-      "id": "p11",
+      "id": "p02",
       "sectionId": "compliance",
       "label": "P11. Si aplica compliance: mapeá cada obligación a requisito técnico + test + evidencia automatizada. ¿Qué evidencia se genera automáticamente en el pipeline vs. manual?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica compliance: mapeá cada obligación a requisito técn"
+      "placeholder": "Si aplica compliance: mapeá cada obligación a requisito técnico + test +..."
     },
     {
-      "id": "p12",
+      "id": "p03",
       "sectionId": "compliance",
       "label": "P12. ¿Hay auditoría continua o solo auditoría anual?",
       "type": "radio",
@@ -103,13 +103,13 @@
       ]
     },
     {
-      "id": "p13",
+      "id": "p04",
       "sectionId": "compliance",
       "label": "P13. ¿Qué requisito de seguridad, si se incumple, bloquea el go-live del MVP aunque todo lo demás funcione?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué requisito de seguridad, si se incumple, bloquea el go-l"
+      "placeholder": "¿Qué requisito de seguridad, si se incumple, bloquea el go-live del MVP aunque..."
     }
   ],
   "webhook": {

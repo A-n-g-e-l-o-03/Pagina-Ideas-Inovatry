@@ -1,10 +1,10 @@
 {
   "phaseId": "23-dep",
-  "variant": "edge",
   "phaseName": "DEP — Edge/Híbrido",
   "phaseGroup": "operaciones",
   "order": 23,
   "schemaVersion": 1,
+  "variant": "edge",
   "hero": {
     "title": "DEP — Edge/Híbrido",
     "description": "El DEP (Deployment Specification) define cómo el MVP llega a producción de forma repetible, segura y reversible. No es \"hacer deploy\" — es GitOps, progressive delivery, verificación y rollback. Se genera tras verify y antes de operar.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p08",
+      "id": "p01",
       "sectionId": "edge",
       "label": "P8. ¿El MVP despliega en edge, on-prem híbrido o con operación desconectada?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p02",
       "sectionId": "edge",
       "label": "P9. Si aplica edge: ¿cómo se gestiona fleet (clusters edge), qué pasa sin conectividad, cómo se sincronizan datos y cómo se hace OTA update con rollback?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica edge: ¿cómo se gestiona fleet (clusters edge), qué"
+      "placeholder": "Si aplica edge: ¿cómo se gestiona fleet (clusters edge), qué pasa sin..."
     },
     {
-      "id": "p10",
+      "id": "p03",
       "sectionId": "edge",
       "label": "P10. ¿El deploy del MVP es reproducible desde cero (infra como código + git como fuente de verdad)?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p11",
+      "id": "p04",
       "sectionId": "edge",
       "label": "P11. ¿Qué deploy fallido causaría el mayor daño? ¿Qué verificación (smoke test, health check, synthetic) lo detectaría en <2 minutos?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué deploy fallido causaría el mayor daño? ¿Qué verificació"
+      "placeholder": "¿Qué deploy fallido causaría el mayor daño? ¿Qué verificación (smoke test,..."
     }
   ],
   "webhook": {

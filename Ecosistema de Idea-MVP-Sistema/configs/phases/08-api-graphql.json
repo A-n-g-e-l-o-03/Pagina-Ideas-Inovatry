@@ -1,10 +1,10 @@
 {
   "phaseId": "08-api",
-  "variant": "graphql",
   "phaseName": "API — GraphQL",
   "phaseGroup": "tecnico",
   "order": 8,
   "schemaVersion": 1,
+  "variant": "graphql",
   "hero": {
     "title": "API — GraphQL",
     "description": "El API Design Document define el contrato entre el MVP y sus consumidores (frontend, otros servicios, terceros). Es un contrato versionado y testeable: romperlo sin avisar es romper a tus clientes. Se genera en fase design SDD y alimenta implementación y contract testing.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p07",
+      "id": "p01",
       "sectionId": "graphql",
       "label": "P7. ¿El MVP necesita GraphQL?",
       "type": "radio",
@@ -55,13 +55,13 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p02",
       "sectionId": "graphql",
       "label": "P8. Si aplica GraphQL: ¿cuál es el schema core (types, queries, mutations, subscriptions), cómo se maneja authZ a nivel campo y qué límites de complexity/depth hay para evitar queries abusivas?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica GraphQL: ¿cuál es el schema core (types, queries, "
+      "placeholder": "Si aplica GraphQL: ¿cuál es el schema core (types, queries, mutations,..."
     }
   ],
   "webhook": {

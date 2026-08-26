@@ -1,10 +1,10 @@
 {
   "phaseId": "14-agd",
-  "variant": "review-agent",
   "phaseName": "AGD — Review Agent",
   "phaseGroup": "mcp",
   "order": 14,
   "schemaVersion": 1,
+  "variant": "review-agent",
   "hero": {
     "title": "AGD — Review Agent",
     "description": "El AGD (Agent Design Document) diseña agentes de IA que generan, testean o revisan código. No son prompts sueltos — son sistemas con stack, patrones, quality gates y criterios de evaluación. Se genera en fase design SDD cuando el proceso de desarrollo será asistido o ejecutado por agentes.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p08",
+      "id": "p01",
       "sectionId": "review_agent",
       "label": "P8. ¿Necesitás un agente que revise código (seguridad, performance, arquitectura)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p02",
       "sectionId": "review_agent",
       "label": "P9. Si aplica Review Agent: ¿qué dimensiones revisa, qué severidades (blocker/major/minor), cuándo hace auto-fix vs. solo sugiere y cómo maneja falsos positivos?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica Review Agent: ¿qué dimensiones revisa, qué severid"
+      "placeholder": "Si aplica Review Agent: ¿qué dimensiones revisa, qué severidades..."
     },
     {
-      "id": "p10",
+      "id": "p03",
       "sectionId": "review_agent",
       "label": "P10. ¿Los agentes operan con presupuesto (tokens, tiempo, iteraciones) y gobernanza?",
       "type": "radio",

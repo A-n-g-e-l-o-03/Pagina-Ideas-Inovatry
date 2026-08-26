@@ -1,10 +1,10 @@
 {
   "phaseId": "24-mdd",
-  "variant": "security",
   "phaseName": "MDD — Security",
   "phaseGroup": "operaciones",
   "order": 24,
   "schemaVersion": 1,
+  "variant": "security",
   "hero": {
     "title": "MDD — Security",
     "description": "El MDD (Monitoring & Diagnostics Document) define cómo sabés que el MVP está vivo, sano y generando valor — y qué hacés cuando no. Es observabilidad accionable, no dashboards bonitos. Se genera tras deploy y alimenta la operación continua.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p10",
+      "id": "p01",
       "sectionId": "security",
       "label": "P10. ¿El MVP necesita observabilidad de seguridad (threat detection, vuln management, compliance monitoring)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p11",
+      "id": "p02",
       "sectionId": "security",
       "label": "P11. Si aplica security monitoring: ¿qué amenazas detectás en runtime, cómo gestionás vulnerabilidades, qué compliance monitoreás y cómo responde el equipo a un incidente de seguridad?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica security monitoring: ¿qué amenazas detectás en run"
+      "placeholder": "Si aplica security monitoring: ¿qué amenazas detectás en runtime, cómo..."
     },
     {
-      "id": "p12",
+      "id": "p03",
       "sectionId": "security",
       "label": "P12. ¿Observabilidad es costo o inversión para el MVP?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p13",
+      "id": "p04",
       "sectionId": "security",
       "label": "P13. Si solo pudieras tener 3 gráficos para operar el MVP, ¿cuáles serían y qué decisión tomarías con cada uno?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si solo pudieras tener 3 gráficos para operar el MVP, ¿cuále"
+      "placeholder": "Si solo pudieras tener 3 gráficos para operar el MVP, ¿cuáles serían y qué..."
     }
   ],
   "webhook": {

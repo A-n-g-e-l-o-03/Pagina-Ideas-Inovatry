@@ -1,10 +1,10 @@
 {
   "phaseId": "26-chd",
-  "variant": "emergencia",
   "phaseName": "CHD — Emergencia",
   "phaseGroup": "tecnico",
   "order": 26,
   "schemaVersion": 1,
+  "variant": "emergencia",
   "hero": {
     "title": "CHD — Emergencia",
     "description": "El CHD (Change Design Document) diseña cómo se gestionan cambios en el MVP sin romper producción ni auditoría. Todo cambio —feature, fix, config, infra— pasa por diseño, impacto, aprobación, implementación, testing, rollback y comunicación. Sin CHD, los cambios son \"deploy y rezo\".",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p05",
+      "id": "p01",
       "sectionId": "emergencia",
       "label": "P5. ¿Tenés proceso de emergencia para hotfixes/security patches?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p06",
+      "id": "p02",
       "sectionId": "emergencia",
       "label": "P6. Describí el último hotfix (o simulacro): ¿cuánto tardaste desde detección a deploy, quién aprobó, cómo se testeó en emergencia y qué se revisó después?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí el último hotfix (o simulacro): ¿cuánto tardaste de"
+      "placeholder": "Describí el último hotfix (o simulacro): ¿cuánto tardaste desde detección a..."
     },
     {
-      "id": "p07",
+      "id": "p03",
       "sectionId": "emergencia",
       "label": "P7. ¿Los cambios de emergencia generan deuda o aprendizaje?",
       "type": "radio",

@@ -1,10 +1,10 @@
 {
   "phaseId": "15-aad",
-  "variant": "pipeline",
   "phaseName": "AAD — Pipeline",
   "phaseGroup": "mcp",
   "order": 15,
   "schemaVersion": 1,
+  "variant": "pipeline",
   "hero": {
     "title": "AAD — Pipeline",
     "description": "El AAD (Agent Architecture Document) define cómo se orquestan múltiples agentes para construir el MVP. Si el AGD diseña un agente, el AAD diseña el sistema de agentes: quién hace qué, en qué orden, cómo se comunican y cómo se recuperan de fallos.",
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Mapeá el pipeline de agentes: stages, qué agente opera en ca"
+      "placeholder": "Mapeá el pipeline de agentes: stages, qué agente opera en cada stage, qué..."
     },
     {
       "id": "p03",

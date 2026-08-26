@@ -1,13 +1,13 @@
 {
   "phaseId": "20-atd",
-  "variant": "contract",
   "phaseName": "ATD — Contract Testing",
   "phaseGroup": "validacion",
   "order": 20,
   "schemaVersion": 1,
+  "variant": "contract",
   "hero": {
     "title": "ATD — Contract Testing",
-    "description": "El ATD (Acceptance Test Definition) define cómo se demuestra que el MVP hace lo que promete, en lenguaje que negocio y tecnología comparten. Es la validación de aceptación: si los ATD pasan, el MVP es aceptable para el usuario. Se ejecuta en fase `verify` del SDD.",
+    "description": "El ATD (Acceptance Test Definition) define cómo se demuestra que el MVP hace lo que promete, en lenguaje que negocio y tecnología comparten. Es la validación de aceptación: si los ATD pasan, el MVP es aceptable para el usuario. Se ejecuta en fase verify del SDD.",
     "badge": "4 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p08",
+      "id": "p01",
       "sectionId": "contract",
       "label": "P8. ¿El MVP tiene dependencias donde un contrato roto rompe al consumidor?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p02",
       "sectionId": "contract",
       "label": "P9. Si aplica contract testing: ¿quién es consumer/provider por integración, qué contrato Pact define, cómo se verifica en CI del provider y qué bloquea el deploy si el contrato se rompe?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica contract testing: ¿quién es consumer/provider por "
+      "placeholder": "Si aplica contract testing: ¿quién es consumer/provider por integración, qué..."
     },
     {
-      "id": "p10",
+      "id": "p03",
       "sectionId": "contract",
       "label": "P10. ¿Qué porcentaje de criterios de aceptación del MVP es automatizable vs. requiere juicio humano?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p11",
+      "id": "p04",
       "sectionId": "contract",
       "label": "P11. ¿Qué escenario de aceptación, si falla en producción, hace que el MVP sea inaceptable aunque todo lo demás pase?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué escenario de aceptación, si falla en producción, hace q"
+      "placeholder": "¿Qué escenario de aceptación, si falla en producción, hace que el MVP sea..."
     }
   ],
   "webhook": {

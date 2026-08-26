@@ -1,10 +1,10 @@
 {
   "phaseId": "15-aad",
-  "variant": "event-driven",
   "phaseName": "AAD — Event-Driven",
   "phaseGroup": "mcp",
   "order": 15,
   "schemaVersion": 1,
+  "variant": "event-driven",
   "hero": {
     "title": "AAD — Event-Driven",
     "description": "El AAD (Agent Architecture Document) define cómo se orquestan múltiples agentes para construir el MVP. Si el AGD diseña un agente, el AAD diseña el sistema de agentes: quién hace qué, en qué orden, cómo se comunican y cómo se recuperan de fallos.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p04",
+      "id": "p01",
       "sectionId": "event_driven",
       "label": "P4. Si es event-driven, ¿choreography (cada agente decide) u orchestration (orquestador central / saga)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p05",
+      "id": "p02",
       "sectionId": "event_driven",
       "label": "P5. Describí el event bus: ¿qué eventos disparan agentes, cómo se garantiza idempotencia, qué pasa con dead letters y cómo se observa el flujo?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí el event bus: ¿qué eventos disparan agentes, cómo s"
+      "placeholder": "Describí el event bus: ¿qué eventos disparan agentes, cómo se garantiza..."
     },
     {
-      "id": "p06",
+      "id": "p03",
       "sectionId": "event_driven",
       "label": "P6. ¿Hay saga con compensaciones para flujos multi-agente que fallan a mitad?",
       "type": "radio",

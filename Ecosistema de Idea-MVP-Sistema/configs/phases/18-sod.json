@@ -1,10 +1,10 @@
 {
   "phaseId": "18-sod",
-  "variant": "pipeline",
   "phaseName": "SOD — Pipeline",
   "phaseGroup": "mcp",
   "order": 18,
   "schemaVersion": 1,
+  "variant": "pipeline",
   "hero": {
     "title": "SOD — Pipeline",
     "description": "El SOD (Software Orchestration Document) orquesta cómo se construye, testea, despliega y verifica el MVP de forma automatizada y trazable. Es el \"director de orquesta\" del ciclo SDD: define stages, agentes, gates, rollback y métricas DORA. Sin SOD, el delivery es manual, frágil y no repetible.",
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Para cada stage: ¿qué agente/herramienta opera, qué gate/cri"
+      "placeholder": "Para cada stage: ¿qué agente/herramienta opera, qué gate/criterio permite..."
     },
     {
       "id": "p03",

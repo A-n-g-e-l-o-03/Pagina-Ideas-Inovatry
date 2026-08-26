@@ -1,10 +1,10 @@
 {
   "phaseId": "09-uid",
-  "variant": "web",
   "phaseName": "UID — Web",
   "phaseGroup": "diseno",
   "order": 9,
   "schemaVersion": 1,
+  "variant": "web",
   "hero": {
     "title": "UID — Web",
     "description": "El UID (UI Design Document) define cómo el usuario ve y toca el MVP. No es \"hacerlo lindo\" — es usabilidad, accesibilidad, performance percibida y consistencia. Se genera en fase design SDD y debe estar conectado al PRD Usuario (02-a) y al journey mapeado.",
@@ -100,7 +100,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí las 3 pantallas/flujos más críticos del MVP: ¿qué v"
+      "placeholder": "Describí las 3 pantallas/flujos más críticos del MVP: ¿qué ve el usuario, qué..."
     },
     {
       "id": "p04",

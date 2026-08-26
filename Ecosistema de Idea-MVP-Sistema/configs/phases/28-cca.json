@@ -1,10 +1,10 @@
 {
   "phaseId": "28-cca",
-  "variant": "llm",
   "phaseName": "CCA — LLM",
   "phaseGroup": "marketing",
   "order": 28,
   "schemaVersion": 1,
+  "variant": "llm",
   "hero": {
     "title": "CCA — LLM",
     "description": "El CCA (Cognitive Communication Agent) es el agente que comunica el MVP a cada audiencia, usando explicaciones (CED) como base. No es un chatbot genérico — es un agente con propósito, prompts, RAG, evaluación y guardrails. Es transversal y automatiza la comunicación sin perder calidad ni control.",
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica LLM: describí el agente — ¿qué prompts/templates u"
+      "placeholder": "Si aplica LLM: describí el agente — ¿qué prompts/templates usa, qué..."
     },
     {
       "id": "p03",

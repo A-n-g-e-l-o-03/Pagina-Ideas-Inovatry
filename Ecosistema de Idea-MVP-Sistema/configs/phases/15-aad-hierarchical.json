@@ -1,10 +1,10 @@
 {
   "phaseId": "15-aad",
-  "variant": "hierarchical",
   "phaseName": "AAD — Hierarchical",
   "phaseGroup": "mcp",
   "order": 15,
   "schemaVersion": 1,
+  "variant": "hierarchical",
   "hero": {
     "title": "AAD — Hierarchical",
     "description": "El AAD (Agent Architecture Document) define cómo se orquestan múltiples agentes para construir el MVP. Si el AGD diseña un agente, el AAD diseña el sistema de agentes: quién hace qué, en qué orden, cómo se comunican y cómo se recuperan de fallos.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p07",
+      "id": "p01",
       "sectionId": "hierarchical",
       "label": "P7. ¿Necesitás jerarquía orchestrator → managers → workers?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p02",
       "sectionId": "hierarchical",
       "label": "P8. Si aplica jerarquía: ¿qué decide el orchestrator, qué delega a managers, cómo escala un worker cuando se bloquea y cómo se controla budget/costo por nivel?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica jerarquía: ¿qué decide el orchestrator, qué delega"
+      "placeholder": "Si aplica jerarquía: ¿qué decide el orchestrator, qué delega a managers, cómo..."
     },
     {
-      "id": "p09",
+      "id": "p03",
       "sectionId": "hierarchical",
       "label": "P9. ¿Hay gobernanza y observabilidad de la orquestación (quién hizo qué, cuánto costó, cuánto tardó, por qué falló)?",
       "type": "radio",

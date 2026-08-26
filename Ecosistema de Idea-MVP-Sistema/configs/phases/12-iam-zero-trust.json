@@ -1,10 +1,10 @@
 {
   "phaseId": "12-iam",
-  "variant": "zero-trust",
   "phaseName": "IAM — Zero Trust",
   "phaseGroup": "validacion",
   "order": 12,
   "schemaVersion": 1,
+  "variant": "zero-trust",
   "hero": {
     "title": "IAM — Zero Trust",
     "description": "El IAM Document define quién puede hacer qué, sobre qué, cuándo y cómo se verifica. Es el control de acceso del MVP — no solo login, sino autorización fina, separación de deberes (SoD), provisioning y auditoría. Un IAM mal diseñado es el vector #1 de brechas.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p05",
+      "id": "p01",
       "sectionId": "zero_trust",
       "label": "P5. ¿Qué modelo de confianza usa el MVP?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p06",
+      "id": "p02",
       "sectionId": "zero_trust",
       "label": "P6. Describí el flujo de autenticación y autorización del MVP: IdP (OIDC/SAML), MFA, device posture, PDP/PEP, micro-segmentación. ¿Dónde se toma la decisión de acceso?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí el flujo de autenticación y autorización del MVP: I"
+      "placeholder": "Describí el flujo de autenticación y autorización del MVP: IdP (OIDC/SAML),..."
     },
     {
-      "id": "p07",
+      "id": "p03",
       "sectionId": "zero_trust",
       "label": "P7. ¿Hay verificación continua o solo en el login?",
       "type": "radio",

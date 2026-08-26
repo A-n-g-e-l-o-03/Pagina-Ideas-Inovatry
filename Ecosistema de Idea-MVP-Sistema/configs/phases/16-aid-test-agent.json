@@ -1,10 +1,10 @@
 {
   "phaseId": "16-aid",
-  "variant": "test-agent",
   "phaseName": "AID — Test Agent",
   "phaseGroup": "mcp",
   "order": 16,
   "schemaVersion": 1,
+  "variant": "test-agent",
   "hero": {
     "title": "AID — Test Agent",
     "description": "El AID (AI Instruction Document) son las instrucciones operativas que un agente de IA ejecuta para hacer su trabajo. Si el AGD es el \"qué\" (diseño del agente) y el AAD es el \"cómo se orquestan\", el AID es el manual paso a paso con workflow, estándares, gates, restricciones y manejo de incertidumbre. Es lo que hace que un agente sea predecible y auditable, no un generador aleatorio.",
@@ -22,16 +22,16 @@
   },
   "fields": [
     {
-      "id": "p06",
+      "id": "p01",
       "sectionId": "test_agent",
       "label": "P6. Describí el workflow del Test Agent: ¿cómo genera tests desde specs/RDD, qué estrategia (unit/integration/E2E), cómo elige test data y cómo reporta?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí el workflow del Test Agent: ¿cómo genera tests desd"
+      "placeholder": "Describí el workflow del Test Agent: ¿cómo genera tests desde specs/RDD, qué..."
     },
     {
-      "id": "p07",
+      "id": "p02",
       "sectionId": "test_agent",
       "label": "P7. ¿Qué coverage y mutation targets tiene el Test Agent?",
       "type": "radio",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p03",
       "sectionId": "test_agent",
       "label": "P8. ¿Cómo maneja flakiness el Test Agent?",
       "type": "radio",

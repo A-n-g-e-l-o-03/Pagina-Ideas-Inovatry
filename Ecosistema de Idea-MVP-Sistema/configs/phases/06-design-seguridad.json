@@ -1,13 +1,13 @@
 {
   "phaseId": "06-design",
-  "variant": "seguridad",
   "phaseName": "Design — Seguridad",
   "phaseGroup": "diseno",
   "order": 6,
   "schemaVersion": 1,
+  "variant": "seguridad",
   "hero": {
     "title": "Design — Seguridad",
-    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase `design` del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
+    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase design del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
     "badge": "3 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p12",
+      "id": "p01",
       "sectionId": "seguridad",
       "label": "P12. ¿Qué modelo de seguridad rige el diseño?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p13",
+      "id": "p02",
       "sectionId": "seguridad",
       "label": "P13. Describí cross-cutting concerns resueltos antes de componentes: authN/authZ, observabilidad, config/secrets, feature flags, rate limiting, circuit breaker, caching. ¿Cuál falta y es bloqueante?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí cross-cutting concerns resueltos antes de component"
+      "placeholder": "Describí cross-cutting concerns resueltos antes de componentes: authN/authZ,..."
     },
     {
-      "id": "p14",
+      "id": "p03",
       "sectionId": "seguridad",
       "label": "P14. ¿La supply chain (dependencias, imágenes base, pipelines) tiene controles?",
       "type": "radio",

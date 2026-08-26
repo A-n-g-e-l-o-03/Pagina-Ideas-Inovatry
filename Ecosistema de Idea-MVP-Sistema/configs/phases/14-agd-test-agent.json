@@ -1,10 +1,10 @@
 {
   "phaseId": "14-agd",
-  "variant": "test-agent",
   "phaseName": "AGD — Test Agent",
   "phaseGroup": "mcp",
   "order": 14,
   "schemaVersion": 1,
+  "variant": "test-agent",
   "hero": {
     "title": "AGD — Test Agent",
     "description": "El AGD (Agent Design Document) diseña agentes de IA que generan, testean o revisan código. No son prompts sueltos — son sistemas con stack, patrones, quality gates y criterios de evaluación. Se genera en fase design SDD cuando el proceso de desarrollo será asistido o ejecutado por agentes.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p05",
+      "id": "p01",
       "sectionId": "test_agent",
       "label": "P5. ¿Qué pirámide de tests genera el Test Agent?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p06",
+      "id": "p02",
       "sectionId": "test_agent",
       "label": "P6. ¿Cómo maneja el Test Agent flakiness, test data, coverage y reporting? Describí el ciclo: generación → ejecución → diagnóstico de fallo → reparación.",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Cómo maneja el Test Agent flakiness, test data, coverage y "
+      "placeholder": "¿Cómo maneja el Test Agent flakiness, test data, coverage y reporting? Describí..."
     },
     {
-      "id": "p07",
+      "id": "p03",
       "sectionId": "test_agent",
       "label": "P7. ¿Qué coverage target tiene el Test Agent y cómo evita tests tautológicos?",
       "type": "radio",

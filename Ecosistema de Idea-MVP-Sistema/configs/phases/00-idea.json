@@ -47,7 +47,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Dónde y cuándo surgió exactamente la idea del MVP? Describí"
+      "placeholder": "¿Dónde y cuándo surgió exactamente la idea del MVP? Describí lugar, fecha..."
     },
     {
       "id": "p02",
@@ -107,7 +107,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué experiencias, conocimientos previos o interacciones soc"
+      "placeholder": "¿Qué experiencias, conocimientos previos o interacciones sociales influyeron..."
     },
     {
       "id": "p04",
@@ -167,7 +167,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué estímulos concretos (una conversación, un dato, un prod"
+      "placeholder": "¿Qué estímulos concretos (una conversación, un dato, un producto competidor, un..."
     },
     {
       "id": "p06",
@@ -176,7 +176,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "En una frase, ¿qué ES la idea del MVP y qué HACE por quien l"
+      "placeholder": "En una frase, ¿qué ES la idea del MVP y qué HACE por quien la use? (Sin..."
     },
     {
       "id": "p07",
@@ -257,7 +257,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué problema o dolor específico resuelve la idea? ¿Para qui"
+      "placeholder": "¿Qué problema o dolor específico resuelve la idea? ¿Para quién duele HOY y..."
     },
     {
       "id": "p10",
@@ -344,7 +344,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Fue validada de alguna forma? Describí si hubo validación i"
+      "placeholder": "¿Fue validada de alguna forma? Describí si hubo validación interna (coherencia..."
     },
     {
       "id": "p13",
@@ -398,7 +398,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si la idea muriera mañana, ¿cuál sería la causa más probable"
+      "placeholder": "Si la idea muriera mañana, ¿cuál sería la causa más probable? ¿Qué supuestos,..."
     },
     {
       "id": "p15",
@@ -440,7 +440,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si tiene descendencia, describí brevemente qué ideas derivar"
+      "placeholder": "Si tiene descendencia, describí brevemente qué ideas derivaron de ella y en qué..."
     },
     {
       "id": "p17",
@@ -488,7 +488,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué impacto esperás que genere el MVP si funciona? (Usuario"
+      "placeholder": "¿Qué impacto esperás que genere el MVP si funciona? (Usuarios afectados,..."
     },
     {
       "id": "p19",
@@ -569,7 +569,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué necesitarías para considerar que esta idea está lista p"
+      "placeholder": "¿Qué necesitarías para considerar que esta idea está lista para promover a IDD..."
     },
     {
       "id": "p22",
@@ -617,7 +617,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué harías para no olvidar ideas futuras en el momento exac"
+      "placeholder": "¿Qué harías para no olvidar ideas futuras en el momento exacto en que aparecen?..."
     }
   ],
   "webhook": {

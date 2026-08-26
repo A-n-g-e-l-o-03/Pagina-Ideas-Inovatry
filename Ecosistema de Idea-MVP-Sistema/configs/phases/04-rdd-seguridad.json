@@ -1,10 +1,10 @@
 {
   "phaseId": "04-rdd",
-  "variant": "seguridad",
   "phaseName": "RDD — Seguridad",
   "phaseGroup": "rdd",
   "order": 4,
   "schemaVersion": 1,
+  "variant": "seguridad",
   "hero": {
     "title": "RDD — Seguridad",
     "description": "El RDD (Requirements Design Document) es la especificación de comportamiento que el diseño y el testing implementan y verifican. Traduce el PRD/BRD en requisitos trazables, sin ambigüedad, listos para SDD spec. Es el contrato entre producto y tecnología.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p12",
+      "id": "p01",
       "sectionId": "seguridad",
       "label": "P12. ¿Hiciste threat modeling del MVP (STRIDE, DFDs)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p13",
+      "id": "p02",
       "sectionId": "seguridad",
       "label": "P13. Listá los 3 controles de seguridad más críticos para el MVP (ej: auth, validación de input, rate limiting, cifrado, auditoría). ¿Qué OWASP Top 10 aplica directamente?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Listá los 3 controles de seguridad más críticos para el MVP "
+      "placeholder": "Listá los 3 controles de seguridad más críticos para el MVP (ej: auth,..."
     },
     {
-      "id": "p14",
+      "id": "p03",
       "sectionId": "seguridad",
       "label": "P14. ¿Los requisitos de compliance (GDPR, PCI-DSS, etc.) están traducidos a requisitos técnicos verificables?",
       "type": "radio",
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "id": "p15",
+      "id": "p04",
       "sectionId": "seguridad",
       "label": "P15. ¿Hay requisitos de incident response (detección, contención, notificación, forense) desde el día 1?",
       "type": "radio",

@@ -1,13 +1,13 @@
 {
   "phaseId": "01-idd",
-  "variant": "mercado",
   "phaseName": "IDD — Mercado",
   "phaseGroup": "idd",
   "order": 1,
   "schemaVersion": 1,
+  "variant": "mercado",
   "hero": {
     "title": "IDD — Mercado",
-    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo IDEA → IDD → PRD/BRD. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
     "badge": "5 preguntas"
   },
   "form": {
@@ -67,7 +67,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Definí en 2-3 frases: ¿cuál es el problema en lenguaje del c"
+      "placeholder": "Definí en 2-3 frases: ¿cuál es el problema en lenguaje del cliente (no de la..."
     },
     {
       "id": "p03",
@@ -109,7 +109,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Listá 3 a 5 cosas que el MVP explícitamente NO hará en su pr"
+      "placeholder": "Listá 3 a 5 cosas que el MVP explícitamente NO hará en su primera versión (test..."
     },
     {
       "id": "p05",

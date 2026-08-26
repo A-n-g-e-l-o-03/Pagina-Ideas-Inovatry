@@ -1,13 +1,13 @@
 {
   "phaseId": "17-tasks",
-  "variant": "kanban",
   "phaseName": "Tasks — Kanban",
   "phaseGroup": "mcp",
   "order": 17,
   "schemaVersion": 1,
+  "variant": "kanban",
   "hero": {
     "title": "Tasks — Kanban",
-    "description": "El Tasks Document descompone el diseño (Design) en trabajo ejecutable con estimación, dependencias, criterios de hecho (DoD/DoR) y mitigación de riesgos. Se genera en fase `tasks` del SDD, tras Design y antes de Apply. Sin Tasks, el MVP es una lista de deseos sin orden ni estimación.",
+    "description": "El Tasks Document descompone el diseño (Design) en trabajo ejecutable con estimación, dependencias, criterios de hecho (DoD/DoR) y mitigación de riesgos. Se genera en fase tasks del SDD, tras Design y antes de Apply. Sin Tasks, el MVP es una lista de deseos sin orden ni estimación.",
     "badge": "2 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p06",
+      "id": "p01",
       "sectionId": "kanban",
       "label": "P6. Si usás Kanban, ¿tenés WIP limits y classes of service?",
       "type": "radio",
@@ -55,13 +55,13 @@
       ]
     },
     {
-      "id": "p07",
+      "id": "p02",
       "sectionId": "kanban",
       "label": "P7. ¿Qué flow metrics medís (lead time, cycle time, throughput, WIP aging) y cómo hacés forecasting (Monte Carlo, Little's Law)? ¿Cuál es el lead time objetivo del MVP?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué flow metrics medís (lead time, cycle time, throughput, "
+      "placeholder": "¿Qué flow metrics medís (lead time, cycle time, throughput, WIP aging) y cómo..."
     }
   ],
   "webhook": {

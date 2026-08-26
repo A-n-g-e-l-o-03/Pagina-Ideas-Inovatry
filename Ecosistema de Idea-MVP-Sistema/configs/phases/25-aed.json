@@ -1,10 +1,10 @@
 {
   "phaseId": "25-aed",
-  "variant": "tecnico",
   "phaseName": "AED — Técnico",
   "phaseGroup": "tecnico",
   "order": 25,
   "schemaVersion": 1,
+  "variant": "tecnico",
   "hero": {
     "title": "AED — Técnico",
     "description": "El AED (Architecture Evolution Document) planifica cómo evoluciona la arquitectura del MVP sin reescribirlo. Es el roadmap técnico: deuda, modernización, capacidad, descomposición y governance. Se genera tras operar el MVP y alimenta decisiones de inversión técnica.",
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Listá las 3 deudas técnicas más caras del MVP: ¿qué la causó"
+      "placeholder": "Listá las 3 deudas técnicas más caras del MVP: ¿qué la causó, cuánto cuesta..."
     },
     {
       "id": "p03",

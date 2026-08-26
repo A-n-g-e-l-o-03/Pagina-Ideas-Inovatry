@@ -1,10 +1,10 @@
 {
   "phaseId": "23-dep",
-  "variant": "serverless",
   "phaseName": "DEP — Serverless",
   "phaseGroup": "operaciones",
   "order": 23,
   "schemaVersion": 1,
+  "variant": "serverless",
   "hero": {
     "title": "DEP — Serverless",
     "description": "El DEP (Deployment Specification) define cómo el MVP llega a producción de forma repetible, segura y reversible. No es \"hacer deploy\" — es GitOps, progressive delivery, verificación y rollback. Se genera tras verify y antes de operar.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p06",
+      "id": "p01",
       "sectionId": "serverless",
       "label": "P6. ¿El MVP usa serverless (Lambda, Cloud Functions, Cloud Run)?",
       "type": "radio",
@@ -55,13 +55,13 @@
       ]
     },
     {
-      "id": "p07",
+      "id": "p02",
       "sectionId": "serverless",
       "label": "P7. Si aplica serverless: ¿qué functions, con qué triggers, qué IaC (Terraform/Pulumi/SAM), cómo se hace canary y cómo se observa (cold starts, throttles, DLQ)?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica serverless: ¿qué functions, con qué triggers, qué "
+      "placeholder": "Si aplica serverless: ¿qué functions, con qué triggers, qué IaC..."
     }
   ],
   "webhook": {

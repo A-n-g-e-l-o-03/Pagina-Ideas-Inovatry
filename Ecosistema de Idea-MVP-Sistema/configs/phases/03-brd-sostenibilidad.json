@@ -1,10 +1,10 @@
 {
   "phaseId": "03-brd",
-  "variant": "sostenibilidad",
   "phaseName": "BRD — Sostenibilidad/ESG",
   "phaseGroup": "rdd",
   "order": 3,
   "schemaVersion": 1,
+  "variant": "sostenibilidad",
   "hero": {
     "title": "BRD — Sostenibilidad/ESG",
     "description": "El BRD (Business Requirements Document) traduce la necesidad de negocio en requisitos que la organización necesita satisfacer, en lenguaje de negocio (no de producto ni de sistema). Responde: ¿por qué la empresa debe invertir en esto, qué gana, qué arriesga y qué exige el entorno? Se genera en paralelo al PRD, tras el IDD, y ambos alimentan al RDD. Sin BRD, el MVP puede ser buen producto pero mala inversión.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p17",
+      "id": "p01",
       "sectionId": "sostenibilidad",
       "label": "P17. ¿El MVP tiene impacto ESG (ambiental, social, gobernanza) relevante?",
       "type": "radio",
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "id": "p18",
+      "id": "p02",
       "sectionId": "sostenibilidad",
       "label": "P18. ¿El MVP afecta capacidades, cultura o retención de talento?",
       "type": "radio",
@@ -100,13 +100,13 @@
       ]
     },
     {
-      "id": "p19",
+      "id": "p03",
       "sectionId": "sostenibilidad",
       "label": "P19. Si marcaste ESG o Talento, ¿qué métrica no financiera debe acompañar al ROI para decidir? (Ej: eNPS, horas de toil eliminadas, huella de carbono, tiempo de onboarding).",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si marcaste ESG o Talento, ¿qué métrica no financiera debe a"
+      "placeholder": "Si marcaste ESG o Talento, ¿qué métrica no financiera debe acompañar al ROI..."
     }
   ],
   "webhook": {

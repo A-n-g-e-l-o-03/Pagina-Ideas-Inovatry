@@ -1,10 +1,10 @@
 {
   "phaseId": "12-iam",
-  "variant": "pam",
   "phaseName": "IAM — PAM",
   "phaseGroup": "validacion",
   "order": 12,
   "schemaVersion": 1,
+  "variant": "pam",
   "hero": {
     "title": "IAM — PAM",
     "description": "El IAM Document define quién puede hacer qué, sobre qué, cuándo y cómo se verifica. Es el control de acceso del MVP — no solo login, sino autorización fina, separación de deberes (SoD), provisioning y auditoría. Un IAM mal diseñado es el vector #1 de brechas.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p08",
+      "id": "p01",
       "sectionId": "pam",
       "label": "P8. ¿El MVP tiene accesos privilegiados (admin, root, break-glass, vendor)?",
       "type": "radio",
@@ -55,22 +55,22 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p02",
       "sectionId": "pam",
       "label": "P9. Si aplica PAM: ¿cómo se eleva privilegio (JIT con aprobación), cuánto dura, se graba la sesión, dónde se bóvedan credenciales y cómo funciona break-glass en emergencia?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica PAM: ¿cómo se eleva privilegio (JIT con aprobación"
+      "placeholder": "Si aplica PAM: ¿cómo se eleva privilegio (JIT con aprobación), cuánto dura, se..."
     },
     {
-      "id": "p10",
+      "id": "p03",
       "sectionId": "pam",
       "label": "P10. ¿Qué acceso, si se compromete, causa el mayor daño? ¿Qué mitigación reduce ese blast radius aunque el atacante obtenga credenciales válidas?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué acceso, si se compromete, causa el mayor daño? ¿Qué mit"
+      "placeholder": "¿Qué acceso, si se compromete, causa el mayor daño? ¿Qué mitigación reduce ese..."
     }
   ],
   "webhook": {

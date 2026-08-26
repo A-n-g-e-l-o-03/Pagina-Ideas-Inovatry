@@ -1,13 +1,13 @@
 {
   "phaseId": "01-idd",
-  "variant": "operativa",
   "phaseName": "IDD — Operativa",
   "phaseGroup": "idd",
   "order": 1,
   "schemaVersion": 1,
+  "variant": "operativa",
   "hero": {
     "title": "IDD — Operativa",
-    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo IDEA → IDD → PRD/BRD. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
     "badge": "3 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p09",
+      "id": "p01",
       "sectionId": "operativa",
       "label": "P9. ¿Cuál es el cuello de botella operativo que el MVP ataca?",
       "type": "radio",
@@ -61,16 +61,16 @@
       ]
     },
     {
-      "id": "p10",
+      "id": "p02",
       "sectionId": "operativa",
       "label": "P10. Mapeá el flujo actual (pasos, responsables, tiempos de espera vs. trabajo real). ¿Dónde se acumula el WIP y qué desperdicio Lean (sobreproducción, espera, transporte, sobreproceso) es más...",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Mapeá el flujo actual (pasos, responsables, tiempos de esper"
+      "placeholder": "Mapeá el flujo actual (pasos, responsables, tiempos de espera vs. trabajo..."
     },
     {
-      "id": "p11",
+      "id": "p03",
       "sectionId": "operativa",
       "label": "P11. ¿El MVP reduce WIP o solo acelera un paso aislado?",
       "type": "radio",

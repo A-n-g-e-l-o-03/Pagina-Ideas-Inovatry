@@ -1,10 +1,10 @@
 {
   "phaseId": "11-srd",
-  "variant": "infra",
   "phaseName": "SRD — Infra",
   "phaseGroup": "validacion",
   "order": 11,
   "schemaVersion": 1,
+  "variant": "infra",
   "hero": {
     "title": "SRD — Infra",
     "description": "El SRD (Security Requirements Document) traduce amenazas (TMD) en requisitos de seguridad verificables con owner, prioridad y test. Es el \"qué debe cumplir\" antes del \"cómo se implementa\" (SAD). Sin SRD, los controles son ad-hoc y no auditables.",
@@ -22,16 +22,16 @@
   },
   "fields": [
     {
-      "id": "p06",
+      "id": "p01",
       "sectionId": "infra",
       "label": "P6. Describí controles de infra para el MVP: network (segmentación, WAF, DDoS), host/container (hardening, CIS benchmarks), k8s (RBAC, network policies, PodSecurity), cloud (IAM, logging,...",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí controles de infra para el MVP: network (segmentaci"
+      "placeholder": "Describí controles de infra para el MVP: network (segmentación, WAF, DDoS),..."
     },
     {
-      "id": "p07",
+      "id": "p02",
       "sectionId": "infra",
       "label": "P7. ¿Cómo se gestionan secrets (API keys, certs, passwords)?",
       "type": "radio",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p03",
       "sectionId": "infra",
       "label": "P8. ¿Supply chain de artefactos (imágenes, pipelines) está asegurada?",
       "type": "radio",
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p04",
       "sectionId": "infra",
       "label": "P9. ¿Data protection (clasificación, cifrado, retención, borrado) está definido?",
       "type": "radio",

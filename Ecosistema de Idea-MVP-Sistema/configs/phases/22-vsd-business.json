@@ -1,13 +1,13 @@
 {
   "phaseId": "22-vsd",
-  "variant": "business",
   "phaseName": "VSD — Business",
   "phaseGroup": "validacion",
   "order": 22,
   "schemaVersion": 1,
+  "variant": "business",
   "hero": {
     "title": "VSD — Business",
-    "description": "El VSD (Validation Specification Document) es la validación final: demuestra con evidencia que el MVP cumple lo que prometió (RDD), que es técnicamente sólido y que satisface obligaciones externas. Es el gate antes de liberar. Se ejecuta en fase `verify` del SDD, cierra el ciclo de validación junto a ATD y STD.",
+    "description": "El VSD (Validation Specification Document) es la validación final: demuestra con evidencia que el MVP cumple lo que prometió (RDD), que es técnicamente sólido y que satisface obligaciones externas. Es el gate antes de liberar. Se ejecuta en fase verify del SDD, cierra el ciclo de validación junto a ATD y STD.",
     "badge": "4 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p09",
+      "id": "p01",
       "sectionId": "business",
       "label": "P9. ¿Validás el MVP con negocio/usuarios antes del go-live?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p10",
+      "id": "p02",
       "sectionId": "business",
       "label": "P10. Si aplica business validation: ¿qué métrica de negocio (activation, retention, NPS, revenue) valida cada user story? ¿Qué stakeholder hace sign-off y con qué evidencia (demo, beta, A/B)?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica business validation: ¿qué métrica de negocio (acti"
+      "placeholder": "Si aplica business validation: ¿qué métrica de negocio (activation, retention,..."
     },
     {
-      "id": "p11",
+      "id": "p03",
       "sectionId": "business",
       "label": "P11. ¿Qué criterio define que el MVP está \"validado\" y listo para liberar?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p12",
+      "id": "p04",
       "sectionId": "business",
       "label": "P12. ¿Qué validación, si falla, te obliga a no liberar aunque todo lo demás esté verde? ¿Está ese gate automatizado o depende de juicio humano?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué validación, si falla, te obliga a no liberar aunque tod"
+      "placeholder": "¿Qué validación, si falla, te obliga a no liberar aunque todo lo demás esté..."
     }
   ],
   "webhook": {

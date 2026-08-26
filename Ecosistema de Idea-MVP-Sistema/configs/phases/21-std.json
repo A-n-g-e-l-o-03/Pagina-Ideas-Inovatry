@@ -1,13 +1,13 @@
 {
   "phaseId": "21-std",
-  "variant": "e2e",
   "phaseName": "STD — E2E",
   "phaseGroup": "validacion",
   "order": 21,
   "schemaVersion": 1,
+  "variant": "e2e",
   "hero": {
     "title": "STD — E2E",
-    "description": "El STD (System Test Document) prueba el sistema completo integrado, no componentes aislados. Valida que el MVP funciona end-to-end, con sus dependencias reales, bajo condiciones de producción. Se ejecuta en fase `verify` del SDD, después de ATD y antes de VSD.",
+    "description": "El STD (System Test Document) prueba el sistema completo integrado, no componentes aislados. Valida que el MVP funciona end-to-end, con sus dependencias reales, bajo condiciones de producción. Se ejecuta en fase verify del SDD, después de ATD y antes de VSD.",
     "badge": "4 preguntas"
   },
   "form": {
@@ -28,7 +28,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Listá los 3-5 critical journeys del MVP (ej: registro→onboar"
+      "placeholder": "Listá los 3-5 critical journeys del MVP (ej: registro→onboarding→primera..."
     },
     {
       "id": "p02",

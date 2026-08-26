@@ -1,10 +1,10 @@
 {
   "phaseId": "16-aid",
-  "variant": "code-agent",
   "phaseName": "AID — Code Agent",
   "phaseGroup": "mcp",
   "order": 16,
   "schemaVersion": 1,
+  "variant": "code-agent",
   "hero": {
     "title": "AID — Code Agent",
     "description": "El AID (AI Instruction Document) son las instrucciones operativas que un agente de IA ejecuta para hacer su trabajo. Si el AGD es el \"qué\" (diseño del agente) y el AAD es el \"cómo se orquestan\", el AID es el manual paso a paso con workflow, estándares, gates, restricciones y manejo de incertidumbre. Es lo que hace que un agente sea predecible y auditable, no un generador aleatorio.",
@@ -28,7 +28,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Escribí el workflow paso a paso del Code Agent: ¿qué lee pri"
+      "placeholder": "Escribí el workflow paso a paso del Code Agent: ¿qué lee primero, qué genera,..."
     },
     {
       "id": "p02",

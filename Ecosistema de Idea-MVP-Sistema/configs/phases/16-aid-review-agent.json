@@ -1,10 +1,10 @@
 {
   "phaseId": "16-aid",
-  "variant": "review-agent",
   "phaseName": "AID — Review Agent",
   "phaseGroup": "mcp",
   "order": 16,
   "schemaVersion": 1,
+  "variant": "review-agent",
   "hero": {
     "title": "AID — Review Agent",
     "description": "El AID (AI Instruction Document) son las instrucciones operativas que un agente de IA ejecuta para hacer su trabajo. Si el AGD es el \"qué\" (diseño del agente) y el AAD es el \"cómo se orquestan\", el AID es el manual paso a paso con workflow, estándares, gates, restricciones y manejo de incertidumbre. Es lo que hace que un agente sea predecible y auditable, no un generador aleatorio.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p09",
+      "id": "p01",
       "sectionId": "review_agent",
       "label": "P9. ¿Necesitás instrucciones para un Review Agent?",
       "type": "radio",
@@ -55,22 +55,22 @@
       ]
     },
     {
-      "id": "p10",
+      "id": "p02",
       "sectionId": "review_agent",
       "label": "P10. Si aplica Review Agent: ¿qué dimensiones revisa (seguridad, performance, arquitectura, mantenibilidad), cómo clasifica severidad, cuándo hace auto-fix vs. solo reporta y cómo aprende de...",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica Review Agent: ¿qué dimensiones revisa (seguridad, "
+      "placeholder": "Si aplica Review Agent: ¿qué dimensiones revisa (seguridad, performance,..."
     },
     {
-      "id": "p11",
+      "id": "p03",
       "sectionId": "review_agent",
       "label": "P11. ¿Qué instrucción, si el agente la ignora, causa el mayor daño? ¿Cómo verificás que la cumple (test, gate, auditoría)?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué instrucción, si el agente la ignora, causa el mayor dañ"
+      "placeholder": "¿Qué instrucción, si el agente la ignora, causa el mayor daño? ¿Cómo verificás..."
     }
   ],
   "webhook": {

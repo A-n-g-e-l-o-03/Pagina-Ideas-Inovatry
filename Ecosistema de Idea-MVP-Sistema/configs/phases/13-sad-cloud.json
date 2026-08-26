@@ -1,10 +1,10 @@
 {
   "phaseId": "13-sad",
-  "variant": "cloud",
   "phaseName": "SAD — Cloud Native",
   "phaseGroup": "validacion",
   "order": 13,
   "schemaVersion": 1,
+  "variant": "cloud",
   "hero": {
     "title": "SAD — Cloud Native",
     "description": "El SAD (Security Architecture Document) es la arquitectura de seguridad del MVP: cómo los controles (SRD) y el modelo de amenazas (TMD) se materializan en infraestructura, identidad y flujos de datos. Es el plano que integra IAM, network, data y appsec en un todo coherente. Sin SAD, los controles son piezas sueltas.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p04",
+      "id": "p01",
       "sectionId": "cloud",
       "label": "P4. ¿Tenés claro el modelo de responsabilidad compartida con el cloud provider?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p05",
+      "id": "p02",
       "sectionId": "cloud",
       "label": "P5. Describí controles cloud native del MVP: k8s (PodSecurity, network policies, RBAC), serverless (least privilege por función), managed services (encripción, logging, IAM), supply chain y...",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí controles cloud native del MVP: k8s (PodSecurity, n"
+      "placeholder": "Describí controles cloud native del MVP: k8s (PodSecurity, network policies,..."
     },
     {
-      "id": "p06",
+      "id": "p03",
       "sectionId": "cloud",
       "label": "P6. ¿Hay detection & response en runtime (no solo prevención)?",
       "type": "radio",

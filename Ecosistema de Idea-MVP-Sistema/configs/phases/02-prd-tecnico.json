@@ -1,10 +1,10 @@
 {
   "phaseId": "02-prd",
-  "variant": "tecnico",
   "phaseName": "PRD — Técnico",
   "phaseGroup": "rdd",
   "order": 2,
   "schemaVersion": 1,
+  "variant": "tecnico",
   "hero": {
     "title": "PRD — Técnico",
     "description": "El PRD (Product Requirements Document) traduce la idea validada en el IDD a un producto gestionable. Responde: ¿qué vamos a construir, para quién, por qué lo elegirían y cómo sabemos que funciona? Se genera siempre tras el IDD y antes del RDD, y alimenta directamente al diseño de requisitos. Cada lente mira el mismo producto desde un ángulo distinto; juntos evitan que el MVP sea deseable pero inviable, o viable pero nadie lo quiera.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p15",
+      "id": "p01",
       "sectionId": "tecnico",
       "label": "P15. ¿Cuál es la factibilidad técnica del MVP con el equipo/stack actual?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p16",
+      "id": "p02",
       "sectionId": "tecnico",
       "label": "P16. Describí la arquitectura candidata en 1 párrafo: estilo (monolito modular, microservicios, serverless), stack principal, integraciones externas y mayor riesgo técnico.",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí la arquitectura candidata en 1 párrafo: estilo (mon"
+      "placeholder": "Describí la arquitectura candidata en 1 párrafo: estilo (monolito modular,..."
     },
     {
-      "id": "p17",
+      "id": "p03",
       "sectionId": "tecnico",
       "label": "P17. ¿Qué deuda técnica asume el MVP para llegar rápido?",
       "type": "radio",
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "id": "p18",
+      "id": "p04",
       "sectionId": "tecnico",
       "label": "P18. ¿Cuál es la estimación t-shirt del MVP y qué nivel de confianza tenés?",
       "type": "radio",

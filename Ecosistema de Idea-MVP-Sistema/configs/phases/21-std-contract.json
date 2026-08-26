@@ -1,13 +1,13 @@
 {
   "phaseId": "21-std",
-  "variant": "contract",
   "phaseName": "STD — Contract",
   "phaseGroup": "validacion",
   "order": 21,
   "schemaVersion": 1,
+  "variant": "contract",
   "hero": {
     "title": "STD — Contract",
-    "description": "El STD (System Test Document) prueba el sistema completo integrado, no componentes aislados. Valida que el MVP funciona end-to-end, con sus dependencias reales, bajo condiciones de producción. Se ejecuta en fase `verify` del SDD, después de ATD y antes de VSD.",
+    "description": "El STD (System Test Document) prueba el sistema completo integrado, no componentes aislados. Valida que el MVP funciona end-to-end, con sus dependencias reales, bajo condiciones de producción. Se ejecuta en fase verify del SDD, después de ATD y antes de VSD.",
     "badge": "2 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p05",
+      "id": "p01",
       "sectionId": "contract",
       "label": "P5. ¿Tenés contract tests entre el MVP y sus dependencias (APIs externas, eventos, DB)?",
       "type": "radio",
@@ -55,13 +55,13 @@
       ]
     },
     {
-      "id": "p06",
+      "id": "p02",
       "sectionId": "contract",
       "label": "P6. Para la integración más riesgosa: ¿quién es consumer/provider, qué contrato define, qué pasa si el provider cambia el schema sin avisar y cómo lo detectás antes de prod?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Para la integración más riesgosa: ¿quién es consumer/provide"
+      "placeholder": "Para la integración más riesgosa: ¿quién es consumer/provider, qué contrato..."
     }
   ],
   "webhook": {

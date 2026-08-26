@@ -1,13 +1,13 @@
 {
   "phaseId": "17-tasks",
-  "variant": "sprint",
   "phaseName": "Tasks — Sprint",
   "phaseGroup": "mcp",
   "order": 17,
   "schemaVersion": 1,
+  "variant": "sprint",
   "hero": {
     "title": "Tasks — Sprint",
-    "description": "El Tasks Document descompone el diseño (Design) en trabajo ejecutable con estimación, dependencias, criterios de hecho (DoD/DoR) y mitigación de riesgos. Se genera en fase `tasks` del SDD, tras Design y antes de Apply. Sin Tasks, el MVP es una lista de deseos sin orden ni estimación.",
+    "description": "El Tasks Document descompone el diseño (Design) en trabajo ejecutable con estimación, dependencias, criterios de hecho (DoD/DoR) y mitigación de riesgos. Se genera en fase tasks del SDD, tras Design y antes de Apply. Sin Tasks, el MVP es una lista de deseos sin orden ni estimación.",
     "badge": "5 preguntas"
   },
   "form": {
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Descomponé el MVP en 8-12 stories con: título, criterio de a"
+      "placeholder": "Descomponé el MVP en 8-12 stories con: título, criterio de aceptación,..."
     },
     {
       "id": "p03",
@@ -136,7 +136,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué spike/POC necesita el MVP antes de comprometerse a un s"
+      "placeholder": "¿Qué spike/POC necesita el MVP antes de comprometerse a un sprint? ¿Qué..."
     }
   ],
   "webhook": {

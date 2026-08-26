@@ -1,13 +1,13 @@
 {
   "phaseId": "19-tdd",
-  "variant": "atdd",
   "phaseName": "TDD — ATDD/BDD",
   "phaseGroup": "mcp",
   "order": 19,
   "schemaVersion": 1,
+  "variant": "atdd",
   "hero": {
     "title": "TDD — ATDD/BDD",
-    "description": "El TDD Document define cómo se escribe código guiado por tests en el MVP. No es \"testear después\" — es diseñar a través de tests. El TDD correcto produce código desacoplado, testeable y con regresión automática. Se ejecuta en fase `apply` del SDD.",
+    "description": "El TDD Document define cómo se escribe código guiado por tests en el MVP. No es \"testear después\" — es diseñar a través de tests. El TDD correcto produce código desacoplado, testeable y con regresión automática. Se ejecuta en fase apply del SDD.",
     "badge": "3 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p06",
+      "id": "p01",
       "sectionId": "atdd",
       "label": "P6. ¿El MVP usa ATDD/BDD (tests de aceptación que guían el desarrollo)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p07",
+      "id": "p02",
       "sectionId": "atdd",
       "label": "P7. Escribí un escenario Gherkin para el flujo más crítico del MVP: `Feature / Scenario / Given / When / Then`. ¿Es automatizable directamente?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Escribí un escenario Gherkin para el flujo más crítico del M"
+      "placeholder": "Escribí un escenario Gherkin para el flujo más crítico del MVP: `Feature /..."
     },
     {
-      "id": "p08",
+      "id": "p03",
       "sectionId": "atdd",
       "label": "P8. ¿Los escenarios Gherkin son living documentation (se ejecutan en CI y fallan si el sistema cambia)?",
       "type": "radio",

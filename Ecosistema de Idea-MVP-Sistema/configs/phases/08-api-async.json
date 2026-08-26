@@ -1,10 +1,10 @@
 {
   "phaseId": "08-api",
-  "variant": "async",
   "phaseName": "API — Async/Event-Driven",
   "phaseGroup": "tecnico",
   "order": 8,
   "schemaVersion": 1,
+  "variant": "async",
   "hero": {
     "title": "API — Async/Event-Driven",
     "description": "El API Design Document define el contrato entre el MVP y sus consumidores (frontend, otros servicios, terceros). Es un contrato versionado y testeable: romperlo sin avisar es romper a tus clientes. Se genera en fase design SDD y alimenta implementación y contract testing.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p09",
+      "id": "p01",
       "sectionId": "async",
       "label": "P9. ¿El MVP emite o consume eventos/comandos async?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p10",
+      "id": "p02",
       "sectionId": "async",
       "label": "P10. Si aplica async: listá topics/eventos clave con schema (Avro/JSON Schema), productor, consumidores, garantía de entrega (at-least-once / exactly-once), idempotencia y dead letter policy.",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica async: listá topics/eventos clave con schema (Avro"
+      "placeholder": "Si aplica async: listá topics/eventos clave con schema (Avro/JSON Schema),..."
     },
     {
-      "id": "p11",
+      "id": "p03",
       "sectionId": "async",
       "label": "P11. ¿Los schemas de eventos están versionados y con compatibilidad (backward/forward)?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p12",
+      "id": "p04",
       "sectionId": "async",
       "label": "P12. ¿Qué pasa si un consumidor está caído 2 horas y se pierden eventos? ¿Hay replay, outbox pattern o event store?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué pasa si un consumidor está caído 2 horas y se pierden e"
+      "placeholder": "¿Qué pasa si un consumidor está caído 2 horas y se pierden eventos? ¿Hay..."
     }
   ],
   "webhook": {

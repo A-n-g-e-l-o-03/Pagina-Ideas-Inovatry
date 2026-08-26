@@ -1,10 +1,10 @@
 {
   "phaseId": "02-prd",
-  "variant": "producto",
   "phaseName": "PRD — Producto",
   "phaseGroup": "rdd",
   "order": 2,
   "schemaVersion": 1,
+  "variant": "producto",
   "hero": {
     "title": "PRD — Producto",
     "description": "El PRD (Product Requirements Document) traduce la idea validada en el IDD a un producto gestionable. Responde: ¿qué vamos a construir, para quién, por qué lo elegirían y cómo sabemos que funciona? Se genera siempre tras el IDD y antes del RDD, y alimenta directamente al diseño de requisitos. Cada lente mira el mismo producto desde un ángulo distinto; juntos evitan que el MVP sea deseable pero inviable, o viable pero nadie lo quiera.",
@@ -22,16 +22,16 @@
   },
   "fields": [
     {
-      "id": "p07",
+      "id": "p01",
       "sectionId": "producto",
       "label": "P7. Listá todas las capacidades candidatas del MVP y priorizalas con un framework (RICE, ICE, MoSCoW o Kano). ¿Cuál es el corte Must vs. Should vs. Won't para la primera entrega?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Listá todas las capacidades candidatas del MVP y priorizalas"
+      "placeholder": "Listá todas las capacidades candidatas del MVP y priorizalas con un framework..."
     },
     {
-      "id": "p08",
+      "id": "p02",
       "sectionId": "producto",
       "label": "P8. ¿Qué métrica define éxito del MVP a 30/60/90 días?",
       "type": "radio",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p03",
       "sectionId": "producto",
       "label": "P9. ¿Cómo manejás feature creep / deuda UX cuando el roadmap presiona?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p10",
+      "id": "p04",
       "sectionId": "producto",
       "label": "P10. Describí el roadmap del MVP en 3 horizontes: ¿qué entra en las próximas 4 semanas (MVP), qué en 8-12 semanas (v1), qué queda explícitamente fuera?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí el roadmap del MVP en 3 horizontes: ¿qué entra en l"
+      "placeholder": "Describí el roadmap del MVP en 3 horizontes: ¿qué entra en las próximas 4..."
     }
   ],
   "webhook": {

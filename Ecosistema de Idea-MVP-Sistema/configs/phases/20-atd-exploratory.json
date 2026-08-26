@@ -1,13 +1,13 @@
 {
   "phaseId": "20-atd",
-  "variant": "exploratory",
   "phaseName": "ATD — Exploratory",
   "phaseGroup": "validacion",
   "order": 20,
   "schemaVersion": 1,
+  "variant": "exploratory",
   "hero": {
     "title": "ATD — Exploratory",
-    "description": "El ATD (Acceptance Test Definition) define cómo se demuestra que el MVP hace lo que promete, en lenguaje que negocio y tecnología comparten. Es la validación de aceptación: si los ATD pasan, el MVP es aceptable para el usuario. Se ejecuta en fase `verify` del SDD.",
+    "description": "El ATD (Acceptance Test Definition) define cómo se demuestra que el MVP hace lo que promete, en lenguaje que negocio y tecnología comparten. Es la validación de aceptación: si los ATD pasan, el MVP es aceptable para el usuario. Se ejecuta en fase verify del SDD.",
     "badge": "3 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p05",
+      "id": "p01",
       "sectionId": "exploratory",
       "label": "P5. ¿Hacés exploratory testing además de automatizado?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p06",
+      "id": "p02",
       "sectionId": "exploratory",
       "label": "P6. Definí un charter de exploratory para el MVP: misión, alcance, heurística (HICCUPPS/SFDPOT), datos de prueba y criterio de cierre. ¿Qué bug crítico solo aparecería explorando?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Definí un charter de exploratory para el MVP: misión, alcanc"
+      "placeholder": "Definí un charter de exploratory para el MVP: misión, alcance, heurística..."
     },
     {
-      "id": "p07",
+      "id": "p03",
       "sectionId": "exploratory",
       "label": "P7. ¿Cómo se hace handoff de hallazgos exploratory a automatización?",
       "type": "radio",

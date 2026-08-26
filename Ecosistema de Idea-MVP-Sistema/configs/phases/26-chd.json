@@ -1,10 +1,10 @@
 {
   "phaseId": "26-chd",
-  "variant": "estandar",
   "phaseName": "CHD — Estándar",
   "phaseGroup": "tecnico",
   "order": 26,
   "schemaVersion": 1,
+  "variant": "estandar",
   "hero": {
     "title": "CHD — Estándar",
     "description": "El CHD (Change Design Document) diseña cómo se gestionan cambios en el MVP sin romper producción ni auditoría. Todo cambio —feature, fix, config, infra— pasa por diseño, impacto, aprobación, implementación, testing, rollback y comunicación. Sin CHD, los cambios son \"deploy y rezo\".",
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Para el próximo cambio grande del MVP: ¿qué impacto tiene (q"
+      "placeholder": "Para el próximo cambio grande del MVP: ¿qué impacto tiene (qué sistemas/equipos..."
     },
     {
       "id": "p03",

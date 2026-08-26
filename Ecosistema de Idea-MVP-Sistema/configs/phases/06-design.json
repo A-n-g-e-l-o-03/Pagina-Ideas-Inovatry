@@ -1,13 +1,13 @@
 {
   "phaseId": "06-design",
-  "variant": "arquitectura",
   "phaseName": "Design — Arquitectura",
   "phaseGroup": "diseno",
   "order": 6,
   "schemaVersion": 1,
+  "variant": "arquitectura",
   "hero": {
     "title": "Design — Arquitectura",
-    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase `design` del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
+    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase design del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
     "badge": "5 preguntas"
   },
   "form": {
@@ -67,7 +67,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Priorizá los quality attributes ISO 25010 para el MVP (perfo"
+      "placeholder": "Priorizá los quality attributes ISO 25010 para el MVP (performance,..."
     },
     {
       "id": "p03",
@@ -109,7 +109,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Mapeá bounded contexts a dominios de negocio: ¿cuántos conte"
+      "placeholder": "Mapeá bounded contexts a dominios de negocio: ¿cuántos contextos, cómo se..."
     },
     {
       "id": "p05",

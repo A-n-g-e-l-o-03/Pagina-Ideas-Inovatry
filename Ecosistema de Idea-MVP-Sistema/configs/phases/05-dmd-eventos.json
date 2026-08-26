@@ -1,10 +1,10 @@
 {
   "phaseId": "05-dmd",
-  "variant": "eventos",
   "phaseName": "DMD — Eventos/Event Sourcing",
   "phaseGroup": "diseno",
   "order": 5,
   "schemaVersion": 1,
+  "variant": "eventos",
   "hero": {
     "title": "DMD — Eventos/Event Sourcing",
     "description": "El DMD (Domain Model Document) modela el corazón del negocio — entidades, reglas invariantes y eventos— con independencia de la tecnología. Es donde DDD cobra vida: si el RDD dice qué hace el sistema, el DMD dice cómo se estructura el conocimiento del dominio para que el sistema sea correcto, expresivo y evolutivo.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p07",
+      "id": "p01",
       "sectionId": "eventos",
       "label": "P7. ¿El MVP necesita event sourcing (historia completa, replay, auditoría temporal)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p02",
       "sectionId": "eventos",
       "label": "P8. Si aplica event sourcing: ¿cuáles son los 5-7 domain events fundacionales (ej: `PedidoCreado`, `PagoConfirmado`, `EnvioDespachado`)? ¿Qué projections/read models derivan de ellos?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica event sourcing: ¿cuáles son los 5-7 domain events "
+      "placeholder": "Si aplica event sourcing: ¿cuáles son los 5-7 domain events fundacionales (ej:..."
     },
     {
-      "id": "p09",
+      "id": "p03",
       "sectionId": "eventos",
       "label": "P9. ¿Cómo manejás consistencia entre aggregates/servicios?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p10",
+      "id": "p04",
       "sectionId": "eventos",
       "label": "P10. ¿Qué proceso de negocio cruza múltiples aggregates y requiere saga/process manager? Describí el flujo de compensación si un paso falla.",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué proceso de negocio cruza múltiples aggregates y requier"
+      "placeholder": "¿Qué proceso de negocio cruza múltiples aggregates y requiere saga/process..."
     }
   ],
   "webhook": {

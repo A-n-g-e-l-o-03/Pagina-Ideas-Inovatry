@@ -1,10 +1,10 @@
 {
   "phaseId": "27-ced",
-  "variant": "tecnico",
   "phaseName": "CED — Técnico",
   "phaseGroup": "marketing",
   "order": 27,
   "schemaVersion": 1,
+  "variant": "tecnico",
   "hero": {
     "title": "CED — Técnico",
     "description": "El CED (Cognitive Explanation Document) es la capa de explicación del MVP: traduce lo técnico a cada audiencia sin perder precisión ni generar falsa simplicidad. Es transversal a todo el ciclo — cada documento técnico necesita su explicación cognitiva. Sin CED, el conocimiento queda atrapado en el equipo técnico.",
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Explicá el trade-off técnico más importante del MVP (ej: con"
+      "placeholder": "Explicá el trade-off técnico más importante del MVP (ej: consistencia vs...."
     },
     {
       "id": "p03",

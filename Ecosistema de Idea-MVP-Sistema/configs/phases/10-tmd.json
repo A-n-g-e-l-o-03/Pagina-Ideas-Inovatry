@@ -1,10 +1,10 @@
 {
   "phaseId": "10-tmd",
-  "variant": "stride",
   "phaseName": "TMD — STRIDE",
   "phaseGroup": "validacion",
   "order": 10,
   "schemaVersion": 1,
+  "variant": "stride",
   "hero": {
     "title": "TMD — STRIDE",
     "description": "El TMD (Threat Model Document) responde: ¿cómo puede ser atacado el MVP y qué hacemos al respecto? Es el análisis estructurado de amenazas antes de que el atacante lo haga por vos. Se genera en fase design SDD y alimenta a SRD, IAM y SAD. Sin TMD, la seguridad es reactiva y anecdótica.",
@@ -28,7 +28,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Dibujá el DFD (Data Flow Diagram) del MVP: actores, procesos"
+      "placeholder": "Dibujá el DFD (Data Flow Diagram) del MVP: actores, procesos, data stores,..."
     },
     {
       "id": "p02",
@@ -82,7 +82,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Para la categoría que marcaste arriba, describí 2 amenazas c"
+      "placeholder": "Para la categoría que marcaste arriba, describí 2 amenazas concretas con:..."
     },
     {
       "id": "p04",

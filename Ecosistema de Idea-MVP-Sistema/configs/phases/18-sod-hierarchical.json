@@ -1,10 +1,10 @@
 {
   "phaseId": "18-sod",
-  "variant": "hierarchical",
   "phaseName": "SOD — Hierarchical",
   "phaseGroup": "mcp",
   "order": 18,
   "schemaVersion": 1,
+  "variant": "hierarchical",
   "hero": {
     "title": "SOD — Hierarchical",
     "description": "El SOD (Software Orchestration Document) orquesta cómo se construye, testea, despliega y verifica el MVP de forma automatizada y trazable. Es el \"director de orquesta\" del ciclo SDD: define stages, agentes, gates, rollback y métricas DORA. Sin SOD, el delivery es manual, frágil y no repetible.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p07",
+      "id": "p01",
       "sectionId": "hierarchical",
       "label": "P7. ¿Necesitás orquestación jerárquica (orchestrator → managers → workers)?",
       "type": "radio",
@@ -55,22 +55,22 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p02",
       "sectionId": "hierarchical",
       "label": "P8. Si aplica jerarquía: ¿qué delega cada nivel, cómo escala un fallo y cómo se controla budget?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica jerarquía: ¿qué delega cada nivel, cómo escala un "
+      "placeholder": "Si aplica jerarquía: ¿qué delega cada nivel, cómo escala un fallo y cómo se..."
     },
     {
-      "id": "p09",
+      "id": "p03",
       "sectionId": "hierarchical",
       "label": "P9. ¿Qué stage del pipeline, si falla silenciosamente, deja pasar un defecto crítico a producción? ¿Cómo lo detectarías?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué stage del pipeline, si falla silenciosamente, deja pasa"
+      "placeholder": "¿Qué stage del pipeline, si falla silenciosamente, deja pasar un defecto..."
     }
   ],
   "webhook": {

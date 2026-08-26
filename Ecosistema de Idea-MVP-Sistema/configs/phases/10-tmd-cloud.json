@@ -1,10 +1,10 @@
 {
   "phaseId": "10-tmd",
-  "variant": "cloud",
   "phaseName": "TMD — Cloud/Kubernetes",
   "phaseGroup": "validacion",
   "order": 10,
   "schemaVersion": 1,
+  "variant": "cloud",
   "hero": {
     "title": "TMD — Cloud/Kubernetes",
     "description": "El TMD (Threat Model Document) responde: ¿cómo puede ser atacado el MVP y qué hacemos al respecto? Es el análisis estructurado de amenazas antes de que el atacante lo haga por vos. Se genera en fase design SDD y alimenta a SRD, IAM y SAD. Sin TMD, la seguridad es reactiva y anecdótica.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p09",
+      "id": "p01",
       "sectionId": "cloud",
       "label": "P9. ¿El MVP corre en cloud/k8s/serverless con modelo de responsabilidad compartida?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p10",
+      "id": "p02",
       "sectionId": "cloud",
       "label": "P10. Si aplica cloud/k8s: ¿qué amenazas específicas de la capa cloud (IAM misconfig, supply chain de imágenes, secrets en env vars, network policies, runtime) están en el TMD?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica cloud/k8s: ¿qué amenazas específicas de la capa cl"
+      "placeholder": "Si aplica cloud/k8s: ¿qué amenazas específicas de la capa cloud (IAM misconfig,..."
     },
     {
-      "id": "p11",
+      "id": "p03",
       "sectionId": "cloud",
       "label": "P11. ¿El TMD se revisa en cada cambio de arquitectura o es un one-shot?",
       "type": "radio",

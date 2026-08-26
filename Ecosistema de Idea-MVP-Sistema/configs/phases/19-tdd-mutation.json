@@ -1,13 +1,13 @@
 {
   "phaseId": "19-tdd",
-  "variant": "mutation",
   "phaseName": "TDD — Mutation Testing",
   "phaseGroup": "mcp",
   "order": 19,
   "schemaVersion": 1,
+  "variant": "mutation",
   "hero": {
     "title": "TDD — Mutation Testing",
-    "description": "El TDD Document define cómo se escribe código guiado por tests en el MVP. No es \"testear después\" — es diseñar a través de tests. El TDD correcto produce código desacoplado, testeable y con regresión automática. Se ejecuta en fase `apply` del SDD.",
+    "description": "El TDD Document define cómo se escribe código guiado por tests en el MVP. No es \"testear después\" — es diseñar a través de tests. El TDD correcto produce código desacoplado, testeable y con regresión automática. Se ejecuta en fase apply del SDD.",
     "badge": "4 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p09",
+      "id": "p01",
       "sectionId": "mutation",
       "label": "P9. ¿El MVP usa mutation testing para medir calidad real de los tests?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p10",
+      "id": "p02",
       "sectionId": "mutation",
       "label": "P10. Si aplica mutation: ¿qué mutation score exige el MVP, qué mutadores aplican y cómo manejás mutantes equivalentes?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica mutation: ¿qué mutation score exige el MVP, qué mu"
+      "placeholder": "Si aplica mutation: ¿qué mutation score exige el MVP, qué mutadores aplican y..."
     },
     {
-      "id": "p11",
+      "id": "p03",
       "sectionId": "mutation",
       "label": "P11. ¿Qué le dirías a alguien que dice \"TDD ralentiza el MVP\"?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p12",
+      "id": "p04",
       "sectionId": "mutation",
       "label": "P12. ¿Qué parte del MVP NO harías con TDD y por qué? (Ej: spike exploratorio, UI visual, integración con vendor sin contrato).",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué parte del MVP NO harías con TDD y por qué? (Ej: spike e"
+      "placeholder": "¿Qué parte del MVP NO harías con TDD y por qué? (Ej: spike exploratorio, UI..."
     }
   ],
   "webhook": {

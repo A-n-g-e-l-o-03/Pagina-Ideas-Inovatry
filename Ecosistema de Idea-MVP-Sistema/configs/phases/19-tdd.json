@@ -1,13 +1,13 @@
 {
   "phaseId": "19-tdd",
-  "variant": "classic",
   "phaseName": "TDD — Clásico",
   "phaseGroup": "mcp",
   "order": 19,
   "schemaVersion": 1,
+  "variant": "classic",
   "hero": {
     "title": "TDD — Clásico",
-    "description": "El TDD Document define cómo se escribe código guiado por tests en el MVP. No es \"testear después\" — es diseñar a través de tests. El TDD correcto produce código desacoplado, testeable y con regresión automática. Se ejecuta en fase `apply` del SDD.",
+    "description": "El TDD Document define cómo se escribe código guiado por tests en el MVP. No es \"testear después\" — es diseñar a través de tests. El TDD correcto produce código desacoplado, testeable y con regresión automática. Se ejecuta en fase apply del SDD.",
     "badge": "5 preguntas"
   },
   "form": {
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Para el aggregate/componente más crítico del MVP: ¿cuál serí"
+      "placeholder": "Para el aggregate/componente más crítico del MVP: ¿cuál sería el primer test..."
     },
     {
       "id": "p03",

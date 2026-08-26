@@ -1,13 +1,13 @@
 {
   "phaseId": "01-idd",
-  "variant": "humana",
   "phaseName": "IDD — Humana",
   "phaseGroup": "idd",
   "order": 1,
   "schemaVersion": 1,
+  "variant": "humana",
   "hero": {
     "title": "IDD — Humana",
-    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo IDEA → IDD → PRD/BRD. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
     "badge": "3 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p12",
+      "id": "p01",
       "sectionId": "humana",
       "label": "P12. ¿Cuántos context-switches por día sufre el rol que más se beneficiaría del MVP?",
       "type": "radio",
@@ -61,16 +61,16 @@
       ]
     },
     {
-      "id": "p13",
+      "id": "p02",
       "sectionId": "humana",
       "label": "P13. ¿Qué carga cognitiva elimina el MVP (recordar, copiar/pegar, consolidar, decidir sin datos)? ¿Cuántos bloques de foco profundo (90+ min sin interrupción) se recuperarían por semana?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué carga cognitiva elimina el MVP (recordar, copiar/pegar,"
+      "placeholder": "¿Qué carga cognitiva elimina el MVP (recordar, copiar/pegar, consolidar,..."
     },
     {
-      "id": "p14",
+      "id": "p03",
       "sectionId": "humana",
       "label": "P14. ¿El MVP aumenta o reduce la energía/sostenibilidad del equipo a 6 meses?",
       "type": "radio",

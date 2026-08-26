@@ -1,10 +1,10 @@
 {
   "phaseId": "02-prd",
-  "variant": "negocio",
   "phaseName": "PRD — Negocio",
   "phaseGroup": "rdd",
   "order": 2,
   "schemaVersion": 1,
+  "variant": "negocio",
   "hero": {
     "title": "PRD — Negocio",
     "description": "El PRD (Product Requirements Document) traduce la idea validada en el IDD a un producto gestionable. Responde: ¿qué vamos a construir, para quién, por qué lo elegirían y cómo sabemos que funciona? Se genera siempre tras el IDD y antes del RDD, y alimenta directamente al diseño de requisitos. Cada lente mira el mismo producto desde un ángulo distinto; juntos evitan que el MVP sea deseable pero inviable, o viable pero nadie lo quiera.",
@@ -22,16 +22,16 @@
   },
   "fields": [
     {
-      "id": "p11",
+      "id": "p01",
       "sectionId": "negocio",
       "label": "P11. ¿Cuál es el modelo de monetización o captura de valor del MVP? (Venta directa, ahorro interno, upsell, retención, datos). ¿Cuál es la unidad económica (por usuario, por transacción, por asiento)?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Cuál es el modelo de monetización o captura de valor del MV"
+      "placeholder": "¿Cuál es el modelo de monetización o captura de valor del MVP? (Venta directa,..."
     },
     {
-      "id": "p12",
+      "id": "p02",
       "sectionId": "negocio",
       "label": "P12. ¿Tenés dimensionamiento TAM/SAM/SOM o equivalente interno?",
       "type": "radio",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "id": "p13",
+      "id": "p03",
       "sectionId": "negocio",
       "label": "P13. ¿Qué pricing o costo interno tiene el MVP vs. alternativas (competidor, workaround, no hacer nada)?",
       "type": "radio",
@@ -103,13 +103,13 @@
       ]
     },
     {
-      "id": "p14",
+      "id": "p04",
       "sectionId": "negocio",
       "label": "P14. ¿Cuál es el supuesto de negocio más riesgoso? Si ese supuesto es falso, ¿el MVP pierde sentido? ¿Cómo lo testearías barato (fake door, landing test, concierge)?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Cuál es el supuesto de negocio más riesgoso? Si ese supuest"
+      "placeholder": "¿Cuál es el supuesto de negocio más riesgoso? Si ese supuesto es falso, ¿el MVP..."
     }
   ],
   "webhook": {

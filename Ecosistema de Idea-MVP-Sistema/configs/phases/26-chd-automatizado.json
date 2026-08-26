@@ -1,10 +1,10 @@
 {
   "phaseId": "26-chd",
-  "variant": "automatizado",
   "phaseName": "CHD — Automatizado",
   "phaseGroup": "tecnico",
   "order": 26,
   "schemaVersion": 1,
+  "variant": "automatizado",
   "hero": {
     "title": "CHD — Automatizado",
     "description": "El CHD (Change Design Document) diseña cómo se gestionan cambios en el MVP sin romper producción ni auditoría. Todo cambio —feature, fix, config, infra— pasa por diseño, impacto, aprobación, implementación, testing, rollback y comunicación. Sin CHD, los cambios son \"deploy y rezo\".",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p08",
+      "id": "p01",
       "sectionId": "automatizado",
       "label": "P8. ¿Tenés cambios automatizados (Dependabot, Renovate, config drift, policy enforcement)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p02",
       "sectionId": "automatizado",
       "label": "P9. Si aplica automatizado: ¿qué cambios se auto-aprueban, qué policy los bloquea, cómo se detecta config drift y qué self-healing existe?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica automatizado: ¿qué cambios se auto-aprueban, qué p"
+      "placeholder": "Si aplica automatizado: ¿qué cambios se auto-aprueban, qué policy los bloquea,..."
     },
     {
-      "id": "p10",
+      "id": "p03",
       "sectionId": "automatizado",
       "label": "P10. ¿Cuál es el cambio más riesgoso que el MVP enfrentará en los próximos 3 meses?",
       "type": "radio",
@@ -103,13 +103,13 @@
       ]
     },
     {
-      "id": "p11",
+      "id": "p04",
       "sectionId": "automatizado",
       "label": "P11. Si ese cambio riesgoso sale mal, ¿cuál es el blast radius, cuánto tarda el rollback y cómo avisas a usuarios/clientes?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si ese cambio riesgoso sale mal, ¿cuál es el blast radius, c"
+      "placeholder": "Si ese cambio riesgoso sale mal, ¿cuál es el blast radius, cuánto tarda el..."
     }
   ],
   "webhook": {

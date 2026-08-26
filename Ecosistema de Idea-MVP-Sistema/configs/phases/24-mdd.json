@@ -1,10 +1,10 @@
 {
   "phaseId": "24-mdd",
-  "variant": "sre",
   "phaseName": "MDD — SRE",
   "phaseGroup": "operaciones",
   "order": 24,
   "schemaVersion": 1,
+  "variant": "sre",
   "hero": {
     "title": "MDD — SRE",
     "description": "El MDD (Monitoring & Diagnostics Document) define cómo sabés que el MVP está vivo, sano y generando valor — y qué hacés cuando no. Es observabilidad accionable, no dashboards bonitos. Se genera tras deploy y alimenta la operación continua.",
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Definí 3 SLIs críticos del MVP con SLO, ventana y error budg"
+      "placeholder": "Definí 3 SLIs críticos del MVP con SLO, ventana y error budget: ¿qué mide cada..."
     },
     {
       "id": "p03",
@@ -169,7 +169,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí el último incidente (o simulacro) del MVP: ¿cuánto "
+      "placeholder": "Describí el último incidente (o simulacro) del MVP: ¿cuánto tardaste en..."
     }
   ],
   "webhook": {

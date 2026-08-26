@@ -1,13 +1,13 @@
 {
   "phaseId": "22-vsd",
-  "variant": "tecnico",
   "phaseName": "VSD — Técnico",
   "phaseGroup": "validacion",
   "order": 22,
   "schemaVersion": 1,
+  "variant": "tecnico",
   "hero": {
     "title": "VSD — Técnico",
-    "description": "El VSD (Validation Specification Document) es la validación final: demuestra con evidencia que el MVP cumple lo que prometió (RDD), que es técnicamente sólido y que satisface obligaciones externas. Es el gate antes de liberar. Se ejecuta en fase `verify` del SDD, cierra el ciclo de validación junto a ATD y STD.",
+    "description": "El VSD (Validation Specification Document) es la validación final: demuestra con evidencia que el MVP cumple lo que prometió (RDD), que es técnicamente sólido y que satisface obligaciones externas. Es el gate antes de liberar. Se ejecuta en fase verify del SDD, cierra el ciclo de validación junto a ATD y STD.",
     "badge": "4 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p05",
+      "id": "p01",
       "sectionId": "tecnico",
       "label": "P5. ¿Tenés traceability matrix completa (IDD→PRD→RDD→código→test→evidencia)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p06",
+      "id": "p02",
       "sectionId": "tecnico",
       "label": "P6. Consolidá coverage del MVP: unit + integration + E2E + mutation. ¿Qué % de requisitos tiene al menos 1 test automatizado? ¿Qué requisito crítico no tiene coverage y por qué?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Consolidá coverage del MVP: unit + integration + E2E + mutat"
+      "placeholder": "Consolidá coverage del MVP: unit + integration + E2E + mutation. ¿Qué % de..."
     },
     {
-      "id": "p07",
+      "id": "p03",
       "sectionId": "tecnico",
       "label": "P7. ¿Qué quality gates bloquean la liberación?",
       "type": "radio",
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p04",
       "sectionId": "tecnico",
       "label": "P8. ¿Hay validación de compliance arquitectónico (¿lo construido respeta el Design/ADRs)?",
       "type": "radio",

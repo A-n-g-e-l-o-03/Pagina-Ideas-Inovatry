@@ -1,13 +1,13 @@
 {
   "phaseId": "01-idd",
-  "variant": "productividad",
   "phaseName": "IDD — Productividad Equipo",
   "phaseGroup": "idd",
   "order": 1,
   "schemaVersion": 1,
+  "variant": "productividad",
   "hero": {
     "title": "IDD — Productividad Equipo",
-    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo IDEA → IDD → PRD/BRD. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
     "badge": "3 preguntas"
   },
   "form": {
@@ -22,16 +22,16 @@
   },
   "fields": [
     {
-      "id": "p06",
+      "id": "p01",
       "sectionId": "productividad",
       "label": "P6. ¿Qué fricción repetitiva del equipo elimina el MVP? Cuantificá: ¿cuántas horas/semana se pierden hoy, quién las pierde y en qué tarea de bajo valor?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué fricción repetitiva del equipo elimina el MVP? Cuantifi"
+      "placeholder": "¿Qué fricción repetitiva del equipo elimina el MVP? Cuantificá: ¿cuántas..."
     },
     {
-      "id": "p07",
+      "id": "p02",
       "sectionId": "productividad",
       "label": "P7. ¿Cómo medís hoy la productividad del equipo afectado?",
       "type": "radio",
@@ -70,13 +70,13 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p03",
       "sectionId": "productividad",
       "label": "P8. Si el MVP funciona, ¿qué haría el equipo con el tiempo liberado? ¿Ese nuevo uso genera más valor que el costo de construir y mantener el MVP?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si el MVP funciona, ¿qué haría el equipo con el tiempo liber"
+      "placeholder": "Si el MVP funciona, ¿qué haría el equipo con el tiempo liberado? ¿Ese nuevo uso..."
     }
   ],
   "webhook": {

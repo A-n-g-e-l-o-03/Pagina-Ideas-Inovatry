@@ -1,10 +1,10 @@
 {
   "phaseId": "27-ced",
-  "variant": "no-tecnico",
   "phaseName": "CED — No Técnico/Usuario",
   "phaseGroup": "marketing",
   "order": 27,
   "schemaVersion": 1,
+  "variant": "no-tecnico",
   "hero": {
     "title": "CED — No Técnico/Usuario",
     "description": "El CED (Cognitive Explanation Document) es la capa de explicación del MVP: traduce lo técnico a cada audiencia sin perder precisión ni generar falsa simplicidad. Es transversal a todo el ciclo — cada documento técnico necesita su explicación cognitiva. Sin CED, el conocimiento queda atrapado en el equipo técnico.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p07",
+      "id": "p01",
       "sectionId": "no_tecnico",
       "label": "P7. ¿Necesitás explicar el MVP a usuarios no técnicos (clientes, operadores, soporte)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p02",
       "sectionId": "no_tecnico",
       "label": "P8. Si aplica no técnico: ¿qué analogía o historia explica el MVP sin jerga? ¿Qué puede hacer el usuario después de entenderlo (acción concreta) y cómo genera confianza?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica no técnico: ¿qué analogía o historia explica el MV"
+      "placeholder": "Si aplica no técnico: ¿qué analogía o historia explica el MVP sin jerga? ¿Qué..."
     },
     {
-      "id": "p09",
+      "id": "p03",
       "sectionId": "no_tecnico",
       "label": "P9. ¿Tenés validación de que las explicaciones se entienden (test con audiencia real)?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p10",
+      "id": "p04",
       "sectionId": "no_tecnico",
       "label": "P10. ¿Qué concepto del MVP es más difícil de explicar sin perder precisión? ¿Cómo lo explicarías a un adolescente de 15 años sin mentir?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué concepto del MVP es más difícil de explicar sin perder "
+      "placeholder": "¿Qué concepto del MVP es más difícil de explicar sin perder precisión? ¿Cómo lo..."
     }
   ],
   "webhook": {

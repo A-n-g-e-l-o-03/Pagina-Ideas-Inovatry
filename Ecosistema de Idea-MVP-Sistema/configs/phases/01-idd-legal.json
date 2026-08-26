@@ -1,13 +1,13 @@
 {
   "phaseId": "01-idd",
-  "variant": "legal",
   "phaseName": "IDD — Legal/Regulatorio",
   "phaseGroup": "idd",
   "order": 1,
   "schemaVersion": 1,
+  "variant": "legal",
   "hero": {
     "title": "IDD — Legal/Regulatorio",
-    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo IDEA → IDD → PRD/BRD. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
     "badge": "2 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p28",
+      "id": "p01",
       "sectionId": "legal",
       "label": "P28. ¿El MVP maneja datos regulados (salud, financiero, menores, datos personales UE/Brasil)?",
       "type": "radio",
@@ -61,13 +61,13 @@
       ]
     },
     {
-      "id": "p31",
+      "id": "p02",
       "sectionId": "legal",
       "label": "P31. Para cada proyección que marcaste como \"sí\" arriba, ¿qué pregunta bloqueante debe responderse ANTES del PRD? (Ej: \"¿Podemos almacenar datos de salud en X región legalmente?\").",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Para cada proyección que marcaste como \"sí\" arriba, ¿qué pre"
+      "placeholder": "Para cada proyección que marcaste como \"sí\" arriba, ¿qué pregunta bloqueante..."
     }
   ],
   "webhook": {

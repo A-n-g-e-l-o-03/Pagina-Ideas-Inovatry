@@ -1,13 +1,13 @@
 {
   "phaseId": "17-tasks",
-  "variant": "chained-pr",
   "phaseName": "Tasks — Chained PR",
   "phaseGroup": "mcp",
   "order": 17,
   "schemaVersion": 1,
+  "variant": "chained-pr",
   "hero": {
     "title": "Tasks — Chained PR",
-    "description": "El Tasks Document descompone el diseño (Design) en trabajo ejecutable con estimación, dependencias, criterios de hecho (DoD/DoR) y mitigación de riesgos. Se genera en fase `tasks` del SDD, tras Design y antes de Apply. Sin Tasks, el MVP es una lista de deseos sin orden ni estimación.",
+    "description": "El Tasks Document descompone el diseño (Design) en trabajo ejecutable con estimación, dependencias, criterios de hecho (DoD/DoR) y mitigación de riesgos. Se genera en fase tasks del SDD, tras Design y antes de Apply. Sin Tasks, el MVP es una lista de deseos sin orden ni estimación.",
     "badge": "4 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p08",
+      "id": "p01",
       "sectionId": "chained_pr",
       "label": "P8. ¿El MVP se entrega en chained PRs (PRs encadenados, slices revisables)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p02",
       "sectionId": "chained_pr",
       "label": "P9. Si aplica Chained PR: definí los slices revisables del MVP (cada slice mergeable, testeable y rollbackeable). ¿Cuál es el punto de integración y qué se hace si un slice intermedio falla?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica Chained PR: definí los slices revisables del MVP ("
+      "placeholder": "Si aplica Chained PR: definí los slices revisables del MVP (cada slice..."
     },
     {
-      "id": "p10",
+      "id": "p03",
       "sectionId": "chained_pr",
       "label": "P10. ¿Hay mitigación de riesgos por tarea (qué puede salir mal, probabilidad, impacto, plan B)?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p11",
+      "id": "p04",
       "sectionId": "chained_pr",
       "label": "P11. ¿Qué tarea, si se subestima 2x, retrasa todo el MVP? ¿Qué buffer o plan de recorte tenés para ese caso?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué tarea, si se subestima 2x, retrasa todo el MVP? ¿Qué bu"
+      "placeholder": "¿Qué tarea, si se subestima 2x, retrasa todo el MVP? ¿Qué buffer o plan de..."
     }
   ],
   "webhook": {

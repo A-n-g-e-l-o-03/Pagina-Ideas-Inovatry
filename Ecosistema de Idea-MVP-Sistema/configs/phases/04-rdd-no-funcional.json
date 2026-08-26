@@ -1,10 +1,10 @@
 {
   "phaseId": "04-rdd",
-  "variant": "no-funcional",
   "phaseName": "RDD — No Funcional",
   "phaseGroup": "rdd",
   "order": 4,
   "schemaVersion": 1,
+  "variant": "no-funcional",
   "hero": {
     "title": "RDD — No Funcional",
     "description": "El RDD (Requirements Design Document) es la especificación de comportamiento que el diseño y el testing implementan y verifican. Traduce el PRD/BRD en requisitos trazables, sin ambigüedad, listos para SDD spec. Es el contrato entre producto y tecnología.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p08",
+      "id": "p01",
       "sectionId": "no_funcional",
       "label": "P8. ¿Qué atributo de calidad es #1 para el MVP (si solo podés elegir uno)?",
       "type": "radio",
@@ -67,16 +67,16 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p02",
       "sectionId": "no_funcional",
       "label": "P9. Definí SLOs concretos para el MVP: ¿qué latencia p95, qué throughput (req/s), qué disponibilidad (%), qué RTO/RPO y con qué ventana de medición?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Definí SLOs concretos para el MVP: ¿qué latencia p95, qué th"
+      "placeholder": "Definí SLOs concretos para el MVP: ¿qué latencia p95, qué throughput (req/s),..."
     },
     {
-      "id": "p10",
+      "id": "p03",
       "sectionId": "no_funcional",
       "label": "P10. ¿Los requisitos no funcionales tienen umbrales cuantitativos o son \"que sea rápido/escalable\"?",
       "type": "radio",
@@ -109,13 +109,13 @@
       ]
     },
     {
-      "id": "p11",
+      "id": "p04",
       "sectionId": "no_funcional",
       "label": "P11. ¿Qué pasa si el MVP no cumple un NFR crítico en producción? ¿Hay plan de degradación (feature flag, circuit breaker, fallback) o falla completa?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué pasa si el MVP no cumple un NFR crítico en producción? "
+      "placeholder": "¿Qué pasa si el MVP no cumple un NFR crítico en producción? ¿Hay plan de..."
     }
   ],
   "webhook": {

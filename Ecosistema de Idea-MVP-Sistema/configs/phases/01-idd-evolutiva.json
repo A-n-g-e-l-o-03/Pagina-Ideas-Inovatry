@@ -1,13 +1,13 @@
 {
   "phaseId": "01-idd",
-  "variant": "evolutiva",
   "phaseName": "IDD — Evolutiva",
   "phaseGroup": "idd",
   "order": 1,
   "schemaVersion": 1,
+  "variant": "evolutiva",
   "hero": {
     "title": "IDD — Evolutiva",
-    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo IDEA → IDD → PRD/BRD. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
     "badge": "4 preguntas"
   },
   "form": {
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p24",
+      "id": "p01",
       "sectionId": "evolutiva",
       "label": "P24. ¿Cuál es el bus factor del dominio que el MVP toca?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p25",
+      "id": "p02",
       "sectionId": "evolutiva",
       "label": "P25. ¿Qué fundación deja el MVP aunque fracase? (Ej: modelo de datos, integración, aprendizaje validado, componente reutilizable). Si la respuesta es \"nada\", la apuesta es frágil.",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué fundación deja el MVP aunque fracase? (Ej: modelo de da"
+      "placeholder": "¿Qué fundación deja el MVP aunque fracase? (Ej: modelo de datos, integración,..."
     },
     {
-      "id": "p26",
+      "id": "p03",
       "sectionId": "evolutiva",
       "label": "P26. ¿Qué tan reversible es la decisión de construir este MVP?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p27",
+      "id": "p04",
       "sectionId": "evolutiva",
       "label": "P27. ¿Cuánto tarda hoy onboardear a alguien nuevo en el flujo que el MVP mejora? ¿El MVP reduce ese tiempo y cómo?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Cuánto tarda hoy onboardear a alguien nuevo en el flujo que"
+      "placeholder": "¿Cuánto tarda hoy onboardear a alguien nuevo en el flujo que el MVP mejora? ¿El..."
     }
   ],
   "webhook": {

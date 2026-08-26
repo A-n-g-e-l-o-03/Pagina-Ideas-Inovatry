@@ -1,10 +1,10 @@
 {
   "phaseId": "07-dbd",
-  "variant": "nosql",
   "phaseName": "DBD — NoSQL/Document",
   "phaseGroup": "tecnico",
   "order": 7,
   "schemaVersion": 1,
+  "variant": "nosql",
   "hero": {
     "title": "DBD — NoSQL/Document",
     "description": "El DBD (Database Design Document) detalla cómo se almacenan y evolucionan los datos del MVP. Traduce el modelo de dominio (DMD) y el diseño de datos (06-c) en esquemas concretos, migraciones, índices, particionado y estrategias de HA/backup. Elegir mal la DB es una de las decisiones más caras de revertir.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p07",
+      "id": "p01",
       "sectionId": "nosql",
       "label": "P7. ¿El MVP usa NoSQL/document store? ¿Para qué caso?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p02",
       "sectionId": "nosql",
       "label": "P8. Para la colección/documento principal NoSQL: ¿qué va embebido vs. referenciado y por qué? ¿Cuál es el access pattern dominante (lectura por ID, query por atributo, agregación)?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Para la colección/documento principal NoSQL: ¿qué va embebid"
+      "placeholder": "Para la colección/documento principal NoSQL: ¿qué va embebido vs. referenciado..."
     },
     {
-      "id": "p09",
+      "id": "p03",
       "sectionId": "nosql",
       "label": "P9. ¿Qué nivel de consistencia y TTL aplica?",
       "type": "radio",

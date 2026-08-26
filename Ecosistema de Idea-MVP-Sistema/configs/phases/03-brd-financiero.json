@@ -1,10 +1,10 @@
 {
   "phaseId": "03-brd",
-  "variant": "financiero",
   "phaseName": "BRD — Financiero",
   "phaseGroup": "rdd",
   "order": 3,
   "schemaVersion": 1,
+  "variant": "financiero",
   "hero": {
     "title": "BRD — Financiero",
     "description": "El BRD (Business Requirements Document) traduce la necesidad de negocio en requisitos que la organización necesita satisfacer, en lenguaje de negocio (no de producto ni de sistema). Responde: ¿por qué la empresa debe invertir en esto, qué gana, qué arriesga y qué exige el entorno? Se genera en paralelo al PRD, tras el IDD, y ambos alimentan al RDD. Sin BRD, el MVP puede ser buen producto pero mala inversión.",
@@ -22,16 +22,16 @@
   },
   "fields": [
     {
-      "id": "p09",
+      "id": "p01",
       "sectionId": "financiero",
       "label": "P9. Detallá inversión estimada del MVP: costo de equipo (personas×tiempo), infraestructura, licencias, costo de oportunidad. ¿Cuál es el total a 3 y 6 meses?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Detallá inversión estimada del MVP: costo de equipo (persona"
+      "placeholder": "Detallá inversión estimada del MVP: costo de equipo (personas×tiempo),..."
     },
     {
-      "id": "p10",
+      "id": "p02",
       "sectionId": "financiero",
       "label": "P10. ¿Cuál es el retorno esperado y en qué horizonte?",
       "type": "radio",
@@ -70,7 +70,7 @@
       ]
     },
     {
-      "id": "p11",
+      "id": "p03",
       "sectionId": "financiero",
       "label": "P11. ¿Qué método financiero usás para decidir?",
       "type": "radio",
@@ -109,13 +109,13 @@
       ]
     },
     {
-      "id": "p12",
+      "id": "p04",
       "sectionId": "financiero",
       "label": "P12. ¿Cuál es el escenario de pérdida máxima si el MVP fracasa? ¿Ese monto es tolerable sin poner en riesgo la operación?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Cuál es el escenario de pérdida máxima si el MVP fracasa? ¿"
+      "placeholder": "¿Cuál es el escenario de pérdida máxima si el MVP fracasa? ¿Ese monto es..."
     }
   ],
   "webhook": {

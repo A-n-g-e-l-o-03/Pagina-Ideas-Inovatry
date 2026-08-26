@@ -1,10 +1,10 @@
 {
   "phaseId": "05-dmd",
-  "variant": "data-mesh",
   "phaseName": "DMD — Data Mesh",
   "phaseGroup": "diseno",
   "order": 5,
   "schemaVersion": 1,
+  "variant": "data-mesh",
   "hero": {
     "title": "DMD — Data Mesh",
     "description": "El DMD (Domain Model Document) modela el corazón del negocio — entidades, reglas invariantes y eventos— con independencia de la tecnología. Es donde DDD cobra vida: si el RDD dice qué hace el sistema, el DMD dice cómo se estructura el conocimiento del dominio para que el sistema sea correcto, expresivo y evolutivo.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p11",
+      "id": "p01",
       "sectionId": "data_mesh",
       "label": "P11. Si el dominio es mayormente CRUD sin invariants complejos, ¿justifica modelo anémico + transaction scripts?",
       "type": "radio",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "id": "p12",
+      "id": "p02",
       "sectionId": "data_mesh",
       "label": "P12. ¿El MVP es un data product en una arquitectura Data Mesh (ownership federado, self-serve platform)?",
       "type": "radio",
@@ -88,13 +88,13 @@
       ]
     },
     {
-      "id": "p13",
+      "id": "p03",
       "sectionId": "data_mesh",
       "label": "P13. Para el dominio elegido, ¿qué decisión de modelado, si te equivocás, es más cara de revertir? ¿Cómo la validarías barato (event storming, prototype de modelo)?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Para el dominio elegido, ¿qué decisión de modelado, si te eq"
+      "placeholder": "Para el dominio elegido, ¿qué decisión de modelado, si te equivocás, es más..."
     }
   ],
   "webhook": {

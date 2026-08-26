@@ -1,10 +1,10 @@
 {
   "phaseId": "05-dmd",
-  "variant": "dominio",
   "phaseName": "DMD — Dominio",
   "phaseGroup": "diseno",
   "order": 5,
   "schemaVersion": 1,
+  "variant": "dominio",
   "hero": {
     "title": "DMD — Dominio",
     "description": "El DMD (Domain Model Document) modela el corazón del negocio — entidades, reglas invariantes y eventos— con independencia de la tecnología. Es donde DDD cobra vida: si el RDD dice qué hace el sistema, el DMD dice cómo se estructura el conocimiento del dominio para que el sistema sea correcto, expresivo y evolutivo.",
@@ -28,7 +28,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Cuál es el lenguaje ubicuo del dominio? Listá 8-12 términos"
+      "placeholder": "¿Cuál es el lenguaje ubicuo del dominio? Listá 8-12 términos de negocio que..."
     },
     {
       "id": "p02",
@@ -37,7 +37,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Identificá los aggregates raíz del MVP (ej: Pedido, Suscripc"
+      "placeholder": "Identificá los aggregates raíz del MVP (ej: Pedido, Suscripción, Proyecto,..."
     },
     {
       "id": "p03",
@@ -112,7 +112,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Describí 2 invariants críticos que, si se violan, el negocio"
+      "placeholder": "Describí 2 invariants críticos que, si se violan, el negocio sufre (ej: \"un..."
     },
     {
       "id": "p06",

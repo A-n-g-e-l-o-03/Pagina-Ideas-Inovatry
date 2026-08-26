@@ -1,10 +1,10 @@
 {
   "phaseId": "28-cca",
-  "variant": "template",
   "phaseName": "CCA — Template-Based",
   "phaseGroup": "marketing",
   "order": 28,
   "schemaVersion": 1,
+  "variant": "template",
   "hero": {
     "title": "CCA — Template-Based",
     "description": "El CCA (Cognitive Communication Agent) es el agente que comunica el MVP a cada audiencia, usando explicaciones (CED) como base. No es un chatbot genérico — es un agente con propósito, prompts, RAG, evaluación y guardrails. Es transversal y automatiza la comunicación sin perder calidad ni control.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p05",
+      "id": "p01",
       "sectionId": "template",
       "label": "P5. ¿Tenés comunicación template-based (determinística, auditable) para el MVP?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p06",
+      "id": "p02",
       "sectionId": "template",
       "label": "P6. Si aplica template-based: ¿qué templates existen (ej: reporte de status, explicación de error, onboarding), qué variables extrae, cómo se compone y cómo se audita qué se comunicó?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica template-based: ¿qué templates existen (ej: report"
+      "placeholder": "Si aplica template-based: ¿qué templates existen (ej: reporte de status,..."
     },
     {
-      "id": "p07",
+      "id": "p03",
       "sectionId": "template",
       "label": "P7. ¿Cuándo usar template vs. LLM?",
       "type": "radio",

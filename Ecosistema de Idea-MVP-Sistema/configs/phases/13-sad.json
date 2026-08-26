@@ -1,10 +1,10 @@
 {
   "phaseId": "13-sad",
-  "variant": "zero-trust",
   "phaseName": "SAD — Zero Trust",
   "phaseGroup": "validacion",
   "order": 13,
   "schemaVersion": 1,
+  "variant": "zero-trust",
   "hero": {
     "title": "SAD — Zero Trust",
     "description": "El SAD (Security Architecture Document) es la arquitectura de seguridad del MVP: cómo los controles (SRD) y el modelo de amenazas (TMD) se materializan en infraestructura, identidad y flujos de datos. Es el plano que integra IAM, network, data y appsec en un todo coherente. Sin SAD, los controles son piezas sueltas.",
@@ -28,7 +28,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Mapeá trust boundaries del MVP: ¿qué zonas de confianza exis"
+      "placeholder": "Mapeá trust boundaries del MVP: ¿qué zonas de confianza existen, dónde están..."
     },
     {
       "id": "p02",

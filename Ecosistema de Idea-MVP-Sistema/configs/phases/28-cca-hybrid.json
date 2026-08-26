@@ -1,10 +1,10 @@
 {
   "phaseId": "28-cca",
-  "variant": "hybrid",
   "phaseName": "CCA — Híbrido",
   "phaseGroup": "marketing",
   "order": 28,
   "schemaVersion": 1,
+  "variant": "hybrid",
   "hero": {
     "title": "CCA — Híbrido",
     "description": "El CCA (Cognitive Communication Agent) es el agente que comunica el MVP a cada audiencia, usando explicaciones (CED) como base. No es un chatbot genérico — es un agente con propósito, prompts, RAG, evaluación y guardrails. Es transversal y automatiza la comunicación sin perder calidad ni control.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p08",
+      "id": "p01",
       "sectionId": "hybrid",
       "label": "P8. ¿Necesitás agente híbrido (estructura template + contenido LLM)?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p02",
       "sectionId": "hybrid",
       "label": "P9. Si aplica híbrido: ¿qué parte es template (estructura, compliance, formato) y qué parte es LLM (contenido, tono, adaptación)? ¿Cómo controlás costo y cómo auditas qué generó cada parte?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica híbrido: ¿qué parte es template (estructura, compl"
+      "placeholder": "Si aplica híbrido: ¿qué parte es template (estructura, compliance, formato) y..."
     },
     {
-      "id": "p10",
+      "id": "p03",
       "sectionId": "hybrid",
       "label": "P10. ¿Cómo medís éxito del agente de comunicación?",
       "type": "radio",
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "id": "p11",
+      "id": "p04",
       "sectionId": "hybrid",
       "label": "P11. ¿Qué riesgo tiene el agente de comunicación si alucina o comunica mal?",
       "type": "radio",
@@ -130,13 +130,13 @@
       ]
     },
     {
-      "id": "p12",
+      "id": "p05",
       "sectionId": "hybrid",
       "label": "P12. ¿Qué pregunta de usuario el agente NO debe responder sin escalar a humano? ¿Cómo detecta ese caso y qué hace?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué pregunta de usuario el agente NO debe responder sin esc"
+      "placeholder": "¿Qué pregunta de usuario el agente NO debe responder sin escalar a humano?..."
     }
   ],
   "webhook": {

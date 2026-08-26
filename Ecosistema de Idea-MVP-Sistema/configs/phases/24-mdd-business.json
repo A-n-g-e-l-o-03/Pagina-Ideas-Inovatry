@@ -1,10 +1,10 @@
 {
   "phaseId": "24-mdd",
-  "variant": "business",
   "phaseName": "MDD — Business",
   "phaseGroup": "operaciones",
   "order": 24,
   "schemaVersion": 1,
+  "variant": "business",
   "hero": {
     "title": "MDD — Business",
     "description": "El MDD (Monitoring & Diagnostics Document) define cómo sabés que el MVP está vivo, sano y generando valor — y qué hacés cuando no. Es observabilidad accionable, no dashboards bonitos. Se genera tras deploy y alimenta la operación continua.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p07",
+      "id": "p01",
       "sectionId": "business",
       "label": "P7. ¿Cuál es la North Star metric del MVP y su funnel?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p08",
+      "id": "p02",
       "sectionId": "business",
       "label": "P8. Definí el funnel del MVP (ej: visita→registro→activación→retención→revenue) con conversión actual o esperada por etapa. ¿Dónde está el mayor drop y qué hipótesis lo explica?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Definí el funnel del MVP (ej: visita→registro→activación→ret"
+      "placeholder": "Definí el funnel del MVP (ej: visita→registro→activación→retención→revenue) con..."
     },
     {
-      "id": "p09",
+      "id": "p03",
       "sectionId": "business",
       "label": "P9. ¿Tenés dashboards ejecutivos y de customer health?",
       "type": "radio",

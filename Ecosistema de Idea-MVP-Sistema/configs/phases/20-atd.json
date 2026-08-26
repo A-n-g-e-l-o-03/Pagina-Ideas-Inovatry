@@ -1,13 +1,13 @@
 {
   "phaseId": "20-atd",
-  "variant": "gherkin",
   "phaseName": "ATD — Gherkin",
   "phaseGroup": "validacion",
   "order": 20,
   "schemaVersion": 1,
+  "variant": "gherkin",
   "hero": {
     "title": "ATD — Gherkin",
-    "description": "El ATD (Acceptance Test Definition) define cómo se demuestra que el MVP hace lo que promete, en lenguaje que negocio y tecnología comparten. Es la validación de aceptación: si los ATD pasan, el MVP es aceptable para el usuario. Se ejecuta en fase `verify` del SDD.",
+    "description": "El ATD (Acceptance Test Definition) define cómo se demuestra que el MVP hace lo que promete, en lenguaje que negocio y tecnología comparten. Es la validación de aceptación: si los ATD pasan, el MVP es aceptable para el usuario. Se ejecuta en fase verify del SDD.",
     "badge": "4 preguntas"
   },
   "form": {
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Escribí 1 feature file completo para el flujo de mayor riesg"
+      "placeholder": "Escribí 1 feature file completo para el flujo de mayor riesgo del MVP:..."
     },
     {
       "id": "p03",

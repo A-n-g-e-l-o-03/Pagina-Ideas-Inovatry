@@ -1,10 +1,10 @@
 {
   "phaseId": "11-srd",
-  "variant": "appsec",
   "phaseName": "SRD — AppSec",
   "phaseGroup": "validacion",
   "order": 11,
   "schemaVersion": 1,
+  "variant": "appsec",
   "hero": {
     "title": "SRD — AppSec",
     "description": "El SRD (Security Requirements Document) traduce amenazas (TMD) en requisitos de seguridad verificables con owner, prioridad y test. Es el \"qué debe cumplir\" antes del \"cómo se implementa\" (SAD). Sin SRD, los controles son ad-hoc y no auditables.",
@@ -61,7 +61,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Listá 5 controles AppSec críticos para el MVP (ej: validació"
+      "placeholder": "Listá 5 controles AppSec críticos para el MVP (ej: validación de input, output..."
     },
     {
       "id": "p03",

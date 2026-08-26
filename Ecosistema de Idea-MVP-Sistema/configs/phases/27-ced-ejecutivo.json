@@ -1,10 +1,10 @@
 {
   "phaseId": "27-ced",
-  "variant": "ejecutivo",
   "phaseName": "CED — Ejecutivo",
   "phaseGroup": "marketing",
   "order": 27,
   "schemaVersion": 1,
+  "variant": "ejecutivo",
   "hero": {
     "title": "CED — Ejecutivo",
     "description": "El CED (Cognitive Explanation Document) es la capa de explicación del MVP: traduce lo técnico a cada audiencia sin perder precisión ni generar falsa simplicidad. Es transversal a todo el ciclo — cada documento técnico necesita su explicación cognitiva. Sin CED, el conocimiento queda atrapado en el equipo técnico.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p04",
+      "id": "p01",
       "sectionId": "ejecutivo",
       "label": "P4. ¿Podés explicar el MVP a un ejecutivo no técnico en 5 minutos con bottom-line claro?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p05",
+      "id": "p02",
       "sectionId": "ejecutivo",
       "label": "P5. Escribí el pitch ejecutivo del MVP en 4 frases: ¿qué problema resuelve, cuánto vale resolverlo, qué cuesta el MVP y qué decisión necesita el ejecutivo hoy?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Escribí el pitch ejecutivo del MVP en 4 frases: ¿qué problem"
+      "placeholder": "Escribí el pitch ejecutivo del MVP en 4 frases: ¿qué problema resuelve, cuánto..."
     },
     {
-      "id": "p06",
+      "id": "p03",
       "sectionId": "ejecutivo",
       "label": "P6. ¿Las explicaciones ejecutivas cuantifican ROI, riesgo y alineación estratégica?",
       "type": "radio",

@@ -1,13 +1,13 @@
 {
   "phaseId": "01-idd",
-  "variant": "colaborativa",
   "phaseName": "IDD — Colaborativa",
   "phaseGroup": "idd",
   "order": 1,
   "schemaVersion": 1,
+  "variant": "colaborativa",
   "hero": {
     "title": "IDD — Colaborativa",
-    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo IDEA → IDD → PRD/BRD. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
     "badge": "3 preguntas"
   },
   "form": {
@@ -22,16 +22,16 @@
   },
   "fields": [
     {
-      "id": "p21",
+      "id": "p01",
       "sectionId": "colaborativa",
       "label": "P21. ¿Cuántos handoffs (paso de trabajo entre personas/equipos) tiene hoy el flujo que el MVP toca? ¿Cuántos quedarían después y quién sería owner de cada parte?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Cuántos handoffs (paso de trabajo entre personas/equipos) t"
+      "placeholder": "¿Cuántos handoffs (paso de trabajo entre personas/equipos) tiene hoy el flujo..."
     },
     {
-      "id": "p22",
+      "id": "p02",
       "sectionId": "colaborativa",
       "label": "P22. ¿Existen dependencias inter-equipo que el MVP crea o elimina?",
       "type": "radio",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "id": "p23",
+      "id": "p03",
       "sectionId": "colaborativa",
       "label": "P23. ¿Los contratos entre equipos (APIs, eventos, SLAs) están explícitos?",
       "type": "radio",

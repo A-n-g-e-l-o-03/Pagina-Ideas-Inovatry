@@ -1,10 +1,10 @@
 {
   "phaseId": "12-iam",
-  "variant": "rbac",
   "phaseName": "IAM — RBAC",
   "phaseGroup": "validacion",
   "order": 12,
   "schemaVersion": 1,
+  "variant": "rbac",
   "hero": {
     "title": "IAM — RBAC",
     "description": "El IAM Document define quién puede hacer qué, sobre qué, cuándo y cómo se verifica. Es el control de acceso del MVP — no solo login, sino autorización fina, separación de deberes (SoD), provisioning y auditoría. Un IAM mal diseñado es el vector #1 de brechas.",
@@ -28,7 +28,7 @@
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Listá los roles del MVP (ej: admin, editor, viewer, auditor)"
+      "placeholder": "Listá los roles del MVP (ej: admin, editor, viewer, auditor) con permisos por..."
     },
     {
       "id": "p02",

@@ -1,10 +1,10 @@
 {
   "phaseId": "25-aed",
-  "variant": "estrategico",
   "phaseName": "AED — Estratégico",
   "phaseGroup": "tecnico",
   "order": 25,
   "schemaVersion": 1,
+  "variant": "estrategico",
   "hero": {
     "title": "AED — Estratégico",
     "description": "El AED (Architecture Evolution Document) planifica cómo evoluciona la arquitectura del MVP sin reescribirlo. Es el roadmap técnico: deuda, modernización, capacidad, descomposición y governance. Se genera tras operar el MVP y alimenta decisiones de inversión técnica.",
@@ -22,7 +22,7 @@
   },
   "fields": [
     {
-      "id": "p08",
+      "id": "p01",
       "sectionId": "estrategico",
       "label": "P8. ¿La evolución arquitectónica está alineada a estrategia de negocio a 12-24 meses?",
       "type": "radio",
@@ -55,16 +55,16 @@
       ]
     },
     {
-      "id": "p09",
+      "id": "p02",
       "sectionId": "estrategico",
       "label": "P9. Si aplica estratégico: ¿qué technology radar, qué foso competitivo construye la arquitectura, qué regulación futura la afecta y qué talento necesita para evolucionar?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "Si aplica estratégico: ¿qué technology radar, qué foso compe"
+      "placeholder": "Si aplica estratégico: ¿qué technology radar, qué foso competitivo construye la..."
     },
     {
-      "id": "p10",
+      "id": "p03",
       "sectionId": "estrategico",
       "label": "P10. ¿Tenés governance de evolución (quién aprueba cambios arquitectónicos, con qué criterio y ADRs)?",
       "type": "radio",
@@ -97,13 +97,13 @@
       ]
     },
     {
-      "id": "p11",
+      "id": "p04",
       "sectionId": "estrategico",
       "label": "P11. ¿Qué decisión de evolución, si la postergás 6 meses, se vuelve 10x más cara? ¿Qué harías hoy para evitarlo?",
       "type": "textarea",
       "required": true,
       "fullWidth": true,
-      "placeholder": "¿Qué decisión de evolución, si la postergás 6 meses, se vuel"
+      "placeholder": "¿Qué decisión de evolución, si la postergás 6 meses, se vuelve 10x más cara?..."
     }
   ],
   "webhook": {
