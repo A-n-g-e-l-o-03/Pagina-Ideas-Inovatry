@@ -1,0 +1,138 @@
+{
+  "phaseId": "23-dep",
+  "variant": "edge",
+  "phaseName": "DEP — Edge/Híbrido",
+  "phaseGroup": "operaciones",
+  "order": 23,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "DEP — Edge/Híbrido",
+    "description": "El DEP (Deployment Specification) define cómo el MVP llega a producción de forma repetible, segura y reversible. No es \"hacer deploy\" — es GitOps, progressive delivery, verificación y rollback. Se genera tras verify y antes de operar.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "DEP — Edge/Híbrido",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "edge": {
+      "title": "3 · Proyección Edge / Hybrid",
+      "description": "Proyección Edge / Hybrid"
+    }
+  },
+  "fields": [
+    {
+      "id": "p08",
+      "sectionId": "edge",
+      "label": "P8. ¿El MVP despliega en edge, on-prem híbrido o con operación desconectada?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — solo cloud centralizado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere DEP Edge (23-c) con fleet management y OTA updates",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — un componente en edge sin fleet formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "edge",
+      "label": "P9. Si aplica edge: ¿cómo se gestiona fleet (clusters edge), qué pasa sin conectividad, cómo se sincronizan datos y cómo se hace OTA update con rollback?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica edge: ¿cómo se gestiona fleet (clusters edge), qué"
+    },
+    {
+      "id": "p10",
+      "sectionId": "edge",
+      "label": "P10. ¿El deploy del MVP es reproducible desde cero (infra como código + git como fuente de verdad)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — `git clone` + `terraform apply` + `argocd sync` levanta todo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — parte manual, parte IaC",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — deploy con pasos manuales no documentados",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "edge",
+      "label": "P11. ¿Qué deploy fallido causaría el mayor daño? ¿Qué verificación (smoke test, health check, synthetic) lo detectaría en <2 minutos?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué deploy fallido causaría el mayor daño? ¿Qué verificació"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "DEP — Edge/Híbrido",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "DEP — Edge/Híbrido",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

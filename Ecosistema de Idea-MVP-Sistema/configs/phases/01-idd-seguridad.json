@@ -1,0 +1,96 @@
+{
+  "phaseId": "01-idd",
+  "variant": "seguridad",
+  "phaseName": "IDD — Seguridad",
+  "phaseGroup": "idd",
+  "order": 1,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IDD — Seguridad",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "badge": "2 preguntas"
+  },
+  "form": {
+    "title": "IDD — Seguridad",
+    "subtitle": "2 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "seguridad": {
+      "title": "Proyección Seguridad",
+      "description": "Superficie de ataque y controles"
+    }
+  },
+  "fields": [
+    {
+      "id": "p29",
+      "sectionId": "seguridad",
+      "label": "P29. ¿Cuál es la superficie de ataque si el MVP es comprometido?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Baja — sin datos sensibles ni acceso privilegiado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Media — datos de usuarios / integraciones internas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Alta — pagos, identidad, infraestructura crítica",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado — requiere IDD Seguridad (01-k)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p31",
+      "sectionId": "seguridad",
+      "label": "P31. Para cada proyección que marcaste como \"sí\" arriba, ¿qué pregunta bloqueante debe responderse ANTES del PRD? (Ej: \"¿Podemos almacenar datos de salud en X región legalmente?\").",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Para cada proyección que marcaste como \"sí\" arriba, ¿qué pre"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IDD — Seguridad",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IDD — Seguridad",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

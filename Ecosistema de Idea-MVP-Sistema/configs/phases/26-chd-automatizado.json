@@ -1,0 +1,144 @@
+{
+  "phaseId": "26-chd",
+  "variant": "automatizado",
+  "phaseName": "CHD — Automatizado",
+  "phaseGroup": "tecnico",
+  "order": 26,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "CHD — Automatizado",
+    "description": "El CHD (Change Design Document) diseña cómo se gestionan cambios en el MVP sin romper producción ni auditoría. Todo cambio —feature, fix, config, infra— pasa por diseño, impacto, aprobación, implementación, testing, rollback y comunicación. Sin CHD, los cambios son \"deploy y rezo\".",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "CHD — Automatizado",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "automatizado": {
+      "title": "3 · Proyección Automatizado",
+      "description": "Proyección Automatizado"
+    }
+  },
+  "fields": [
+    {
+      "id": "p08",
+      "sectionId": "automatizado",
+      "label": "P8. ¿Tenés cambios automatizados (Dependabot, Renovate, config drift, policy enforcement)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — todo manual",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere CHD Automatizado (26-c) con auto-merge, policy checks y self-healing",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — Dependabot sin auto-merge ni policy",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "automatizado",
+      "label": "P9. Si aplica automatizado: ¿qué cambios se auto-aprueban, qué policy los bloquea, cómo se detecta config drift y qué self-healing existe?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica automatizado: ¿qué cambios se auto-aprueban, qué p"
+    },
+    {
+      "id": "p10",
+      "sectionId": "automatizado",
+      "label": "P10. ¿Cuál es el cambio más riesgoso que el MVP enfrentará en los próximos 3 meses?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Migración de datos / schema",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Cambio de contrato/API con consumidores",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Cambio de infra/cloud provider",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Refactor de dominio core",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Cambio regulatorio / compliance",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "automatizado",
+      "label": "P11. Si ese cambio riesgoso sale mal, ¿cuál es el blast radius, cuánto tarda el rollback y cómo avisas a usuarios/clientes?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si ese cambio riesgoso sale mal, ¿cuál es el blast radius, c"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "CHD — Automatizado",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "CHD — Automatizado",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

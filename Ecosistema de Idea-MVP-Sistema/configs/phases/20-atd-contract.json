@@ -1,0 +1,138 @@
+{
+  "phaseId": "20-atd",
+  "variant": "contract",
+  "phaseName": "ATD — Contract Testing",
+  "phaseGroup": "validacion",
+  "order": 20,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "ATD — Contract Testing",
+    "description": "El ATD (Acceptance Test Definition) define cómo se demuestra que el MVP hace lo que promete, en lenguaje que negocio y tecnología comparten. Es la validación de aceptación: si los ATD pasan, el MVP es aceptable para el usuario. Se ejecuta en fase `verify` del SDD.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "ATD — Contract Testing",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "contract": {
+      "title": "3 · Proyección Contract Testing",
+      "description": "Proyección Contract Testing"
+    }
+  },
+  "fields": [
+    {
+      "id": "p08",
+      "sectionId": "contract",
+      "label": "P8. ¿El MVP tiene dependencias donde un contrato roto rompe al consumidor?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — sin integraciones críticas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere ATD Contract (20-c) con Pact, provider verification y Can-I-Deploy",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — integraciones con mocks sin contrato formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "contract",
+      "label": "P9. Si aplica contract testing: ¿quién es consumer/provider por integración, qué contrato Pact define, cómo se verifica en CI del provider y qué bloquea el deploy si el contrato se rompe?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica contract testing: ¿quién es consumer/provider por "
+    },
+    {
+      "id": "p10",
+      "sectionId": "contract",
+      "label": "P10. ¿Qué porcentaje de criterios de aceptación del MVP es automatizable vs. requiere juicio humano?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": ">80% automatizable (Gherkin + contract)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "50-80% automatizable, resto exploratory",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "<50% automatizable — mucho juicio visual/subjetivo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No medido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "contract",
+      "label": "P11. ¿Qué escenario de aceptación, si falla en producción, hace que el MVP sea inaceptable aunque todo lo demás pase?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué escenario de aceptación, si falla en producción, hace q"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "ATD — Contract Testing",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "ATD — Contract Testing",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

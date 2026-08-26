@@ -1,0 +1,162 @@
+{
+  "phaseId": "14-agd",
+  "variant": "code-agent",
+  "phaseName": "AGD — Code Agent",
+  "phaseGroup": "mcp",
+  "order": 14,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AGD — Code Agent",
+    "description": "El AGD (Agent Design Document) diseña agentes de IA que generan, testean o revisan código. No son prompts sueltos — son sistemas con stack, patrones, quality gates y criterios de evaluación. Se genera en fase design SDD cuando el proceso de desarrollo será asistido o ejecutado por agentes.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "AGD — Code Agent",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "code_agent": {
+      "title": "1 · Code Agent",
+      "description": "¿Genera Código Como un Senior?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "code_agent",
+      "label": "P1. ¿Qué stack y patrones debe dominar el Code Agent?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Stack del MVP (lenguaje, framework, ORM, testing) + patrones (hexagonal, DDD, SOLID)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo lenguaje sin patrones",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Stack genérico — \"que genere cualquier cosa\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "code_agent",
+      "label": "P2. Describí el workflow del Code Agent: ¿qué input recibe (spec, diseño, contexto), qué genera (código, tests, docs), qué quality gates debe pasar y qué hace si falla un gate?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí el workflow del Code Agent: ¿qué input recibe (spec"
+    },
+    {
+      "id": "p03",
+      "sectionId": "code_agent",
+      "label": "P3. ¿Cómo maneja contexto el agente (ventana limitada, archivos grandes, dependencias cruzadas)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "RAG / CodeGraph / embeddings con retrieval selectivo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Ventana completa — todo el repo en contexto",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo archivo actual sin cross-file",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "code_agent",
+      "label": "P4. ¿Qué criterios de code review aplica el agente sobre su propio código?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Checklist formal (seguridad, performance, arquitectura, mantenibilidad) con score",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo linting / formato",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Ninguno — \"si compila, está bien\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Review humano siempre requerido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AGD — Code Agent",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AGD — Code Agent",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "phaseId": "10-tmd",
+  "variant": "attack-trees",
+  "phaseName": "TMD — Attack Trees",
+  "phaseGroup": "validacion",
+  "order": 10,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "TMD — Attack Trees",
+    "description": "El TMD (Threat Model Document) responde: ¿cómo puede ser atacado el MVP y qué hacemos al respecto? Es el análisis estructurado de amenazas antes de que el atacante lo haga por vos. Se genera en fase design SDD y alimenta a SRD, IAM y SAD. Sin TMD, la seguridad es reactiva y anecdótica.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "TMD — Attack Trees",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "attack_trees": {
+      "title": "2 · Attack Trees",
+      "description": "¿Cuánto Cuesta Atacarnos?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p06",
+      "sectionId": "attack_trees",
+      "label": "P6. ¿Tenés attack trees para las 2-3 amenazas más críticas?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — árbol con nodos AND/OR, costos y probabilidades, mitigaciones por rama",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Esbozo informal sin cuantificación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — solo lista plana de amenazas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — amenazas no críticas",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "sectionId": "attack_trees",
+      "label": "P7. Para el attack tree más crítico: ¿cuál es el camino de menor costo para el atacante? ¿Qué mitigación corta ese camino con mejor ROI?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Para el attack tree más crítico: ¿cuál es el camino de menor"
+    },
+    {
+      "id": "p08",
+      "sectionId": "attack_trees",
+      "label": "P8. ¿Hacés sensitivity analysis (qué pasa si una mitigación falla o un supuesto es falso)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — se modela fallo de mitigación y supuestos explícitos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — solo happy path de mitigación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "TMD — Attack Trees",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "TMD — Attack Trees",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "phaseId": "24-mdd",
+  "variant": "sre",
+  "phaseName": "MDD — SRE",
+  "phaseGroup": "operaciones",
+  "order": 24,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "MDD — SRE",
+    "description": "El MDD (Monitoring & Diagnostics Document) define cómo sabés que el MVP está vivo, sano y generando valor — y qué hacés cuando no. Es observabilidad accionable, no dashboards bonitos. Se genera tras deploy y alimenta la operación continua.",
+    "badge": "6 preguntas"
+  },
+  "form": {
+    "title": "MDD — SRE",
+    "subtitle": "6 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "sre": {
+      "title": "1 · SRE",
+      "description": "¿Sabés Cuando Se Rompe Antes Que el Usuario?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "sre",
+      "label": "P1. ¿Tenés SLI/SLO/SLA definidos para el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cada SLI con SLO, error budget y consecuencia de breach",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "SLI sin SLO — se mide pero no hay objetivo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo SLA externo sin SLI interno",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay SLI/SLO/SLA",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "sre",
+      "label": "P2. Definí 3 SLIs críticos del MVP con SLO, ventana y error budget: ¿qué mide cada uno, cuál es el objetivo (ej: 99.9% disponibilidad 30d), cuánto budget queda y qué pasa si se quema?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Definí 3 SLIs críticos del MVP con SLO, ventana y error budg"
+    },
+    {
+      "id": "p03",
+      "sectionId": "sre",
+      "label": "P3. ¿Qué método de alerting usás?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Síntoma + SLO burn (alertar cuando el usuario sufre, no cuando CPU sube) con runbook vinculado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Causa — alerta por CPU/memoria/disco sin correlación a SLI",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sin alerting — se mira dashboard cuando alguien reporta",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Alerting sin runbook — suena pero nadie sabe qué hacer",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "sre",
+      "label": "P4. ¿Tenés runbooks y on-call para el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — runbook por alerta con pasos, escalamiento y postmortem blameless",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Runbook informal en la cabeza de una persona",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No hay runbook ni on-call",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — MVP sin operación 24/7",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "sre",
+      "label": "P5. ¿Qué signals usás (RED para servicios, USE para infra)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "RED (Rate, Errors, Duration) + USE (Utilization, Saturation, Errors) con dashboards y alerting",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo RED sin USE",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo infra (CPU/mem) sin RED",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay signals definidos",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "sectionId": "sre",
+      "label": "P6. Describí el último incidente (o simulacro) del MVP: ¿cuánto tardaste en detectar, diagnosticar y recuperar (MTTD/MTTR)? ¿Qué faltó observar?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí el último incidente (o simulacro) del MVP: ¿cuánto "
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "MDD — SRE",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "MDD — SRE",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

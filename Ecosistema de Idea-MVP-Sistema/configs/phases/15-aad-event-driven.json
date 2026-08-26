@@ -1,0 +1,129 @@
+{
+  "phaseId": "15-aad",
+  "variant": "event-driven",
+  "phaseName": "AAD — Event-Driven",
+  "phaseGroup": "mcp",
+  "order": 15,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AAD — Event-Driven",
+    "description": "El AAD (Agent Architecture Document) define cómo se orquestan múltiples agentes para construir el MVP. Si el AGD diseña un agente, el AAD diseña el sistema de agentes: quién hace qué, en qué orden, cómo se comunican y cómo se recuperan de fallos.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "AAD — Event-Driven",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "event_driven": {
+      "title": "2 · Event-Driven",
+      "description": "¿Coreografía o Orquestación?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p04",
+      "sectionId": "event_driven",
+      "label": "P4. Si es event-driven, ¿choreography (cada agente decide) u orchestration (orquestador central / saga)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Choreography — desacoplo máximo, cada agente escucha y reacciona",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Orchestration — saga/orquestador coordina flujo y compensaciones",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Híbrido — choreography para happy path, orchestration para flujos críticos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — pipeline secuencial",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "event_driven",
+      "label": "P5. Describí el event bus: ¿qué eventos disparan agentes, cómo se garantiza idempotencia, qué pasa con dead letters y cómo se observa el flujo?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí el event bus: ¿qué eventos disparan agentes, cómo s"
+    },
+    {
+      "id": "p06",
+      "sectionId": "event_driven",
+      "label": "P6. ¿Hay saga con compensaciones para flujos multi-agente que fallan a mitad?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cada paso tiene compensación definida",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — algunos flujos con compensación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — si falla, estado inconsistente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — flujos atómicos",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AAD — Event-Driven",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AAD — Event-Driven",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

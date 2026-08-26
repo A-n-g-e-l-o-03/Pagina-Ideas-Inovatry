@@ -1,0 +1,144 @@
+{
+  "phaseId": "03-brd",
+  "variant": "estrategia",
+  "phaseName": "BRD — Estrategia",
+  "phaseGroup": "rdd",
+  "order": 3,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "BRD — Estrategia",
+    "description": "El BRD (Business Requirements Document) traduce la necesidad de negocio en requisitos que la organización necesita satisfacer, en lenguaje de negocio (no de producto ni de sistema). Responde: ¿por qué la empresa debe invertir en esto, qué gana, qué arriesga y qué exige el entorno? Se genera en paralelo al PRD, tras el IDD, y ambos alimentan al RDD. Sin BRD, el MVP puede ser buen producto pero mala inversión.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "BRD — Estrategia",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "estrategia": {
+      "title": "1 · Estrategia",
+      "description": "¿A Dónde Nos Lleva?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "estrategia",
+      "label": "P1. ¿Cómo se alinea el MVP con la estrategia de la empresa a 12-24 meses? ¿Qué pilar estratégico habilita o acelera (ej: diferenciación, time-to-market, plataforma, retención)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Cómo se alinea el MVP con la estrategia de la empresa a 12-"
+    },
+    {
+      "id": "p02",
+      "sectionId": "estrategia",
+      "label": "P2. ¿Qué ventaja competitiva genera el MVP si funciona?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Ninguna — es paridad higiénica",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Eficiencia / costo (hacer lo mismo más barato)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Diferenciación (hacer algo que competidores no hacen)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Foso defensivo (network effect, datos, switching cost)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Opcionalidad estratégica (abre un camino futuro)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "sectionId": "estrategia",
+      "label": "P3. ¿Qué pasa estratégicamente si NO se hace el MVP en los próximos 6 meses?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Nada relevante",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Se pierde eficiencia incremental",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Se pierde ventana de oportunidad (competidor toma posición)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Se erosiona posicionamiento / se vuelve deuda estratégica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "estrategia",
+      "label": "P4. ¿Qué supuestos estratégicos, si son falsos, invalidan la inversión? (Ej: \"el mercado valora X\", \"nuestro canal llega a Y\"). ¿Cómo se validarían?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué supuestos estratégicos, si son falsos, invalidan la inv"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "BRD — Estrategia",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "BRD — Estrategia",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

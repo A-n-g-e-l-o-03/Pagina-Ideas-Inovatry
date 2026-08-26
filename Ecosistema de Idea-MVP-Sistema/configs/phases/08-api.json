@@ -1,0 +1,216 @@
+{
+  "phaseId": "08-api",
+  "variant": "rest",
+  "phaseName": "API — REST",
+  "phaseGroup": "tecnico",
+  "order": 8,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "API — REST",
+    "description": "El API Design Document define el contrato entre el MVP y sus consumidores (frontend, otros servicios, terceros). Es un contrato versionado y testeable: romperlo sin avisar es romper a tus clientes. Se genera en fase design SDD y alimenta implementación y contract testing.",
+    "badge": "6 preguntas"
+  },
+  "form": {
+    "title": "API — REST",
+    "subtitle": "6 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "rest": {
+      "title": "1 · REST",
+      "description": "¿Contrato Predecible?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "rest",
+      "label": "P1. ¿Qué estilo de API expone el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "REST / HTTP con OpenAPI",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "GraphQL",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Async / eventos (no hay REST)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Híbrido — REST para CRUD + eventos para flujos largos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "rest",
+      "label": "P2. Listá los 5-7 recursos/ endpoints core del MVP con verbo, path, payload de request/response y códigos de estado. ¿Siguen convenciones REST (plural, kebab-case, verbos correctos)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Listá los 5-7 recursos/ endpoints core del MVP con verbo, pa"
+    },
+    {
+      "id": "p03",
+      "sectionId": "rest",
+      "label": "P3. ¿Cómo se versiona la API?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "URL path (`/v1/`)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Header (`Accept: application/vnd...`)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Query param",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Sin versionado — breaking changes directos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "rest",
+      "label": "P4. ¿Paginación, filtrado, orden y caching están estandarizados?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cursor/keyset pagination, filtros con spec, `ETag`/`Cache-Control`",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — offset pagination sin cache",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — cada endpoint inventa su forma",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — pocos registros",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "rest",
+      "label": "P5. ¿Rate limiting y idempotencia están definidos?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — rate limit por consumidor + `Idempotency-Key` en writes críticos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo rate limiting",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Ninguno",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "sectionId": "rest",
+      "label": "P6. ¿Qué error devuelve el MVP cuando algo falla? ¿Hay formato estándar (RFC 7807 Problem Details) con código, mensaje, detalle y trace ID?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué error devuelve el MVP cuando algo falla? ¿Hay formato e"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "API — REST",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "API — REST",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

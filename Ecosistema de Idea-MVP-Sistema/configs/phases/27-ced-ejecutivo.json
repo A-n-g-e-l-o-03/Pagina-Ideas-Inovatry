@@ -1,0 +1,129 @@
+{
+  "phaseId": "27-ced",
+  "variant": "ejecutivo",
+  "phaseName": "CED — Ejecutivo",
+  "phaseGroup": "marketing",
+  "order": 27,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "CED — Ejecutivo",
+    "description": "El CED (Cognitive Explanation Document) es la capa de explicación del MVP: traduce lo técnico a cada audiencia sin perder precisión ni generar falsa simplicidad. Es transversal a todo el ciclo — cada documento técnico necesita su explicación cognitiva. Sin CED, el conocimiento queda atrapado en el equipo técnico.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "CED — Ejecutivo",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "ejecutivo": {
+      "title": "2 · Ejecutivo",
+      "description": "¿Explicación Que un CEO Entiende en 5 Minutos?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p04",
+      "sectionId": "ejecutivo",
+      "label": "P4. ¿Podés explicar el MVP a un ejecutivo no técnico en 5 minutos con bottom-line claro?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — problema, solución, impacto (número), riesgo, inversión, decisión necesaria",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — técnico con jerga sin bottom-line",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — requiere 30 min y slides técnicas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Nunca se intentó",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "ejecutivo",
+      "label": "P5. Escribí el pitch ejecutivo del MVP en 4 frases: ¿qué problema resuelve, cuánto vale resolverlo, qué cuesta el MVP y qué decisión necesita el ejecutivo hoy?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Escribí el pitch ejecutivo del MVP en 4 frases: ¿qué problem"
+    },
+    {
+      "id": "p06",
+      "sectionId": "ejecutivo",
+      "label": "P6. ¿Las explicaciones ejecutivas cuantifican ROI, riesgo y alineación estratégica?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — número, rango y fuente para cada afirmación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Cualitativo con \"mucho valor\" sin número",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No cuantificado — \"es estratégico\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay explicación ejecutiva",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "CED — Ejecutivo",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "CED — Ejecutivo",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

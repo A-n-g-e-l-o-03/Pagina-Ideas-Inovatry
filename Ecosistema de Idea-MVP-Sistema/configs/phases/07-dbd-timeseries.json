@@ -1,0 +1,105 @@
+{
+  "phaseId": "07-dbd",
+  "variant": "timeseries",
+  "phaseName": "DBD — Time-Series/Analytics",
+  "phaseGroup": "tecnico",
+  "order": 7,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "DBD — Time-Series/Analytics",
+    "description": "El DBD (Database Design Document) detalla cómo se almacenan y evolucionan los datos del MVP. Traduce el modelo de dominio (DMD) y el diseño de datos (06-c) en esquemas concretos, migraciones, índices, particionado y estrategias de HA/backup. Elegir mal la DB es una de las decisiones más caras de revertir.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "DBD — Time-Series/Analytics",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "timeseries": {
+      "title": "3 · Proyección Time-Series / Analytics",
+      "description": "Proyección Time-Series / Analytics"
+    }
+  },
+  "fields": [
+    {
+      "id": "p10",
+      "sectionId": "timeseries",
+      "label": "P10. ¿El MVP genera datos de series temporales o analíticos (métricas, eventos, logs, IoT)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere DBD Time-Series (07-c) con chunking, compression y continuous aggregates",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sí, pero se resuelve con tabla relacional + índices",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro — no en MVP",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "timeseries",
+      "label": "P11. Si aplica time-series: ¿qué granularidad, retención por tier (hot/warm/cold), downsampling y continuous aggregates necesita el MVP?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica time-series: ¿qué granularidad, retención por tier"
+    },
+    {
+      "id": "p12",
+      "sectionId": "timeseries",
+      "label": "P12. ¿Cuál es la query más cara del MVP en datos? ¿Qué pasa si crece 10x en 6 meses sin rediseño?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Cuál es la query más cara del MVP en datos? ¿Qué pasa si cr"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "DBD — Time-Series/Analytics",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "DBD — Time-Series/Analytics",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

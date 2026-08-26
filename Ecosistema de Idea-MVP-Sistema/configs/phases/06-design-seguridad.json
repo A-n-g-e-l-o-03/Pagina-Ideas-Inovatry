@@ -1,0 +1,129 @@
+{
+  "phaseId": "06-design",
+  "variant": "seguridad",
+  "phaseName": "Design — Seguridad",
+  "phaseGroup": "diseno",
+  "order": 6,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "Design — Seguridad",
+    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase `design` del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "Design — Seguridad",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "seguridad": {
+      "title": "4 · Seguridad",
+      "description": "¿Seguro por Diseño?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p12",
+      "sectionId": "seguridad",
+      "label": "P12. ¿Qué modelo de seguridad rige el diseño?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Zero trust — nunca confiar, siempre verificar (identidad + dispositivo + contexto)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Perímetro clásico — firewall + VPN",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Mixto — zero trust en app, perímetro en infra",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "sectionId": "seguridad",
+      "label": "P13. Describí cross-cutting concerns resueltos antes de componentes: authN/authZ, observabilidad, config/secrets, feature flags, rate limiting, circuit breaker, caching. ¿Cuál falta y es bloqueante?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí cross-cutting concerns resueltos antes de component"
+    },
+    {
+      "id": "p14",
+      "sectionId": "seguridad",
+      "label": "P14. ¿La supply chain (dependencias, imágenes base, pipelines) tiene controles?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — SBOM, pinning de versiones, scanning, firma de artefactos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — scanning en CI pero sin SBOM",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — `npm install` / `pip install` sin control",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "Design — Seguridad",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "Design — Seguridad",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

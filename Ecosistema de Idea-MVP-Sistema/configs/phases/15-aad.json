@@ -1,0 +1,129 @@
+{
+  "phaseId": "15-aad",
+  "variant": "pipeline",
+  "phaseName": "AAD — Pipeline",
+  "phaseGroup": "mcp",
+  "order": 15,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AAD — Pipeline",
+    "description": "El AAD (Agent Architecture Document) define cómo se orquestan múltiples agentes para construir el MVP. Si el AGD diseña un agente, el AAD diseña el sistema de agentes: quién hace qué, en qué orden, cómo se comunican y cómo se recuperan de fallos.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "AAD — Pipeline",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "pipeline": {
+      "title": "1 · Pipeline",
+      "description": "¿Línea de Montaje de Agentes?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "pipeline",
+      "label": "P1. ¿Qué arquitectura de orquestación necesita el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Pipeline secuencial — stages con gates (ej: spec → design → code → test → review)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Event-driven — agentes reaccionan a eventos sin orquestador central",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Hierarchical — orchestrator delega a managers y workers",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No necesita orquestación — un solo agente",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "pipeline",
+      "label": "P2. Mapeá el pipeline de agentes: stages, qué agente opera en cada stage, qué gate/criterio permite avanzar, qué se paraleliza y qué es secuencial.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Mapeá el pipeline de agentes: stages, qué agente opera en ca"
+    },
+    {
+      "id": "p03",
+      "sectionId": "pipeline",
+      "label": "P3. ¿Cómo se maneja rollback y reintento cuando un agente falla?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Rollback automático al stage anterior + reintento con contexto de fallo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Reintento sin rollback",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Fallo bloquea pipeline — intervención humana",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AAD — Pipeline",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AAD — Pipeline",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

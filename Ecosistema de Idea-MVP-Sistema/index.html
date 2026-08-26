@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecosistema Idea-MVP — Inovatry Solutions</title>
+  <meta name="description" content="Sistema modular de formularios para Specification-to-Software">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://discord.com;">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+<script>
+     (function () {
+       try {
+         var allowed = ['light', 'dark', 'protanopia', 'deuteranopia', 'tritanopia', 'mono', 'high-contrast'];
+         var t = localStorage.getItem('ecosystem-theme');
+         if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+         if (allowed.indexOf(t) !== -1) document.documentElement.setAttribute('data-theme', t);
+       } catch (e) {}
+     })();
+   </script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.webp" alt="Logotipo Inovatry">
+      <span>Inovatry Solutions</span>
+    </a>
+    <div class="theme-switcher">
+      <button type="button" class="theme-btn" id="themeBtn" aria-haspopup="true" aria-expanded="false" aria-label="Cambiar tema de colores">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <line x1="12" y1="2" x2="12" y2="4"></line>
+          <line x1="12" y1="20" x2="12" y2="22"></line>
+          <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+          <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+          <line x1="2" y1="12" x2="4" y2="12"></line>
+          <line x1="20" y1="12" x2="22" y2="12"></line>
+          <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+          <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+        </svg>
+        <span>Tema</span>
+        <svg class="chev" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+      <div class="theme-menu" id="themeMenu" role="menu" aria-label="Temas de color">
+        <button type="button" class="theme-option" role="menuitemradio" aria-checked="true" data-theme-option="light">
+          <span class="swatches" aria-hidden="true"><i style="--s1:#f4f7fb"></i><i style="--s1:#152a45"></i><i style="--s1:#2F8CFF"></i></span>
+          Claro (estándar)
+        </button>
+        <button type="button" class="theme-option" role="menuitemradio" aria-checked="false" data-theme-option="dark">
+          <span class="swatches" aria-hidden="true"><i style="--s1:#0d1520"></i><i style="--s1:#e8eef5"></i><i style="--s1:#4da3ff"></i></span>
+          Oscuro
+        </button>
+        <button type="button" class="theme-option" role="menuitemradio" aria-checked="false" data-theme-option="protanopia">
+          <span class="swatches" aria-hidden="true"><i style="--s1:#f4f7fb"></i><i style="--s1:#152a45"></i><i style="--s1:#0055cc"></i></span>
+          Protanopia (rojo débil)
+        </button>
+        <button type="button" class="theme-option" role="menuitemradio" aria-checked="false" data-theme-option="deuteranopia">
+          <span class="swatches" aria-hidden="true"><i style="--s1:#f4f7fb"></i><i style="--s1:#152a45"></i><i style="--s1:#0066b3"></i></span>
+          Deuteranopia (verde débil)
+        </button>
+        <button type="button" class="theme-option" role="menuitemradio" aria-checked="false" data-theme-option="tritanopia">
+          <span class="swatches" aria-hidden="true"><i style="--s1:#f4f7fb"></i><i style="--s1:#152a45"></i><i style="--s1:#c2410c"></i></span>
+          Tritanopia (azul débil)
+        </button>
+        <button type="button" class="theme-option" role="menuitemradio" aria-checked="false" data-theme-option="mono">
+          <span class="swatches" aria-hidden="true"><i style="--s1:#f4f7fb"></i><i style="--s1:#152a45"></i><i style="--s1:#3d4b5c"></i></span>
+          Monocromo (grises)
+        </button>
+        <button type="button" class="theme-option" role="menuitemradio" aria-checked="false" data-theme-option="high-contrast">
+          <span class="swatches" aria-hidden="true"><i style="--s1:#000000"></i><i style="--s1:#ffffff"></i><i style="--s1:#ffff00"></i></span>
+          Alto Contraste (WCAG AAA)
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Private Mode Banner (inserted dynamically by StateManager) -->
+  <div id="privateModeBanner" class="private-banner" hidden>
+    <span class="private-banner-text">⚠ Modo privado detectado. Los datos no persisten al cerrar la pestaña.</span>
+    <button type="button" class="private-banner-dismiss" aria-label="Descartar">×</button>
+  </div>
+
+  <nav class="phase-nav" id="phaseNav" aria-label="Navegación de fases">
+    <button type="button" class="phase-badge active" data-phase="00-idea" aria-current="true">
+      <span class="phase-icon"></span>00 Idea
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="01-idd" disabled>
+      <span class="phase-icon"></span>01 IDD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="02-prd" disabled>
+      <span class="phase-icon"></span>02 PRD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="03-brd" disabled>
+      <span class="phase-icon"></span>03 BRD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="04-rdd" disabled>
+      <span class="phase-icon"></span>04 RDD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="05-dmd" disabled>
+      <span class="phase-icon"></span>05 DMD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="06-design" disabled>
+      <span class="phase-icon"></span>06 Design
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="07-dbd" disabled>
+      <span class="phase-icon"></span>07 DBD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="08-api" disabled>
+      <span class="phase-icon"></span>08 API
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="09-uid" disabled>
+      <span class="phase-icon"></span>09 UID
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="10-tmd" disabled>
+      <span class="phase-icon"></span>10 TMD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="11-srd" disabled>
+      <span class="phase-icon"></span>11 SRD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="12-iam" disabled>
+      <span class="phase-icon"></span>12 IAM
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="13-sad" disabled>
+      <span class="phase-icon"></span>13 SAD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="14-agd" disabled>
+      <span class="phase-icon"></span>14 AGD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="15-aad" disabled>
+      <span class="phase-icon"></span>15 AAD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="16-aid" disabled>
+      <span class="phase-icon"></span>16 AID
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="17-tasks" disabled>
+      <span class="phase-icon"></span>17 Tasks
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="18-sod" disabled>
+      <span class="phase-icon"></span>18 SOD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="19-tdd" disabled>
+      <span class="phase-icon"></span>19 TDD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="20-atd" disabled>
+      <span class="phase-icon"></span>20 ATD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="21-std" disabled>
+      <span class="phase-icon"></span>21 STD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="22-vsd" disabled>
+      <span class="phase-icon"></span>22 VSD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="23-dep" disabled>
+      <span class="phase-icon"></span>23 DEP
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="24-mdd" disabled>
+      <span class="phase-icon"></span>24 MDD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="25-aed" disabled>
+      <span class="phase-icon"></span>25 AED
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="26-chd" disabled>
+      <span class="phase-icon"></span>26 CHD
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="27-ced" disabled>
+      <span class="phase-icon"></span>27 CED
+    </button>
+    <button type="button" class="phase-badge locked" data-phase="28-cca" disabled>
+      <span class="phase-icon"></span>28 CCA
+    </button>
+    <button type="button" id="generateConsolidatedMD" class="btn-md-consolidated" disabled aria-label="Generar Markdown consolidado de todas las fases completadas">
+      <span class="btn-text">Generar MD Consolidado</span>
+      <span class="spinner" aria-hidden="true"></span>
+    </button>
+  </nav>
+
+  <!-- Retry Panel para Discord Queue -->
+  <div id="retryPanel" class="retry-panel" hidden>
+    <button type="button" class="retry-toggle" aria-expanded="false" aria-controls="retryList">
+      <span class="retry-badge" id="retryBadge">0</span> Reintentos pendientes
+    </button>
+    <ul id="retryList" class="retry-list" hidden>
+      <!-- items dinámicos: phase, variant, error, timestamp, btn retry -->
+    </ul>
+  </div>
+
+  <section class="hero">
+    <span class="hero-badge" id="heroBadge">23 preguntas · 6 secciones</span>
+    <h1 id="heroTitle">Encuesta de Génesis de Ideas</h1>
+    <p id="heroDesc">Registra las condiciones de aparición de tus ideas para descubrir patrones y mejorar tu proceso creativo.</p>
+  </section>
+
+  <section class="form-section">
+    <div class="form-container">
+      <div id="formMessage" class="form-message"></div>
+      <h2 class="form-title" id="formTitle">Cuestionario de Génesis</h2>
+      <p class="form-subtitle" id="formSubtitle">Todas las preguntas son anónimas. Marcan con <span style="color:#e74c3c;">*</span> las obligatorias.</p>
+      <div class="progress-wrap">
+        <div class="progress-track" id="progressBar" role="progressbar" aria-label="Progreso del cuestionario" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="progress-label" id="progressLabel">0%</span>
+      </div>
+      <form id="contactForm" novalidate>
+        <div class="form-grid" id="formGrid">
+          <!-- Campos son dinámicos desde configs/phases/00-idea.json -->
+        </div>
+        <div class="submit-wrapper">
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span class="btn-text" id="submitText">Enviar respuestas</span>
+            <span class="spinner"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 <strong>Inovatry Solutions</strong>. Todos los derechos reservados.</p>
+  </footer>
+
+  <script type="module" src="js/core/app-core.js"></script>
+</body>
+</html>

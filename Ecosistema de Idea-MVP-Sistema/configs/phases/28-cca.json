@@ -1,0 +1,162 @@
+{
+  "phaseId": "28-cca",
+  "variant": "llm",
+  "phaseName": "CCA — LLM",
+  "phaseGroup": "marketing",
+  "order": 28,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "CCA — LLM",
+    "description": "El CCA (Cognitive Communication Agent) es el agente que comunica el MVP a cada audiencia, usando explicaciones (CED) como base. No es un chatbot genérico — es un agente con propósito, prompts, RAG, evaluación y guardrails. Es transversal y automatiza la comunicación sin perder calidad ni control.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "CCA — LLM",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "llm": {
+      "title": "1 · LLM",
+      "description": "¿Agente Generativo Con Control?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "llm",
+      "label": "P1. ¿El MVP usa un agente LLM para comunicar/explicar (docs, onboarding, soporte, reportes)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — comunicación 100% humana/manual",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — agente LLM con RAG, prompts y guardrails",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — LLM ad-hoc sin RAG ni evaluación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Evaluando",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "llm",
+      "label": "P2. Si aplica LLM: describí el agente — ¿qué prompts/templates usa, qué conocimiento recupera (RAG sobre qué corpus), qué few-shot examples, cómo se evalúa (factualidad, tono, completitud) y qué...",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica LLM: describí el agente — ¿qué prompts/templates u"
+    },
+    {
+      "id": "p03",
+      "sectionId": "llm",
+      "label": "P3. ¿Hay human-in-loop y evaluación continua del agente LLM?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — humano revisa outputs críticos + evaluación automática con dataset de referencia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo evaluación sin human-in-loop",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo human-in-loop sin evaluación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ninguno — LLM directo a usuario",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "llm",
+      "label": "P4. ¿Qué output multi-modal genera el agente (texto, diagramas, slides, video, voz)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Solo texto",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Texto + diagramas/imágenes",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Texto + multi-modal (slides, diagramas, código)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No genera output — solo clasifica/resume",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "CCA — LLM",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "CCA — LLM",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

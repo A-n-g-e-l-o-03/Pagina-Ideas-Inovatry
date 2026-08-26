@@ -1,0 +1,129 @@
+{
+  "phaseId": "13-sad",
+  "variant": "cloud",
+  "phaseName": "SAD — Cloud Native",
+  "phaseGroup": "validacion",
+  "order": 13,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "SAD — Cloud Native",
+    "description": "El SAD (Security Architecture Document) es la arquitectura de seguridad del MVP: cómo los controles (SRD) y el modelo de amenazas (TMD) se materializan en infraestructura, identidad y flujos de datos. Es el plano que integra IAM, network, data y appsec en un todo coherente. Sin SAD, los controles son piezas sueltas.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "SAD — Cloud Native",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "cloud": {
+      "title": "2 · Cloud Native",
+      "description": "¿Seguridad Compartida Bien Entendida?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p04",
+      "sectionId": "cloud",
+      "label": "P4. ¿Tenés claro el modelo de responsabilidad compartida con el cloud provider?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — matriz de quién asegura qué (provider vs. nosotros) por servicio",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Intuido pero sin matriz",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — \"el cloud se encarga de la seguridad\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — on-prem",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "cloud",
+      "label": "P5. Describí controles cloud native del MVP: k8s (PodSecurity, network policies, RBAC), serverless (least privilege por función), managed services (encripción, logging, IAM), supply chain y...",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí controles cloud native del MVP: k8s (PodSecurity, n"
+    },
+    {
+      "id": "p06",
+      "sectionId": "cloud",
+      "label": "P6. ¿Hay detection & response en runtime (no solo prevención)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — SIEM/SOAR, FIM, runtime threat detection, playbooks de respuesta",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo logs sin detección",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo prevención (WAF, firewall)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay detection",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "SAD — Cloud Native",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "SAD — Cloud Native",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

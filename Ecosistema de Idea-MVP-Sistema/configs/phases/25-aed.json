@@ -1,0 +1,195 @@
+{
+  "phaseId": "25-aed",
+  "variant": "tecnico",
+  "phaseName": "AED — Técnico",
+  "phaseGroup": "tecnico",
+  "order": 25,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AED — Técnico",
+    "description": "El AED (Architecture Evolution Document) planifica cómo evoluciona la arquitectura del MVP sin reescribirlo. Es el roadmap técnico: deuda, modernización, capacidad, descomposición y governance. Se genera tras operar el MVP y alimenta decisiones de inversión técnica.",
+    "badge": "5 preguntas"
+  },
+  "form": {
+    "title": "AED — Técnico",
+    "subtitle": "5 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "tecnico": {
+      "title": "1 · Técnico",
+      "description": "¿Deuda Bajo Control?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "tecnico",
+      "label": "P1. ¿Tenés tech debt roadmap priorizado?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — deuda mapeada con costo, impacto y plan de pago por trimestre",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Lista informal sin priorización",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No mapeada — \"la deuda se paga cuando duele\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay deuda — MVP nuevo",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "tecnico",
+      "label": "P2. Listá las 3 deudas técnicas más caras del MVP: ¿qué la causó, cuánto cuesta mantenerla (horas/mes), qué riesgo genera y cuándo se paga?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Listá las 3 deudas técnicas más caras del MVP: ¿qué la causó"
+    },
+    {
+      "id": "p03",
+      "sectionId": "tecnico",
+      "label": "P3. ¿Cómo planificás capacidad (usuarios, datos, tráfico) a 6-12 meses?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Capacity planning con proyección + load testing + thresholds de escalado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Proyección sin testing",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sin proyección — \"escalamos cuando haga falta\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — volumen bajo y estable",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "tecnico",
+      "label": "P4. ¿Hay patrón de modernización/migración definido (strangler fig, branch by abstraction, etc.)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — patrón elegido con milestones y rollback",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Idea sin patrón formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No hay modernización prevista",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — arquitectura final desde día 1",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "tecnico",
+      "label": "P5. ¿La arquitectura se descompone o se mantiene monolítica?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Se mantiene monolito modular — descomposición no justificada",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Se descompone incrementalmente por bounded context con criterio claro",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Se descompone en microservicios desde el inicio",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No decidido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AED — Técnico",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AED — Técnico",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

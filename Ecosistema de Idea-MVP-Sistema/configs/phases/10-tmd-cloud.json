@@ -1,0 +1,129 @@
+{
+  "phaseId": "10-tmd",
+  "variant": "cloud",
+  "phaseName": "TMD — Cloud/Kubernetes",
+  "phaseGroup": "validacion",
+  "order": 10,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "TMD — Cloud/Kubernetes",
+    "description": "El TMD (Threat Model Document) responde: ¿cómo puede ser atacado el MVP y qué hacemos al respecto? Es el análisis estructurado de amenazas antes de que el atacante lo haga por vos. Se genera en fase design SDD y alimenta a SRD, IAM y SAD. Sin TMD, la seguridad es reactiva y anecdótica.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "TMD — Cloud/Kubernetes",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "cloud": {
+      "title": "3 · Proyección Cloud / Kubernetes",
+      "description": "Proyección Cloud / Kubernetes"
+    }
+  },
+  "fields": [
+    {
+      "id": "p09",
+      "sectionId": "cloud",
+      "label": "P9. ¿El MVP corre en cloud/k8s/serverless con modelo de responsabilidad compartida?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — on-prem / VPS simple",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — cloud IaaS/PaaS",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sí — Kubernetes (managed o self-hosted)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Sí — serverless / containers",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sectionId": "cloud",
+      "label": "P10. Si aplica cloud/k8s: ¿qué amenazas específicas de la capa cloud (IAM misconfig, supply chain de imágenes, secrets en env vars, network policies, runtime) están en el TMD?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica cloud/k8s: ¿qué amenazas específicas de la capa cl"
+    },
+    {
+      "id": "p11",
+      "sectionId": "cloud",
+      "label": "P11. ¿El TMD se revisa en cada cambio de arquitectura o es un one-shot?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "En cada ADR / RFC que toca trust boundaries",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo al inicio del proyecto",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Nunca se revisa formalmente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay TMD",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "TMD — Cloud/Kubernetes",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "TMD — Cloud/Kubernetes",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

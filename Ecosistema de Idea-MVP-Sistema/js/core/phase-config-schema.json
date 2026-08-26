@@ -1,0 +1,257 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://inovatrysolutions.com/schemas/phase-config-schema.json",
+  "title": "Phase Configuration Schema",
+  "description": "Schema for validating phase configuration files in Ecosistema Idea MVP",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "phaseId",
+    "phaseName",
+    "phaseGroup",
+    "order",
+    "schemaVersion",
+    "sections",
+    "fields"
+  ],
+  "properties": {
+    "phaseId": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique identifier for the phase (kebab-case)"
+    },
+    "phaseName": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable name of the phase"
+    },
+    "phaseGroup": {
+      "type": "string",
+      "enum": ["idd", "rdd", "mvp", "validacion", "investigacion", "diseno", "tecnico", "negocio", "marketing", "legal", "operaciones", "finanzas"],
+      "description": "Group/category this phase belongs to"
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Display order within phase group"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1,
+      "description": "Schema version for migration tracking"
+    },
+    "variant": {
+      "type": "string",
+      "description": "Optional variant identifier (e.g., 'funcional', 'tecnico')"
+    },
+    "hero": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "description"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 }
+      }
+    },
+    "form": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "subtitle"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "subtitle": { "type": "string", "minLength": 1 }
+      }
+    },
+    "sections": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "description"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 }
+        }
+      },
+      "description": "Map of sectionId to section metadata"
+    },
+    "fields": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "type"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "description": "Unique field identifier (snake_case)"
+          },
+          "sectionId": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "description": "Section this field belongs to (must exist in sections)"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "description": "Human-readable label"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "text",
+              "email",
+              "textarea",
+              "radio",
+              "checkbox",
+              "select",
+              "file",
+              "honeypot",
+              "hidden",
+              "readonly"
+            ],
+            "description": "Field input type"
+          },
+          "required": {
+            "type": "boolean",
+            "default": false
+          },
+          "placeholder": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "autocomplete": {
+            "type": "string"
+          },
+          "fullWidth": {
+            "type": "boolean",
+            "default": false
+          },
+          "compact": {
+            "type": "boolean",
+            "default": false,
+            "description": "Compact detail field shown inline"
+          },
+          "multiple": {
+            "type": "boolean",
+            "default": false,
+            "description": "For checkbox type - allow multiple selections"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["value", "label"],
+              "properties": {
+                "value": { "type": "string" },
+                "label": { "type": "string", "minLength": 1 },
+                "disabled": { "type": "boolean", "default": false },
+                "selected": { "type": "boolean", "default": false }
+              }
+            },
+            "minItems": 1,
+            "description": "Options for radio, checkbox, select types"
+          },
+          "validation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "minLength": { "type": "integer", "minimum": 0 },
+              "maxLength": { "type": "integer", "minimum": 0 },
+              "pattern": { "type": "string" },
+              "errorMessage": { "type": "string" },
+              "formatMessage": { "type": "string" }
+            }
+          },
+          "showWhen": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "field": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+              "equals": { "type": "string" },
+              "in": { "type": "array", "items": { "type": "string" } },
+              "not": { "type": "string" }
+            },
+            "description": "Conditional visibility rules"
+          },
+          "maxFiles": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "For file type - maximum number of files"
+          },
+          "allowedTypes": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^\\..+" },
+            "description": "For file type - allowed file extensions"
+          }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "type": { "const": "radio" } } },
+            "then": { "required": ["options"] }
+          },
+          {
+            "if": { "properties": { "type": { "const": "select" } } },
+            "then": { "required": ["options"] }
+          },
+          {
+            "if": { "properties": { "type": { "const": "checkbox" }, "multiple": { "const": true } } },
+            "then": { "required": ["options"] }
+          },
+          {
+            "if": { "properties": { "type": { "const": "file" } } },
+            "then": { "required": ["maxFiles", "allowedTypes"] }
+          }
+        ]
+      }
+    },
+    "webhook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "username", "avatarUrl"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "username": { "type": "string", "minLength": 1 },
+        "avatarUrl": { "type": "string", "format": "uri" },
+        "embeds": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": { "type": "string" },
+            "descriptionTemplate": { "type": "string" },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["name", "valueTemplate"],
+                "properties": {
+                  "name": { "type": "string" },
+                  "valueTemplate": { "type": "string" },
+                  "inline": { "type": "boolean", "default": false }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "maxTotalBytes": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 8388608,
+      "description": "Maximum total upload size in bytes"
+    },
+    "allowedTypes": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^\\..+" },
+      "default": [".pdf", ".doc", ".docx", ".txt", ".csv"],
+      "description": "Globally allowed file extensions"
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "phaseId": "08-api",
+  "variant": "async",
+  "phaseName": "API — Async/Event-Driven",
+  "phaseGroup": "tecnico",
+  "order": 8,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "API — Async/Event-Driven",
+    "description": "El API Design Document define el contrato entre el MVP y sus consumidores (frontend, otros servicios, terceros). Es un contrato versionado y testeable: romperlo sin avisar es romper a tus clientes. Se genera en fase design SDD y alimenta implementación y contract testing.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "API — Async/Event-Driven",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "async": {
+      "title": "3 · Proyección Async / Event-Driven",
+      "description": "Proyección Async / Event-Driven"
+    }
+  },
+  "fields": [
+    {
+      "id": "p09",
+      "sectionId": "async",
+      "label": "P9. ¿El MVP emite o consume eventos/comandos async?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — todo sync request/response",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere API Async (08-c) con topics, schemas y delivery guarantees",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Híbrido — sync para UX, async para procesos largos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro — no en MVP",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sectionId": "async",
+      "label": "P10. Si aplica async: listá topics/eventos clave con schema (Avro/JSON Schema), productor, consumidores, garantía de entrega (at-least-once / exactly-once), idempotencia y dead letter policy.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica async: listá topics/eventos clave con schema (Avro"
+    },
+    {
+      "id": "p11",
+      "sectionId": "async",
+      "label": "P11. ¿Los schemas de eventos están versionados y con compatibilidad (backward/forward)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — Schema Registry con compatibilidad verificada en CI",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Versionados sin verificación automática",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sin versionado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "sectionId": "async",
+      "label": "P12. ¿Qué pasa si un consumidor está caído 2 horas y se pierden eventos? ¿Hay replay, outbox pattern o event store?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué pasa si un consumidor está caído 2 horas y se pierden e"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "API — Async/Event-Driven",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "API — Async/Event-Driven",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

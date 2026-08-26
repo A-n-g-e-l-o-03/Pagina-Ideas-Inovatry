@@ -1,0 +1,129 @@
+{
+  "phaseId": "06-design",
+  "variant": "componentes",
+  "phaseName": "Design — Componentes",
+  "phaseGroup": "diseno",
+  "order": 6,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "Design — Componentes",
+    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase `design` del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "Design — Componentes",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "componentes": {
+      "title": "2 · Componentes",
+      "description": "¿Quién Hace Qué?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p06",
+      "sectionId": "componentes",
+      "label": "P6. Listá los 4-6 componentes principales del MVP con: responsabilidad única, interfaces (qué expone/consume), estado que maneja y ciclo de vida.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Listá los 4-6 componentes principales del MVP con: responsab"
+    },
+    {
+      "id": "p07",
+      "sectionId": "componentes",
+      "label": "P7. ¿Cada componente tiene estrategia de testing definida?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — unit + integration + contract por componente, con doubles y coverage target",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — solo unit tests",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — testing se ve después",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Un único test suite monolítico",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "componentes",
+      "label": "P8. ¿Las dependencias entre componentes son acíclicas y direccionales?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — grafo dirigido acíclico verificado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Hay 1-2 ciclos conocidos con plan de ruptura",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Ciclos no analizados",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Todo depende de todo (big ball of mud en potencia)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "Design — Componentes",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "Design — Componentes",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "phaseId": "21-std",
+  "variant": "chaos",
+  "phaseName": "STD — Chaos Engineering",
+  "phaseGroup": "validacion",
+  "order": 21,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "STD — Chaos Engineering",
+    "description": "El STD (System Test Document) prueba el sistema completo integrado, no componentes aislados. Valida que el MVP funciona end-to-end, con sus dependencias reales, bajo condiciones de producción. Se ejecuta en fase `verify` del SDD, después de ATD y antes de VSD.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "STD — Chaos Engineering",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "chaos": {
+      "title": "3 · Proyección Chaos Engineering",
+      "description": "Proyección Chaos Engineering"
+    }
+  },
+  "fields": [
+    {
+      "id": "p07",
+      "sectionId": "chaos",
+      "label": "P7. ¿El MVP necesita chaos engineering?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — MVP simple sin resiliencia crítica",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere STD Chaos (21-c) con hipótesis, blast radius y game days",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — solo fault injection manual",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "chaos",
+      "label": "P8. Si aplica chaos: definí una hipótesis (\"si cae X, el sistema hace Y\"), el experimento, el blast radius controlado, el rollback y qué aprendizaje esperás.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica chaos: definí una hipótesis (\"si cae X, el sistema"
+    },
+    {
+      "id": "p09",
+      "sectionId": "chaos",
+      "label": "P9. ¿Hay evidencia trazable de system tests (qué se probó, con qué datos, qué resultado, qué cobertura)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — reporte con trazabilidad a RDD y evidencia por journey",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — reporte sin trazabilidad",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — \"se probó y anduvo\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay system tests",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sectionId": "chaos",
+      "label": "P10. ¿Qué fallo de sistema completo (no de componente) solo aparecería en E2E con dependencias reales? ¿Tenés test para eso?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué fallo de sistema completo (no de componente) solo apare"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "STD — Chaos Engineering",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "STD — Chaos Engineering",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

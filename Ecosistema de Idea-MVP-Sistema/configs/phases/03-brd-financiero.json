@@ -1,0 +1,150 @@
+{
+  "phaseId": "03-brd",
+  "variant": "financiero",
+  "phaseName": "BRD — Financiero",
+  "phaseGroup": "rdd",
+  "order": 3,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "BRD — Financiero",
+    "description": "El BRD (Business Requirements Document) traduce la necesidad de negocio en requisitos que la organización necesita satisfacer, en lenguaje de negocio (no de producto ni de sistema). Responde: ¿por qué la empresa debe invertir en esto, qué gana, qué arriesga y qué exige el entorno? Se genera en paralelo al PRD, tras el IDD, y ambos alimentan al RDD. Sin BRD, el MVP puede ser buen producto pero mala inversión.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "BRD — Financiero",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "financiero": {
+      "title": "3 · Financiero",
+      "description": "¿Cierra el Número?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p09",
+      "sectionId": "financiero",
+      "label": "P9. Detallá inversión estimada del MVP: costo de equipo (personas×tiempo), infraestructura, licencias, costo de oportunidad. ¿Cuál es el total a 3 y 6 meses?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Detallá inversión estimada del MVP: costo de equipo (persona"
+    },
+    {
+      "id": "p10",
+      "sectionId": "financiero",
+      "label": "P10. ¿Cuál es el retorno esperado y en qué horizonte?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Ahorro de costo (horas×tarifa) en <6 meses",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Ingreso nuevo / upsell en <6 meses",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Retención / churn evitado (difícil de atribuir)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Valor estratégico no monetizable a corto plazo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No cuantificado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "financiero",
+      "label": "P11. ¿Qué método financiero usás para decidir?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Payback simple",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "ROI",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "NPV / flujo descontado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Costo de demora (Cost of Delay) / WSJF",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Intuición — \"se siente que vale la pena\"",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "sectionId": "financiero",
+      "label": "P12. ¿Cuál es el escenario de pérdida máxima si el MVP fracasa? ¿Ese monto es tolerable sin poner en riesgo la operación?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Cuál es el escenario de pérdida máxima si el MVP fracasa? ¿"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "BRD — Financiero",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "BRD — Financiero",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

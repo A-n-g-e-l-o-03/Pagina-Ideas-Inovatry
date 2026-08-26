@@ -1,0 +1,135 @@
+{
+  "phaseId": "01-idd",
+  "variant": "humana",
+  "phaseName": "IDD — Humana",
+  "phaseGroup": "idd",
+  "order": 1,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IDD — Humana",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "IDD — Humana",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "humana": {
+      "title": "4 · Humana",
+      "description": "¿Es Sostenible para las Personas?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p12",
+      "sectionId": "humana",
+      "label": "P12. ¿Cuántos context-switches por día sufre el rol que más se beneficiaría del MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No medido",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "1-3 (bajo)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "4-7 (moderado)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "8+ (alto, fragmentación severa)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No aplica — es producto cliente externo",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "sectionId": "humana",
+      "label": "P13. ¿Qué carga cognitiva elimina el MVP (recordar, copiar/pegar, consolidar, decidir sin datos)? ¿Cuántos bloques de foco profundo (90+ min sin interrupción) se recuperarían por semana?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué carga cognitiva elimina el MVP (recordar, copiar/pegar,"
+    },
+    {
+      "id": "p14",
+      "sectionId": "humana",
+      "label": "P14. ¿El MVP aumenta o reduce la energía/sostenibilidad del equipo a 6 meses?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Reduce claramente (automatiza toil)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Neutral",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Aumenta deuda cognitiva (nueva herramienta que mantener)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IDD — Humana",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IDD — Humana",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

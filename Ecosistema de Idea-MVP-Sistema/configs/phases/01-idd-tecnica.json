@@ -1,0 +1,135 @@
+{
+  "phaseId": "01-idd",
+  "variant": "tecnica",
+  "phaseName": "IDD — Técnica",
+  "phaseGroup": "idd",
+  "order": 1,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IDD — Técnica",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "IDD — Técnica",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "tecnica": {
+      "title": "6 · Técnica",
+      "description": "¿Es Factible sin Heroísmo?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p18",
+      "sectionId": "tecnica",
+      "label": "P18. ¿Qué trabajo manual repetitivo elimina el MVP del toolchain actual? Listá herramientas involucradas y pasos que hoy requieren intervención humana.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué trabajo manual repetitivo elimina el MVP del toolchain "
+    },
+    {
+      "id": "p19",
+      "sectionId": "tecnica",
+      "label": "P19. ¿Qué deuda técnica o fricción de toolchain ataca el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "CI/CD lento o frágil",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Falta de automatización (deploy, tests, migraciones)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Calidad / deuda de código acumulada",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Observabilidad / debugging manual",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Ninguna — es producto de negocio puro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p20",
+      "sectionId": "tecnica",
+      "label": "P20. ¿El MVP introduce nueva deuda técnica a cambio de velocidad?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — usa stack y patrones existentes",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí, pero está mapeada y con plan de pago",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sí, y no está mapeada (riesgo oculto)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IDD — Técnica",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IDD — Técnica",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "phaseId": "01-idd",
+  "variant": "productividad",
+  "phaseName": "IDD — Productividad Equipo",
+  "phaseGroup": "idd",
+  "order": 1,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IDD — Productividad Equipo",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "IDD — Productividad Equipo",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "productividad": {
+      "title": "2 · Productividad Equipo",
+      "description": "¿Libera Capacidad Real?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p06",
+      "sectionId": "productividad",
+      "label": "P6. ¿Qué fricción repetitiva del equipo elimina el MVP? Cuantificá: ¿cuántas horas/semana se pierden hoy, quién las pierde y en qué tarea de bajo valor?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué fricción repetitiva del equipo elimina el MVP? Cuantifi"
+    },
+    {
+      "id": "p07",
+      "sectionId": "productividad",
+      "label": "P7. ¿Cómo medís hoy la productividad del equipo afectado?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No se mide sistemáticamente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Horas trabajadas / tickets cerrados",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Métricas de flujo (lead time, throughput, WIP)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "DORA / SPACE / métricas de outcome",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Combinación de flujo + outcome + encuesta de satisfacción",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "productividad",
+      "label": "P8. Si el MVP funciona, ¿qué haría el equipo con el tiempo liberado? ¿Ese nuevo uso genera más valor que el costo de construir y mantener el MVP?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si el MVP funciona, ¿qué haría el equipo con el tiempo liber"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IDD — Productividad Equipo",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IDD — Productividad Equipo",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "phaseId": "17-tasks",
+  "variant": "sprint",
+  "phaseName": "Tasks — Sprint",
+  "phaseGroup": "mcp",
+  "order": 17,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "Tasks — Sprint",
+    "description": "El Tasks Document descompone el diseño (Design) en trabajo ejecutable con estimación, dependencias, criterios de hecho (DoD/DoR) y mitigación de riesgos. Se genera en fase `tasks` del SDD, tras Design y antes de Apply. Sin Tasks, el MVP es una lista de deseos sin orden ni estimación.",
+    "badge": "5 preguntas"
+  },
+  "form": {
+    "title": "Tasks — Sprint",
+    "subtitle": "5 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "sprint": {
+      "title": "1 · Sprint",
+      "description": "¿Sprints Que Entregan Valor?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "sprint",
+      "label": "P1. ¿Qué metodología de planificación usa el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Scrum / Sprints con stories, capacity y DoD",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Kanban con WIP limits y flow metrics",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Chained PRs con work units atómicos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Híbrido / no definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "sprint",
+      "label": "P2. Descomponé el MVP en 8-12 stories con: título, criterio de aceptación, estimación (t-shirt o points), prioridad (MoSCoW) y dependencias. ¿Cuál es el camino crítico?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Descomponé el MVP en 8-12 stories con: título, criterio de a"
+    },
+    {
+      "id": "p03",
+      "sectionId": "sprint",
+      "label": "P3. ¿Tenés DoR (Definition of Ready) y DoD (Definition of Done) explícitos?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — DoR (lista para tomar) y DoD (lista para liberar) con checklist verificable",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo DoD sin DoR",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo \"cuando el PO dice que está bien\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay DoR/DoD",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "sprint",
+      "label": "P4. ¿Cómo estimás y qué capacidad asumís por sprint?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Planning poker / t-shirt con velocity histórica y capacidad real (descontando reuniones, soporte, vacas)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Estimación del tech lead sin input del equipo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sin estimación — \"lo que salga\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay sprints",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "sprint",
+      "label": "P5. ¿Qué spike/POC necesita el MVP antes de comprometerse a un sprint? ¿Qué pregunta debe responder y en cuánto tiempo?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué spike/POC necesita el MVP antes de comprometerse a un s"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "Tasks — Sprint",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "Tasks — Sprint",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

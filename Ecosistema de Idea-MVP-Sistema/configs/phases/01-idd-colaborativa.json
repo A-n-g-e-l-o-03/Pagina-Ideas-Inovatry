@@ -1,0 +1,129 @@
+{
+  "phaseId": "01-idd",
+  "variant": "colaborativa",
+  "phaseName": "IDD — Colaborativa",
+  "phaseGroup": "idd",
+  "order": 1,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IDD — Colaborativa",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "IDD — Colaborativa",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "colaborativa": {
+      "title": "7 · Colaborativa",
+      "description": "¿Reduce Handoffs?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p21",
+      "sectionId": "colaborativa",
+      "label": "P21. ¿Cuántos handoffs (paso de trabajo entre personas/equipos) tiene hoy el flujo que el MVP toca? ¿Cuántos quedarían después y quién sería owner de cada parte?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Cuántos handoffs (paso de trabajo entre personas/equipos) t"
+    },
+    {
+      "id": "p22",
+      "sectionId": "colaborativa",
+      "label": "P22. ¿Existen dependencias inter-equipo que el MVP crea o elimina?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Elimina dependencias (desacopla)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "No cambia dependencias",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Crea nuevas dependencias (acopla más)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No analizado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p23",
+      "sectionId": "colaborativa",
+      "label": "P23. ¿Los contratos entre equipos (APIs, eventos, SLAs) están explícitos?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí, versionados y con consumer-driven contracts",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Documentados pero sin versionado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Verbales / implícitos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No existen — cada equipo integra ad-hoc",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IDD — Colaborativa",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IDD — Colaborativa",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "phaseId": "18-sod",
+  "variant": "event-driven",
+  "phaseName": "SOD — Event-Driven",
+  "phaseGroup": "mcp",
+  "order": 18,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "SOD — Event-Driven",
+    "description": "El SOD (Software Orchestration Document) orquesta cómo se construye, testea, despliega y verifica el MVP de forma automatizada y trazable. Es el \"director de orquesta\" del ciclo SDD: define stages, agentes, gates, rollback y métricas DORA. Sin SOD, el delivery es manual, frágil y no repetible.",
+    "badge": "2 preguntas"
+  },
+  "form": {
+    "title": "SOD — Event-Driven",
+    "subtitle": "2 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "event_driven": {
+      "title": "2 · Event-Driven",
+      "description": "¿Orquestación Sin Orquestador?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p05",
+      "sectionId": "event_driven",
+      "label": "P5. ¿La orquestación del MVP es event-driven (servicios reaccionan a eventos)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — pipeline secuencial",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — choreography con event bus",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sí — orchestration con saga/orquestador",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Híbrido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "sectionId": "event_driven",
+      "label": "P6. Si es event-driven: describí el event bus, patrón saga, idempotencia, dead letter y observabilidad del flujo orquestado.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si es event-driven: describí el event bus, patrón saga, idem"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "SOD — Event-Driven",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "SOD — Event-Driven",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

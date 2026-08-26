@@ -1,0 +1,138 @@
+{
+  "phaseId": "02-prd",
+  "variant": "producto",
+  "phaseName": "PRD — Producto",
+  "phaseGroup": "rdd",
+  "order": 2,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "PRD — Producto",
+    "description": "El PRD (Product Requirements Document) traduce la idea validada en el IDD a un producto gestionable. Responde: ¿qué vamos a construir, para quién, por qué lo elegirían y cómo sabemos que funciona? Se genera siempre tras el IDD y antes del RDD, y alimenta directamente al diseño de requisitos. Cada lente mira el mismo producto desde un ángulo distinto; juntos evitan que el MVP sea deseable pero inviable, o viable pero nadie lo quiera.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "PRD — Producto",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "producto": {
+      "title": "2 · Producto",
+      "description": "¿Qué Construimos y En Qué Orden?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p07",
+      "sectionId": "producto",
+      "label": "P7. Listá todas las capacidades candidatas del MVP y priorizalas con un framework (RICE, ICE, MoSCoW o Kano). ¿Cuál es el corte Must vs. Should vs. Won't para la primera entrega?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Listá todas las capacidades candidatas del MVP y priorizalas"
+    },
+    {
+      "id": "p08",
+      "sectionId": "producto",
+      "label": "P8. ¿Qué métrica define éxito del MVP a 30/60/90 días?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Output (features entregadas, story points)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Outcome de adopción (activation rate, task success, time-to-value)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Outcome de negocio (retention, NPS, churn reason, revenue)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definida",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "producto",
+      "label": "P9. ¿Cómo manejás feature creep / deuda UX cuando el roadmap presiona?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Todo entra — deuda se paga después",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Framework: ICE para features vs. UX Debt Score (frecuencia×severidad×usuarios) con trade-off explícito",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Deuda UX siempre prioridad 0",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Votación del equipo",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sectionId": "producto",
+      "label": "P10. Describí el roadmap del MVP en 3 horizontes: ¿qué entra en las próximas 4 semanas (MVP), qué en 8-12 semanas (v1), qué queda explícitamente fuera?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí el roadmap del MVP en 3 horizontes: ¿qué entra en l"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "PRD — Producto",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "PRD — Producto",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

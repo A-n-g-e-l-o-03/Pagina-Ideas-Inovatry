@@ -1,0 +1,162 @@
+{
+  "phaseId": "21-std",
+  "variant": "e2e",
+  "phaseName": "STD — E2E",
+  "phaseGroup": "validacion",
+  "order": 21,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "STD — E2E",
+    "description": "El STD (System Test Document) prueba el sistema completo integrado, no componentes aislados. Valida que el MVP funciona end-to-end, con sus dependencias reales, bajo condiciones de producción. Se ejecuta en fase `verify` del SDD, después de ATD y antes de VSD.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "STD — E2E",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "e2e": {
+      "title": "1 · E2E",
+      "description": "¿El Sistema Completo Funciona?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "e2e",
+      "label": "P1. Listá los 3-5 critical journeys del MVP (ej: registro→onboarding→primera tarea→pago→notificación) que, si fallan, el MVP no sirve. ¿Cada journey tiene test E2E automatizado?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Listá los 3-5 critical journeys del MVP (ej: registro→onboar"
+    },
+    {
+      "id": "p02",
+      "sectionId": "e2e",
+      "label": "P2. ¿Los E2E corren contra qué entorno y datos?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Entorno prod-like (staging) con datos sintéticos realistas y seeding reproducible",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Staging con datos de prod anonimizados",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Local con mocks",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay E2E — solo unit/integration",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "sectionId": "e2e",
+      "label": "P3. ¿Cómo manejás flakiness en E2E?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Quarantine + re-run con retry inteligente + root cause + fix (no solo re-run)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Re-run hasta que pase",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Tests E2E deshabilitados por flaky",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay E2E",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "e2e",
+      "label": "P4. ¿Performance y observabilidad se validan en E2E?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — E2E mide latencia, throughput y valida logs/metrics/traces",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo funcional sin performance",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo performance sin observabilidad",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ninguno",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "STD — E2E",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "STD — E2E",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

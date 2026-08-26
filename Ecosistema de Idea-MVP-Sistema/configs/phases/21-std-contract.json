@@ -1,0 +1,96 @@
+{
+  "phaseId": "21-std",
+  "variant": "contract",
+  "phaseName": "STD — Contract",
+  "phaseGroup": "validacion",
+  "order": 21,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "STD — Contract",
+    "description": "El STD (System Test Document) prueba el sistema completo integrado, no componentes aislados. Valida que el MVP funciona end-to-end, con sus dependencias reales, bajo condiciones de producción. Se ejecuta en fase `verify` del SDD, después de ATD y antes de VSD.",
+    "badge": "2 preguntas"
+  },
+  "form": {
+    "title": "STD — Contract",
+    "subtitle": "2 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "contract": {
+      "title": "2 · Contract",
+      "description": "¿Contratos Entre Sistemas?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p05",
+      "sectionId": "contract",
+      "label": "P5. ¿Tenés contract tests entre el MVP y sus dependencias (APIs externas, eventos, DB)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — consumer-driven contracts (Pact) con provider verification en CI",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Schema validation (JSON Schema/OpenAPI) sin Pact",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Mocks sin contrato formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay contract tests",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "sectionId": "contract",
+      "label": "P6. Para la integración más riesgosa: ¿quién es consumer/provider, qué contrato define, qué pasa si el provider cambia el schema sin avisar y cómo lo detectás antes de prod?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Para la integración más riesgosa: ¿quién es consumer/provide"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "STD — Contract",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "STD — Contract",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

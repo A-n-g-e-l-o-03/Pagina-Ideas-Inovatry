@@ -1,0 +1,195 @@
+{
+  "phaseId": "16-aid",
+  "variant": "code-agent",
+  "phaseName": "AID — Code Agent",
+  "phaseGroup": "mcp",
+  "order": 16,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AID — Code Agent",
+    "description": "El AID (AI Instruction Document) son las instrucciones operativas que un agente de IA ejecuta para hacer su trabajo. Si el AGD es el \"qué\" (diseño del agente) y el AAD es el \"cómo se orquestan\", el AID es el manual paso a paso con workflow, estándares, gates, restricciones y manejo de incertidumbre. Es lo que hace que un agente sea predecible y auditable, no un generador aleatorio.",
+    "badge": "5 preguntas"
+  },
+  "form": {
+    "title": "AID — Code Agent",
+    "subtitle": "5 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "code_agent": {
+      "title": "1 · Code Agent",
+      "description": "¿Instrucciones a Prueba de Alucinación?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "code_agent",
+      "label": "P1. Escribí el workflow paso a paso del Code Agent: ¿qué lee primero, qué genera, en qué orden, qué valida antes de entregar y qué hace si no entiende un requisito?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Escribí el workflow paso a paso del Code Agent: ¿qué lee pri"
+    },
+    {
+      "id": "p02",
+      "sectionId": "code_agent",
+      "label": "P2. ¿Qué coding standards debe seguir el agente sin excepción?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Guía de estilo + patrones (hexagonal, DDD) + testing obligatorio + ADRs del proyecto",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo formato (Prettier/Black)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Ninguno — \"que genere como pueda\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Standards del lenguaje sin adaptación al proyecto",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "sectionId": "code_agent",
+      "label": "P3. ¿Qué restricciones tiene el agente (qué NUNCA debe hacer)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Lista explícita — no inventar APIs, no hardcodear secrets, no romper contratos, no asumir sin preguntar",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Restricciones genéricas — \"sé cuidadoso\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sin restricciones",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "code_agent",
+      "label": "P4. ¿Cómo maneja incertidumbre el agente?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Escala a humano con pregunta específica + contexto + opciones",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Asume y sigue — \"ya se corregirá en review\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Se bloquea sin decir por qué",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "code_agent",
+      "label": "P5. ¿Qué quality gates bloquean la entrega del agente?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Compila + tests pasan + lint/format + SAST + coverage + review checklist",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo compila + tests",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo compila",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ninguno — entrega directa",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AID — Code Agent",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AID — Code Agent",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

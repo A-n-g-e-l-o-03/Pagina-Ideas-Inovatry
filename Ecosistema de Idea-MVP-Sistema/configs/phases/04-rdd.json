@@ -1,0 +1,213 @@
+{
+  "phaseId": "04-rdd",
+  "variant": "funcional",
+  "phaseName": "RDD — Funcional",
+  "phaseGroup": "rdd",
+  "order": 4,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "RDD — Funcional",
+    "description": "El RDD (Requirements Design Document) es la especificación de comportamiento que el diseño y el testing implementan y verifican. Traduce el PRD/BRD en requisitos trazables, sin ambigüedad, listos para SDD spec. Es el contrato entre producto y tecnología.",
+    "badge": "7 preguntas"
+  },
+  "form": {
+    "title": "RDD — Funcional",
+    "subtitle": "7 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "funcional": {
+      "title": "1 · Funcional",
+      "description": "¿Qué Hace el Sistema?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "funcional",
+      "label": "P1. Listá todos los actores del MVP (usuarios humanos, sistemas externos, agentes/bots) con su rol, permisos y contexto de uso. ¿Hay matriz RACI por caso de uso?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Listá todos los actores del MVP (usuarios humanos, sistemas "
+    },
+    {
+      "id": "p02",
+      "sectionId": "funcional",
+      "label": "P2. ¿Cada requisito funcional tiene ID único (REQ-F-XXX) y criterio de aceptación Given/When/Then?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí, todos trazables y automatizables (BDD ready)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — algunos sin criterio formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — solo descripciones en texto libre",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay requisitos formales aún",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "sectionId": "funcional",
+      "label": "P3. Elegí el caso de uso más crítico del MVP y describí: happy path, 2 caminos alternativos y 1 camino de error. ¿Qué diagrama (secuencia/actividad) lo representa mejor?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Elegí el caso de uso más crítico del MVP y describí: happy p"
+    },
+    {
+      "id": "p04",
+      "sectionId": "funcional",
+      "label": "P4. ¿Las reglas de negocio están en decision tables o solo en texto?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Decision tables / DMN con condiciones, validaciones y cálculos explícitos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Texto estructurado con ejemplos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Texto libre ambiguo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay reglas de negocio complejas",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "funcional",
+      "label": "P5. ¿Qué entidades clave tienen máquina de estados (ej: pedido, suscripción, ticket, documento)? Describí estados, eventos, guards y acciones para la más importante.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué entidades clave tienen máquina de estados (ej: pedido, "
+    },
+    {
+      "id": "p06",
+      "sectionId": "funcional",
+      "label": "P6. ¿Los contratos funcionales de APIs están definidos (endpoints, payloads, códigos de error, paginación, versionado)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí, con referencia OpenAPI/AsyncAPI",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Definidos pero sin spec formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — solo happy path",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definidos",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "sectionId": "funcional",
+      "label": "P7. ¿Qué nivel de trazabilidad tenés hoy?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Completa: IDD problema → PRD historia → RDD requisito → ATD test",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — PRD→RDD sin IDD ni ATD",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo PRD→código, sin RDD intermedio",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ninguna — requisitos en la cabeza del PO",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "RDD — Funcional",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "RDD — Funcional",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

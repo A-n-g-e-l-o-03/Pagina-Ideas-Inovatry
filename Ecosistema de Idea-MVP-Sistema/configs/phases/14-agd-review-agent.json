@@ -1,0 +1,129 @@
+{
+  "phaseId": "14-agd",
+  "variant": "review-agent",
+  "phaseName": "AGD — Review Agent",
+  "phaseGroup": "mcp",
+  "order": 14,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AGD — Review Agent",
+    "description": "El AGD (Agent Design Document) diseña agentes de IA que generan, testean o revisan código. No son prompts sueltos — son sistemas con stack, patrones, quality gates y criterios de evaluación. Se genera en fase design SDD cuando el proceso de desarrollo será asistido o ejecutado por agentes.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "AGD — Review Agent",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "review_agent": {
+      "title": "3 · Proyección Review Agent",
+      "description": "Proyección Review Agent"
+    }
+  },
+  "fields": [
+    {
+      "id": "p08",
+      "sectionId": "review_agent",
+      "label": "P8. ¿Necesitás un agente que revise código (seguridad, performance, arquitectura)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — review humano alcanza",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere Review Agent (14-c) con dimensiones y auto-fix",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — linter + SAST alcanzan",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "review_agent",
+      "label": "P9. Si aplica Review Agent: ¿qué dimensiones revisa, qué severidades (blocker/major/minor), cuándo hace auto-fix vs. solo sugiere y cómo maneja falsos positivos?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica Review Agent: ¿qué dimensiones revisa, qué severid"
+    },
+    {
+      "id": "p10",
+      "sectionId": "review_agent",
+      "label": "P10. ¿Los agentes operan con presupuesto (tokens, tiempo, iteraciones) y gobernanza?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — budget por tarea, límites y escalamiento a humano",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sin límite — iteran hasta \"terminar\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — ejecución única sin loop",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AGD — Review Agent",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AGD — Review Agent",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

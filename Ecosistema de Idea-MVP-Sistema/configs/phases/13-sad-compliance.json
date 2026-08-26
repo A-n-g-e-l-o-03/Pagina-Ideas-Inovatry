@@ -1,0 +1,105 @@
+{
+  "phaseId": "13-sad",
+  "variant": "compliance",
+  "phaseName": "SAD — Compliance",
+  "phaseGroup": "validacion",
+  "order": 13,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "SAD — Compliance",
+    "description": "El SAD (Security Architecture Document) es la arquitectura de seguridad del MVP: cómo los controles (SRD) y el modelo de amenazas (TMD) se materializan en infraestructura, identidad y flujos de datos. Es el plano que integra IAM, network, data y appsec en un todo coherente. Sin SAD, los controles son piezas sueltas.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "SAD — Compliance",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "compliance": {
+      "title": "3 · Proyección Compliance",
+      "description": "Proyección Compliance"
+    }
+  },
+  "fields": [
+    {
+      "id": "p07",
+      "sectionId": "compliance",
+      "label": "P7. ¿La arquitectura de seguridad está alineada a un framework (NIST, ISO 27001, CIS)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — mapeo explícito control→framework con gaps identificados",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — algunos controles mapeados",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — arquitectura sin referencia a framework",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "compliance",
+      "label": "P8. Si aplica compliance: ¿qué controles arquitectónicos son no negociables para auditar (ej: segmentación de red para PCI-DSS, pseudonimización para GDPR, inmutabilidad de logs para SOX)? ¿Qué...",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica compliance: ¿qué controles arquitectónicos son no "
+    },
+    {
+      "id": "p09",
+      "sectionId": "compliance",
+      "label": "P9. ¿Qué decisión de arquitectura de seguridad, si te equivocás, obliga a re-arquitecturar el MVP completo? ¿Qué ADR la defiende?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué decisión de arquitectura de seguridad, si te equivocás,"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "SAD — Compliance",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "SAD — Compliance",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

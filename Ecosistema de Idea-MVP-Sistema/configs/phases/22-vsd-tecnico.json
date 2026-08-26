@@ -1,0 +1,162 @@
+{
+  "phaseId": "22-vsd",
+  "variant": "tecnico",
+  "phaseName": "VSD — Técnico",
+  "phaseGroup": "validacion",
+  "order": 22,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "VSD — Técnico",
+    "description": "El VSD (Validation Specification Document) es la validación final: demuestra con evidencia que el MVP cumple lo que prometió (RDD), que es técnicamente sólido y que satisface obligaciones externas. Es el gate antes de liberar. Se ejecuta en fase `verify` del SDD, cierra el ciclo de validación junto a ATD y STD.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "VSD — Técnico",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "tecnico": {
+      "title": "2 · Técnico",
+      "description": "¿Técnicamente Sólido?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p05",
+      "sectionId": "tecnico",
+      "label": "P5. ¿Tenés traceability matrix completa (IDD→PRD→RDD→código→test→evidencia)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cada requisito trazable a código y test con estado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — PRD→código sin RDD ni evidencia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — requisitos y código desconectados",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay trazabilidad",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "sectionId": "tecnico",
+      "label": "P6. Consolidá coverage del MVP: unit + integration + E2E + mutation. ¿Qué % de requisitos tiene al menos 1 test automatizado? ¿Qué requisito crítico no tiene coverage y por qué?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Consolidá coverage del MVP: unit + integration + E2E + mutat"
+    },
+    {
+      "id": "p07",
+      "sectionId": "tecnico",
+      "label": "P7. ¿Qué quality gates bloquean la liberación?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Coverage + SAST/SCA/DAST + performance + arquitectura (ADRs) + evidencia de validación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo tests + SAST",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo \"el PO aprueba\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ninguno — se libera directo",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "tecnico",
+      "label": "P8. ¿Hay validación de compliance arquitectónico (¿lo construido respeta el Design/ADRs)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — fitness functions / ArchUnit / checks en CI que fallan si se viola arquitectura",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Review manual sin automatización",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No se valida — \"confiamos en que se respetó\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay arquitectura formal",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "VSD — Técnico",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "VSD — Técnico",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

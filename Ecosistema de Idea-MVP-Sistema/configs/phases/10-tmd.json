@@ -1,0 +1,183 @@
+{
+  "phaseId": "10-tmd",
+  "variant": "stride",
+  "phaseName": "TMD — STRIDE",
+  "phaseGroup": "validacion",
+  "order": 10,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "TMD — STRIDE",
+    "description": "El TMD (Threat Model Document) responde: ¿cómo puede ser atacado el MVP y qué hacemos al respecto? Es el análisis estructurado de amenazas antes de que el atacante lo haga por vos. Se genera en fase design SDD y alimenta a SRD, IAM y SAD. Sin TMD, la seguridad es reactiva y anecdótica.",
+    "badge": "5 preguntas"
+  },
+  "form": {
+    "title": "TMD — STRIDE",
+    "subtitle": "5 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "stride": {
+      "title": "1 · STRIDE",
+      "description": "¿Qué Puede Salir Mal?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "stride",
+      "label": "P1. Dibujá el DFD (Data Flow Diagram) del MVP: actores, procesos, data stores, flujos de datos y trust boundaries. ¿Dónde cruza datos un boundary de confianza?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Dibujá el DFD (Data Flow Diagram) del MVP: actores, procesos"
+    },
+    {
+      "id": "p02",
+      "sectionId": "stride",
+      "label": "P2. ¿Qué categoría STRIDE es más crítica para el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Spoofing (suplantación)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Tampering (manipulación)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Repudiation (repudio)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Information Disclosure (fuga)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Denial of Service",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_f",
+          "label": "Elevation of Privilege",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "sectionId": "stride",
+      "label": "P3. Para la categoría que marcaste arriba, describí 2 amenazas concretas con: activo afectado, vector de ataque, impacto y mitigación propuesta.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Para la categoría que marcaste arriba, describí 2 amenazas c"
+    },
+    {
+      "id": "p04",
+      "sectionId": "stride",
+      "label": "P4. ¿Cómo priorizás amenazas?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "DREAD / CVSS / OWASP Risk Rating con score",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Intuición del equipo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo las que tienen CVE conocido",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No se prioriza — todo es \"crítico\"",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "stride",
+      "label": "P5. ¿Hay riesgo residual aceptado y documentado tras mitigar?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cada amenaza tiene riesgo residual con owner y fecha de revisión",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — solo amenazas críticas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — se asume que mitigar = eliminar",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay TMD aún",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "TMD — STRIDE",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "TMD — STRIDE",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

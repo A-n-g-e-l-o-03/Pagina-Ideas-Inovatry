@@ -1,0 +1,1328 @@
+{
+  "generatedAt": "2026-08-24T00:57:11.300Z",
+  "schemaVersion": 1,
+  "phases": [
+    {
+      "phaseId": "00-idea",
+      "phaseName": "Encuesta de Génesis de Ideas",
+      "phaseGroup": "idd",
+      "order": 0,
+      "variantCount": 0,
+      "variants": []
+    },
+    {
+      "phaseId": "01-idd",
+      "phaseName": "IDD",
+      "phaseGroup": "idd",
+      "order": 1,
+      "variantCount": 13,
+      "variants": [
+        "mercado",
+        "productividad",
+        "operativa",
+        "humana",
+        "economica",
+        "tecnica",
+        "colaborativa",
+        "evolutiva",
+        "legal",
+        "seguridad",
+        "ux",
+        "data",
+        "plataforma"
+      ]
+    },
+    {
+      "phaseId": "02-prd",
+      "phaseName": "PRD",
+      "phaseGroup": "rdd",
+      "order": 2,
+      "variantCount": 6,
+      "variants": [
+        "usuario",
+        "producto",
+        "negocio",
+        "tecnico",
+        "plataforma",
+        "data"
+      ]
+    },
+    {
+      "phaseId": "03-brd",
+      "phaseName": "BRD",
+      "phaseGroup": "rdd",
+      "order": 3,
+      "variantCount": 6,
+      "variants": [
+        "estrategia",
+        "operaciones",
+        "financiero",
+        "regulatorio",
+        "sostenibilidad",
+        "talento"
+      ]
+    },
+    {
+      "phaseId": "04-rdd",
+      "phaseName": "RDD",
+      "phaseGroup": "rdd",
+      "order": 4,
+      "variantCount": 5,
+      "variants": [
+        "funcional",
+        "no-funcional",
+        "seguridad",
+        "plataforma",
+        "data"
+      ]
+    },
+    {
+      "phaseId": "05-dmd",
+      "phaseName": "DMD",
+      "phaseGroup": "diseno",
+      "order": 5,
+      "variantCount": 4,
+      "variants": [
+        "dominio",
+        "eventos",
+        "anemico",
+        "data-mesh"
+      ]
+    },
+    {
+      "phaseId": "06-design",
+      "phaseName": "Design",
+      "phaseGroup": "diseno",
+      "order": 6,
+      "variantCount": 6,
+      "variants": [
+        "arquitectura",
+        "componentes",
+        "datos",
+        "seguridad",
+        "observabilidad",
+        "plataforma"
+      ]
+    },
+    {
+      "phaseId": "07-dbd",
+      "phaseName": "DBD",
+      "phaseGroup": "tecnico",
+      "order": 7,
+      "variantCount": 3,
+      "variants": [
+        "relacional",
+        "nosql",
+        "timeseries"
+      ]
+    },
+    {
+      "phaseId": "08-api",
+      "phaseName": "API",
+      "phaseGroup": "tecnico",
+      "order": 8,
+      "variantCount": 3,
+      "variants": [
+        "rest",
+        "graphql",
+        "async"
+      ]
+    },
+    {
+      "phaseId": "09-uid",
+      "phaseName": "UID",
+      "phaseGroup": "diseno",
+      "order": 9,
+      "variantCount": 3,
+      "variants": [
+        "web",
+        "mobile",
+        "design-system"
+      ]
+    },
+    {
+      "phaseId": "10-tmd",
+      "phaseName": "TMD",
+      "phaseGroup": "validacion",
+      "order": 10,
+      "variantCount": 3,
+      "variants": [
+        "stride",
+        "attack-trees",
+        "cloud"
+      ]
+    },
+    {
+      "phaseId": "11-srd",
+      "phaseName": "SRD",
+      "phaseGroup": "validacion",
+      "order": 11,
+      "variantCount": 3,
+      "variants": [
+        "appsec",
+        "infra",
+        "compliance"
+      ]
+    },
+    {
+      "phaseId": "12-iam",
+      "phaseName": "IAM",
+      "phaseGroup": "validacion",
+      "order": 12,
+      "variantCount": 3,
+      "variants": [
+        "rbac",
+        "zero-trust",
+        "pam"
+      ]
+    },
+    {
+      "phaseId": "13-sad",
+      "phaseName": "SAD",
+      "phaseGroup": "validacion",
+      "order": 13,
+      "variantCount": 3,
+      "variants": [
+        "zero-trust",
+        "cloud",
+        "compliance"
+      ]
+    },
+    {
+      "phaseId": "14-agd",
+      "phaseName": "AGD",
+      "phaseGroup": "mcp",
+      "order": 14,
+      "variantCount": 3,
+      "variants": [
+        "code-agent",
+        "test-agent",
+        "review-agent"
+      ]
+    },
+    {
+      "phaseId": "15-aad",
+      "phaseName": "AAD",
+      "phaseGroup": "mcp",
+      "order": 15,
+      "variantCount": 3,
+      "variants": [
+        "pipeline",
+        "event-driven",
+        "hierarchical"
+      ]
+    },
+    {
+      "phaseId": "16-aid",
+      "phaseName": "AID",
+      "phaseGroup": "mcp",
+      "order": 16,
+      "variantCount": 3,
+      "variants": [
+        "code-agent",
+        "test-agent",
+        "review-agent"
+      ]
+    },
+    {
+      "phaseId": "17-tasks",
+      "phaseName": "Tasks",
+      "phaseGroup": "mcp",
+      "order": 17,
+      "variantCount": 3,
+      "variants": [
+        "sprint",
+        "kanban",
+        "chained-pr"
+      ]
+    },
+    {
+      "phaseId": "18-sod",
+      "phaseName": "SOD",
+      "phaseGroup": "mcp",
+      "order": 18,
+      "variantCount": 3,
+      "variants": [
+        "pipeline",
+        "event-driven",
+        "hierarchical"
+      ]
+    },
+    {
+      "phaseId": "19-tdd",
+      "phaseName": "TDD",
+      "phaseGroup": "mcp",
+      "order": 19,
+      "variantCount": 3,
+      "variants": [
+        "classic",
+        "atdd",
+        "mutation"
+      ]
+    },
+    {
+      "phaseId": "20-atd",
+      "phaseName": "ATD",
+      "phaseGroup": "validacion",
+      "order": 20,
+      "variantCount": 3,
+      "variants": [
+        "gherkin",
+        "exploratory",
+        "contract"
+      ]
+    },
+    {
+      "phaseId": "21-std",
+      "phaseName": "STD",
+      "phaseGroup": "validacion",
+      "order": 21,
+      "variantCount": 3,
+      "variants": [
+        "e2e",
+        "contract",
+        "chaos"
+      ]
+    },
+    {
+      "phaseId": "22-vsd",
+      "phaseName": "VSD",
+      "phaseGroup": "validacion",
+      "order": 22,
+      "variantCount": 3,
+      "variants": [
+        "compliance",
+        "tecnico",
+        "business"
+      ]
+    },
+    {
+      "phaseId": "23-dep",
+      "phaseName": "DEP",
+      "phaseGroup": "operaciones",
+      "order": 23,
+      "variantCount": 3,
+      "variants": [
+        "kubernetes",
+        "serverless",
+        "edge"
+      ]
+    },
+    {
+      "phaseId": "24-mdd",
+      "phaseName": "MDD",
+      "phaseGroup": "operaciones",
+      "order": 24,
+      "variantCount": 3,
+      "variants": [
+        "sre",
+        "business",
+        "security"
+      ]
+    },
+    {
+      "phaseId": "25-aed",
+      "phaseName": "AED",
+      "phaseGroup": "tecnico",
+      "order": 25,
+      "variantCount": 3,
+      "variants": [
+        "tecnico",
+        "plataforma",
+        "estrategico"
+      ]
+    },
+    {
+      "phaseId": "26-chd",
+      "phaseName": "CHD",
+      "phaseGroup": "tecnico",
+      "order": 26,
+      "variantCount": 3,
+      "variants": [
+        "estandar",
+        "emergencia",
+        "automatizado"
+      ]
+    },
+    {
+      "phaseId": "27-ced",
+      "phaseName": "CED",
+      "phaseGroup": "marketing",
+      "order": 27,
+      "variantCount": 3,
+      "variants": [
+        "tecnico",
+        "ejecutivo",
+        "no-tecnico"
+      ]
+    },
+    {
+      "phaseId": "28-cca",
+      "phaseName": "CCA",
+      "phaseGroup": "marketing",
+      "order": 28,
+      "variantCount": 3,
+      "variants": [
+        "llm",
+        "template",
+        "hybrid"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "phaseId": "01-idd",
+      "variant": "mercado",
+      "phaseName": "IDD — Mercado",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": false,
+      "file": "01-idd.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "productividad",
+      "phaseName": "IDD — Productividad Equipo",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": false,
+      "file": "01-idd-productividad.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "operativa",
+      "phaseName": "IDD — Operativa",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": false,
+      "file": "01-idd-operativa.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "humana",
+      "phaseName": "IDD — Humana",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": false,
+      "file": "01-idd-humana.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "economica",
+      "phaseName": "IDD — Económica",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": false,
+      "file": "01-idd-economica.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "tecnica",
+      "phaseName": "IDD — Técnica",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": false,
+      "file": "01-idd-tecnica.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "colaborativa",
+      "phaseName": "IDD — Colaborativa",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": false,
+      "file": "01-idd-colaborativa.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "evolutiva",
+      "phaseName": "IDD — Evolutiva",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": false,
+      "file": "01-idd-evolutiva.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "legal",
+      "phaseName": "IDD — Legal/Regulatorio",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": true,
+      "file": "01-idd-legal.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "seguridad",
+      "phaseName": "IDD — Seguridad",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": true,
+      "file": "01-idd-seguridad.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "ux",
+      "phaseName": "IDD — UX/Cliente",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": true,
+      "file": "01-idd-ux.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "data",
+      "phaseName": "IDD — Data/ML",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": true,
+      "file": "01-idd-data.json"
+    },
+    {
+      "phaseId": "01-idd",
+      "variant": "plataforma",
+      "phaseName": "IDD — Plataforma/Infra",
+      "phaseGroup": "idd",
+      "order": 1,
+      "projection": true,
+      "file": "01-idd-plataforma.json"
+    },
+    {
+      "phaseId": "02-prd",
+      "variant": "usuario",
+      "phaseName": "PRD — Usuario",
+      "phaseGroup": "rdd",
+      "order": 2,
+      "projection": false,
+      "file": "02-prd.json"
+    },
+    {
+      "phaseId": "02-prd",
+      "variant": "producto",
+      "phaseName": "PRD — Producto",
+      "phaseGroup": "rdd",
+      "order": 2,
+      "projection": false,
+      "file": "02-prd-producto.json"
+    },
+    {
+      "phaseId": "02-prd",
+      "variant": "negocio",
+      "phaseName": "PRD — Negocio",
+      "phaseGroup": "rdd",
+      "order": 2,
+      "projection": false,
+      "file": "02-prd-negocio.json"
+    },
+    {
+      "phaseId": "02-prd",
+      "variant": "tecnico",
+      "phaseName": "PRD — Técnico",
+      "phaseGroup": "rdd",
+      "order": 2,
+      "projection": false,
+      "file": "02-prd-tecnico.json"
+    },
+    {
+      "phaseId": "02-prd",
+      "variant": "plataforma",
+      "phaseName": "PRD — Plataforma",
+      "phaseGroup": "rdd",
+      "order": 2,
+      "projection": true,
+      "file": "02-prd-plataforma.json"
+    },
+    {
+      "phaseId": "02-prd",
+      "variant": "data",
+      "phaseName": "PRD — Data/Analytics",
+      "phaseGroup": "rdd",
+      "order": 2,
+      "projection": true,
+      "file": "02-prd-data.json"
+    },
+    {
+      "phaseId": "03-brd",
+      "variant": "estrategia",
+      "phaseName": "BRD — Estrategia",
+      "phaseGroup": "rdd",
+      "order": 3,
+      "projection": false,
+      "file": "03-brd.json"
+    },
+    {
+      "phaseId": "03-brd",
+      "variant": "operaciones",
+      "phaseName": "BRD — Operaciones",
+      "phaseGroup": "rdd",
+      "order": 3,
+      "projection": false,
+      "file": "03-brd-operaciones.json"
+    },
+    {
+      "phaseId": "03-brd",
+      "variant": "financiero",
+      "phaseName": "BRD — Financiero",
+      "phaseGroup": "rdd",
+      "order": 3,
+      "projection": false,
+      "file": "03-brd-financiero.json"
+    },
+    {
+      "phaseId": "03-brd",
+      "variant": "regulatorio",
+      "phaseName": "BRD — Regulatorio",
+      "phaseGroup": "rdd",
+      "order": 3,
+      "projection": false,
+      "file": "03-brd-regulatorio.json"
+    },
+    {
+      "phaseId": "03-brd",
+      "variant": "sostenibilidad",
+      "phaseName": "BRD — Sostenibilidad/ESG",
+      "phaseGroup": "rdd",
+      "order": 3,
+      "projection": true,
+      "file": "03-brd-sostenibilidad.json"
+    },
+    {
+      "phaseId": "03-brd",
+      "variant": "talento",
+      "phaseName": "BRD — Talento/Organización",
+      "phaseGroup": "rdd",
+      "order": 3,
+      "projection": true,
+      "file": "03-brd-talento.json"
+    },
+    {
+      "phaseId": "04-rdd",
+      "variant": "funcional",
+      "phaseName": "RDD — Funcional",
+      "phaseGroup": "rdd",
+      "order": 4,
+      "projection": false,
+      "file": "04-rdd.json"
+    },
+    {
+      "phaseId": "04-rdd",
+      "variant": "no-funcional",
+      "phaseName": "RDD — No Funcional",
+      "phaseGroup": "rdd",
+      "order": 4,
+      "projection": false,
+      "file": "04-rdd-no-funcional.json"
+    },
+    {
+      "phaseId": "04-rdd",
+      "variant": "seguridad",
+      "phaseName": "RDD — Seguridad",
+      "phaseGroup": "rdd",
+      "order": 4,
+      "projection": false,
+      "file": "04-rdd-seguridad.json"
+    },
+    {
+      "phaseId": "04-rdd",
+      "variant": "plataforma",
+      "phaseName": "RDD — Plataforma",
+      "phaseGroup": "rdd",
+      "order": 4,
+      "projection": true,
+      "file": "04-rdd-plataforma.json"
+    },
+    {
+      "phaseId": "04-rdd",
+      "variant": "data",
+      "phaseName": "RDD — Data/ML",
+      "phaseGroup": "rdd",
+      "order": 4,
+      "projection": true,
+      "file": "04-rdd-data.json"
+    },
+    {
+      "phaseId": "05-dmd",
+      "variant": "dominio",
+      "phaseName": "DMD — Dominio",
+      "phaseGroup": "diseno",
+      "order": 5,
+      "projection": false,
+      "file": "05-dmd.json"
+    },
+    {
+      "phaseId": "05-dmd",
+      "variant": "eventos",
+      "phaseName": "DMD — Eventos/Event Sourcing",
+      "phaseGroup": "diseno",
+      "order": 5,
+      "projection": false,
+      "file": "05-dmd-eventos.json"
+    },
+    {
+      "phaseId": "05-dmd",
+      "variant": "anemico",
+      "phaseName": "DMD — Anémico/Transaccional",
+      "phaseGroup": "diseno",
+      "order": 5,
+      "projection": true,
+      "file": "05-dmd-anemico.json"
+    },
+    {
+      "phaseId": "05-dmd",
+      "variant": "data-mesh",
+      "phaseName": "DMD — Data Mesh",
+      "phaseGroup": "diseno",
+      "order": 5,
+      "projection": true,
+      "file": "05-dmd-data-mesh.json"
+    },
+    {
+      "phaseId": "06-design",
+      "variant": "arquitectura",
+      "phaseName": "Design — Arquitectura",
+      "phaseGroup": "diseno",
+      "order": 6,
+      "projection": false,
+      "file": "06-design.json"
+    },
+    {
+      "phaseId": "06-design",
+      "variant": "componentes",
+      "phaseName": "Design — Componentes",
+      "phaseGroup": "diseno",
+      "order": 6,
+      "projection": false,
+      "file": "06-design-componentes.json"
+    },
+    {
+      "phaseId": "06-design",
+      "variant": "datos",
+      "phaseName": "Design — Datos",
+      "phaseGroup": "diseno",
+      "order": 6,
+      "projection": false,
+      "file": "06-design-datos.json"
+    },
+    {
+      "phaseId": "06-design",
+      "variant": "seguridad",
+      "phaseName": "Design — Seguridad",
+      "phaseGroup": "diseno",
+      "order": 6,
+      "projection": false,
+      "file": "06-design-seguridad.json"
+    },
+    {
+      "phaseId": "06-design",
+      "variant": "observabilidad",
+      "phaseName": "Design — Observabilidad",
+      "phaseGroup": "diseno",
+      "order": 6,
+      "projection": true,
+      "file": "06-design-observabilidad.json"
+    },
+    {
+      "phaseId": "06-design",
+      "variant": "plataforma",
+      "phaseName": "Design — Plataforma",
+      "phaseGroup": "diseno",
+      "order": 6,
+      "projection": true,
+      "file": "06-design-plataforma.json"
+    },
+    {
+      "phaseId": "07-dbd",
+      "variant": "relacional",
+      "phaseName": "DBD — Relacional",
+      "phaseGroup": "tecnico",
+      "order": 7,
+      "projection": false,
+      "file": "07-dbd.json"
+    },
+    {
+      "phaseId": "07-dbd",
+      "variant": "nosql",
+      "phaseName": "DBD — NoSQL/Document",
+      "phaseGroup": "tecnico",
+      "order": 7,
+      "projection": false,
+      "file": "07-dbd-nosql.json"
+    },
+    {
+      "phaseId": "07-dbd",
+      "variant": "timeseries",
+      "phaseName": "DBD — Time-Series/Analytics",
+      "phaseGroup": "tecnico",
+      "order": 7,
+      "projection": true,
+      "file": "07-dbd-timeseries.json"
+    },
+    {
+      "phaseId": "08-api",
+      "variant": "rest",
+      "phaseName": "API — REST",
+      "phaseGroup": "tecnico",
+      "order": 8,
+      "projection": false,
+      "file": "08-api.json"
+    },
+    {
+      "phaseId": "08-api",
+      "variant": "graphql",
+      "phaseName": "API — GraphQL",
+      "phaseGroup": "tecnico",
+      "order": 8,
+      "projection": false,
+      "file": "08-api-graphql.json"
+    },
+    {
+      "phaseId": "08-api",
+      "variant": "async",
+      "phaseName": "API — Async/Event-Driven",
+      "phaseGroup": "tecnico",
+      "order": 8,
+      "projection": true,
+      "file": "08-api-async.json"
+    },
+    {
+      "phaseId": "09-uid",
+      "variant": "web",
+      "phaseName": "UID — Web",
+      "phaseGroup": "diseno",
+      "order": 9,
+      "projection": false,
+      "file": "09-uid.json"
+    },
+    {
+      "phaseId": "09-uid",
+      "variant": "mobile",
+      "phaseName": "UID — Mobile",
+      "phaseGroup": "diseno",
+      "order": 9,
+      "projection": false,
+      "file": "09-uid-mobile.json"
+    },
+    {
+      "phaseId": "09-uid",
+      "variant": "design-system",
+      "phaseName": "UID — Design System",
+      "phaseGroup": "diseno",
+      "order": 9,
+      "projection": true,
+      "file": "09-uid-design-system.json"
+    },
+    {
+      "phaseId": "10-tmd",
+      "variant": "stride",
+      "phaseName": "TMD — STRIDE",
+      "phaseGroup": "validacion",
+      "order": 10,
+      "projection": false,
+      "file": "10-tmd.json"
+    },
+    {
+      "phaseId": "10-tmd",
+      "variant": "attack-trees",
+      "phaseName": "TMD — Attack Trees",
+      "phaseGroup": "validacion",
+      "order": 10,
+      "projection": false,
+      "file": "10-tmd-attack-trees.json"
+    },
+    {
+      "phaseId": "10-tmd",
+      "variant": "cloud",
+      "phaseName": "TMD — Cloud/Kubernetes",
+      "phaseGroup": "validacion",
+      "order": 10,
+      "projection": true,
+      "file": "10-tmd-cloud.json"
+    },
+    {
+      "phaseId": "11-srd",
+      "variant": "appsec",
+      "phaseName": "SRD — AppSec",
+      "phaseGroup": "validacion",
+      "order": 11,
+      "projection": false,
+      "file": "11-srd.json"
+    },
+    {
+      "phaseId": "11-srd",
+      "variant": "infra",
+      "phaseName": "SRD — Infra",
+      "phaseGroup": "validacion",
+      "order": 11,
+      "projection": false,
+      "file": "11-srd-infra.json"
+    },
+    {
+      "phaseId": "11-srd",
+      "variant": "compliance",
+      "phaseName": "SRD — Compliance",
+      "phaseGroup": "validacion",
+      "order": 11,
+      "projection": true,
+      "file": "11-srd-compliance.json"
+    },
+    {
+      "phaseId": "12-iam",
+      "variant": "rbac",
+      "phaseName": "IAM — RBAC",
+      "phaseGroup": "validacion",
+      "order": 12,
+      "projection": false,
+      "file": "12-iam.json"
+    },
+    {
+      "phaseId": "12-iam",
+      "variant": "zero-trust",
+      "phaseName": "IAM — Zero Trust",
+      "phaseGroup": "validacion",
+      "order": 12,
+      "projection": false,
+      "file": "12-iam-zero-trust.json"
+    },
+    {
+      "phaseId": "12-iam",
+      "variant": "pam",
+      "phaseName": "IAM — PAM",
+      "phaseGroup": "validacion",
+      "order": 12,
+      "projection": true,
+      "file": "12-iam-pam.json"
+    },
+    {
+      "phaseId": "13-sad",
+      "variant": "zero-trust",
+      "phaseName": "SAD — Zero Trust",
+      "phaseGroup": "validacion",
+      "order": 13,
+      "projection": false,
+      "file": "13-sad.json"
+    },
+    {
+      "phaseId": "13-sad",
+      "variant": "cloud",
+      "phaseName": "SAD — Cloud Native",
+      "phaseGroup": "validacion",
+      "order": 13,
+      "projection": false,
+      "file": "13-sad-cloud.json"
+    },
+    {
+      "phaseId": "13-sad",
+      "variant": "compliance",
+      "phaseName": "SAD — Compliance",
+      "phaseGroup": "validacion",
+      "order": 13,
+      "projection": true,
+      "file": "13-sad-compliance.json"
+    },
+    {
+      "phaseId": "14-agd",
+      "variant": "code-agent",
+      "phaseName": "AGD — Code Agent",
+      "phaseGroup": "mcp",
+      "order": 14,
+      "projection": false,
+      "file": "14-agd.json"
+    },
+    {
+      "phaseId": "14-agd",
+      "variant": "test-agent",
+      "phaseName": "AGD — Test Agent",
+      "phaseGroup": "mcp",
+      "order": 14,
+      "projection": false,
+      "file": "14-agd-test-agent.json"
+    },
+    {
+      "phaseId": "14-agd",
+      "variant": "review-agent",
+      "phaseName": "AGD — Review Agent",
+      "phaseGroup": "mcp",
+      "order": 14,
+      "projection": true,
+      "file": "14-agd-review-agent.json"
+    },
+    {
+      "phaseId": "15-aad",
+      "variant": "pipeline",
+      "phaseName": "AAD — Pipeline",
+      "phaseGroup": "mcp",
+      "order": 15,
+      "projection": false,
+      "file": "15-aad.json"
+    },
+    {
+      "phaseId": "15-aad",
+      "variant": "event-driven",
+      "phaseName": "AAD — Event-Driven",
+      "phaseGroup": "mcp",
+      "order": 15,
+      "projection": false,
+      "file": "15-aad-event-driven.json"
+    },
+    {
+      "phaseId": "15-aad",
+      "variant": "hierarchical",
+      "phaseName": "AAD — Hierarchical",
+      "phaseGroup": "mcp",
+      "order": 15,
+      "projection": true,
+      "file": "15-aad-hierarchical.json"
+    },
+    {
+      "phaseId": "16-aid",
+      "variant": "code-agent",
+      "phaseName": "AID — Code Agent",
+      "phaseGroup": "mcp",
+      "order": 16,
+      "projection": false,
+      "file": "16-aid.json"
+    },
+    {
+      "phaseId": "16-aid",
+      "variant": "test-agent",
+      "phaseName": "AID — Test Agent",
+      "phaseGroup": "mcp",
+      "order": 16,
+      "projection": false,
+      "file": "16-aid-test-agent.json"
+    },
+    {
+      "phaseId": "16-aid",
+      "variant": "review-agent",
+      "phaseName": "AID — Review Agent",
+      "phaseGroup": "mcp",
+      "order": 16,
+      "projection": true,
+      "file": "16-aid-review-agent.json"
+    },
+    {
+      "phaseId": "17-tasks",
+      "variant": "sprint",
+      "phaseName": "Tasks — Sprint",
+      "phaseGroup": "mcp",
+      "order": 17,
+      "projection": false,
+      "file": "17-tasks.json"
+    },
+    {
+      "phaseId": "17-tasks",
+      "variant": "kanban",
+      "phaseName": "Tasks — Kanban",
+      "phaseGroup": "mcp",
+      "order": 17,
+      "projection": false,
+      "file": "17-tasks-kanban.json"
+    },
+    {
+      "phaseId": "17-tasks",
+      "variant": "chained-pr",
+      "phaseName": "Tasks — Chained PR",
+      "phaseGroup": "mcp",
+      "order": 17,
+      "projection": true,
+      "file": "17-tasks-chained-pr.json"
+    },
+    {
+      "phaseId": "18-sod",
+      "variant": "pipeline",
+      "phaseName": "SOD — Pipeline",
+      "phaseGroup": "mcp",
+      "order": 18,
+      "projection": false,
+      "file": "18-sod.json"
+    },
+    {
+      "phaseId": "18-sod",
+      "variant": "event-driven",
+      "phaseName": "SOD — Event-Driven",
+      "phaseGroup": "mcp",
+      "order": 18,
+      "projection": false,
+      "file": "18-sod-event-driven.json"
+    },
+    {
+      "phaseId": "18-sod",
+      "variant": "hierarchical",
+      "phaseName": "SOD — Hierarchical",
+      "phaseGroup": "mcp",
+      "order": 18,
+      "projection": true,
+      "file": "18-sod-hierarchical.json"
+    },
+    {
+      "phaseId": "19-tdd",
+      "variant": "classic",
+      "phaseName": "TDD — Clásico",
+      "phaseGroup": "mcp",
+      "order": 19,
+      "projection": false,
+      "file": "19-tdd.json"
+    },
+    {
+      "phaseId": "19-tdd",
+      "variant": "atdd",
+      "phaseName": "TDD — ATDD/BDD",
+      "phaseGroup": "mcp",
+      "order": 19,
+      "projection": false,
+      "file": "19-tdd-atdd.json"
+    },
+    {
+      "phaseId": "19-tdd",
+      "variant": "mutation",
+      "phaseName": "TDD — Mutation Testing",
+      "phaseGroup": "mcp",
+      "order": 19,
+      "projection": true,
+      "file": "19-tdd-mutation.json"
+    },
+    {
+      "phaseId": "20-atd",
+      "variant": "gherkin",
+      "phaseName": "ATD — Gherkin",
+      "phaseGroup": "validacion",
+      "order": 20,
+      "projection": false,
+      "file": "20-atd.json"
+    },
+    {
+      "phaseId": "20-atd",
+      "variant": "exploratory",
+      "phaseName": "ATD — Exploratory",
+      "phaseGroup": "validacion",
+      "order": 20,
+      "projection": false,
+      "file": "20-atd-exploratory.json"
+    },
+    {
+      "phaseId": "20-atd",
+      "variant": "contract",
+      "phaseName": "ATD — Contract Testing",
+      "phaseGroup": "validacion",
+      "order": 20,
+      "projection": true,
+      "file": "20-atd-contract.json"
+    },
+    {
+      "phaseId": "21-std",
+      "variant": "e2e",
+      "phaseName": "STD — E2E",
+      "phaseGroup": "validacion",
+      "order": 21,
+      "projection": false,
+      "file": "21-std.json"
+    },
+    {
+      "phaseId": "21-std",
+      "variant": "contract",
+      "phaseName": "STD — Contract",
+      "phaseGroup": "validacion",
+      "order": 21,
+      "projection": false,
+      "file": "21-std-contract.json"
+    },
+    {
+      "phaseId": "21-std",
+      "variant": "chaos",
+      "phaseName": "STD — Chaos Engineering",
+      "phaseGroup": "validacion",
+      "order": 21,
+      "projection": true,
+      "file": "21-std-chaos.json"
+    },
+    {
+      "phaseId": "22-vsd",
+      "variant": "compliance",
+      "phaseName": "VSD — Compliance",
+      "phaseGroup": "validacion",
+      "order": 22,
+      "projection": false,
+      "file": "22-vsd.json"
+    },
+    {
+      "phaseId": "22-vsd",
+      "variant": "tecnico",
+      "phaseName": "VSD — Técnico",
+      "phaseGroup": "validacion",
+      "order": 22,
+      "projection": false,
+      "file": "22-vsd-tecnico.json"
+    },
+    {
+      "phaseId": "22-vsd",
+      "variant": "business",
+      "phaseName": "VSD — Business",
+      "phaseGroup": "validacion",
+      "order": 22,
+      "projection": true,
+      "file": "22-vsd-business.json"
+    },
+    {
+      "phaseId": "23-dep",
+      "variant": "kubernetes",
+      "phaseName": "DEP — Kubernetes",
+      "phaseGroup": "operaciones",
+      "order": 23,
+      "projection": false,
+      "file": "23-dep.json"
+    },
+    {
+      "phaseId": "23-dep",
+      "variant": "serverless",
+      "phaseName": "DEP — Serverless",
+      "phaseGroup": "operaciones",
+      "order": 23,
+      "projection": false,
+      "file": "23-dep-serverless.json"
+    },
+    {
+      "phaseId": "23-dep",
+      "variant": "edge",
+      "phaseName": "DEP — Edge/Híbrido",
+      "phaseGroup": "operaciones",
+      "order": 23,
+      "projection": true,
+      "file": "23-dep-edge.json"
+    },
+    {
+      "phaseId": "24-mdd",
+      "variant": "sre",
+      "phaseName": "MDD — SRE",
+      "phaseGroup": "operaciones",
+      "order": 24,
+      "projection": false,
+      "file": "24-mdd.json"
+    },
+    {
+      "phaseId": "24-mdd",
+      "variant": "business",
+      "phaseName": "MDD — Business",
+      "phaseGroup": "operaciones",
+      "order": 24,
+      "projection": false,
+      "file": "24-mdd-business.json"
+    },
+    {
+      "phaseId": "24-mdd",
+      "variant": "security",
+      "phaseName": "MDD — Security",
+      "phaseGroup": "operaciones",
+      "order": 24,
+      "projection": true,
+      "file": "24-mdd-security.json"
+    },
+    {
+      "phaseId": "25-aed",
+      "variant": "tecnico",
+      "phaseName": "AED — Técnico",
+      "phaseGroup": "tecnico",
+      "order": 25,
+      "projection": false,
+      "file": "25-aed.json"
+    },
+    {
+      "phaseId": "25-aed",
+      "variant": "plataforma",
+      "phaseName": "AED — Plataforma",
+      "phaseGroup": "tecnico",
+      "order": 25,
+      "projection": false,
+      "file": "25-aed-plataforma.json"
+    },
+    {
+      "phaseId": "25-aed",
+      "variant": "estrategico",
+      "phaseName": "AED — Estratégico",
+      "phaseGroup": "tecnico",
+      "order": 25,
+      "projection": true,
+      "file": "25-aed-estrategico.json"
+    },
+    {
+      "phaseId": "26-chd",
+      "variant": "estandar",
+      "phaseName": "CHD — Estándar",
+      "phaseGroup": "tecnico",
+      "order": 26,
+      "projection": false,
+      "file": "26-chd.json"
+    },
+    {
+      "phaseId": "26-chd",
+      "variant": "emergencia",
+      "phaseName": "CHD — Emergencia",
+      "phaseGroup": "tecnico",
+      "order": 26,
+      "projection": false,
+      "file": "26-chd-emergencia.json"
+    },
+    {
+      "phaseId": "26-chd",
+      "variant": "automatizado",
+      "phaseName": "CHD — Automatizado",
+      "phaseGroup": "tecnico",
+      "order": 26,
+      "projection": true,
+      "file": "26-chd-automatizado.json"
+    },
+    {
+      "phaseId": "27-ced",
+      "variant": "tecnico",
+      "phaseName": "CED — Técnico",
+      "phaseGroup": "marketing",
+      "order": 27,
+      "projection": false,
+      "file": "27-ced.json"
+    },
+    {
+      "phaseId": "27-ced",
+      "variant": "ejecutivo",
+      "phaseName": "CED — Ejecutivo",
+      "phaseGroup": "marketing",
+      "order": 27,
+      "projection": false,
+      "file": "27-ced-ejecutivo.json"
+    },
+    {
+      "phaseId": "27-ced",
+      "variant": "no-tecnico",
+      "phaseName": "CED — No Técnico/Usuario",
+      "phaseGroup": "marketing",
+      "order": 27,
+      "projection": true,
+      "file": "27-ced-no-tecnico.json"
+    },
+    {
+      "phaseId": "28-cca",
+      "variant": "llm",
+      "phaseName": "CCA — LLM",
+      "phaseGroup": "marketing",
+      "order": 28,
+      "projection": false,
+      "file": "28-cca.json"
+    },
+    {
+      "phaseId": "28-cca",
+      "variant": "template",
+      "phaseName": "CCA — Template-Based",
+      "phaseGroup": "marketing",
+      "order": 28,
+      "projection": false,
+      "file": "28-cca-template.json"
+    },
+    {
+      "phaseId": "28-cca",
+      "variant": "hybrid",
+      "phaseName": "CCA — Híbrido",
+      "phaseGroup": "marketing",
+      "order": 28,
+      "projection": true,
+      "file": "28-cca-hybrid.json"
+    }
+  ]
+}

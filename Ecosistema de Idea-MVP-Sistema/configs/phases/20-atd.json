@@ -1,0 +1,162 @@
+{
+  "phaseId": "20-atd",
+  "variant": "gherkin",
+  "phaseName": "ATD — Gherkin",
+  "phaseGroup": "validacion",
+  "order": 20,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "ATD — Gherkin",
+    "description": "El ATD (Acceptance Test Definition) define cómo se demuestra que el MVP hace lo que promete, en lenguaje que negocio y tecnología comparten. Es la validación de aceptación: si los ATD pasan, el MVP es aceptable para el usuario. Se ejecuta en fase `verify` del SDD.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "ATD — Gherkin",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "gherkin": {
+      "title": "1 · Gherkin",
+      "description": "¿Aceptación Automatizable?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "gherkin",
+      "label": "P1. ¿Los criterios de aceptación del RDD están en Gherkin (`Given/When/Then`)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cada REQ-F tiene feature/scenario trazable y automatizable",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — algunos en Gherkin, otros en texto libre",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — solo texto en Jira/Notion",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay criterios formales",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "gherkin",
+      "label": "P2. Escribí 1 feature file completo para el flujo de mayor riesgo del MVP: `Feature`, `Background`, 2 `Scenarios` (happy + error) con `Given/When/Then/And` y `Examples` si aplica.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Escribí 1 feature file completo para el flujo de mayor riesg"
+    },
+    {
+      "id": "p03",
+      "sectionId": "gherkin",
+      "label": "P3. ¿Los step definitions son reutilizables y mantenibles?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — steps atómicos, sin duplicación, con Page Objects / API clients",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — algunos duplicados o acoplados a UI frágil",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — cada scenario copia/pega steps",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay automatización",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "gherkin",
+      "label": "P4. ¿Los ATD Gherkin son living documentation (se ejecutan en CI y son la spec viva)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — reporte de Gherkin es la documentación oficial, falla si el sistema cambia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Se ejecutan pero la doc está separada",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo documentan, no se ejecutan",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay Gherkin",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "ATD — Gherkin",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "ATD — Gherkin",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

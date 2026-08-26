@@ -1,0 +1,138 @@
+{
+  "phaseId": "09-uid",
+  "variant": "design-system",
+  "phaseName": "UID — Design System",
+  "phaseGroup": "diseno",
+  "order": 9,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "UID — Design System",
+    "description": "El UID (UI Design Document) define cómo el usuario ve y toca el MVP. No es \"hacerlo lindo\" — es usabilidad, accesibilidad, performance percibida y consistencia. Se genera en fase design SDD y debe estar conectado al PRD Usuario (02-a) y al journey mapeado.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "UID — Design System",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "design_system": {
+      "title": "3 · Proyección Design System",
+      "description": "Proyección Design System"
+    }
+  },
+  "fields": [
+    {
+      "id": "p09",
+      "sectionId": "design_system",
+      "label": "P9. ¿El MVP necesita un Design System o alcanza con estilos ad-hoc?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Ad-hoc alcanza — 3-5 pantallas sin reutilización",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Design System ligero — tokens + 10-15 componentes core",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Design System completo — requiere UID Design System (09-c) con governance y adoption",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ya existe uno — se extiende",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sectionId": "design_system",
+      "label": "P10. Si aplica Design System: ¿qué tokens (color, tipografía, spacing), componentes y patrones son fundacionales? ¿Quién governa cambios y cómo se versiona?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica Design System: ¿qué tokens (color, tipografía, spa"
+    },
+    {
+      "id": "p11",
+      "sectionId": "design_system",
+      "label": "P11. ¿Cómo se mide éxito de UX del MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Task success rate + time-to-value + SUS/UMUX",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo NPS",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo analytics (clics, funnels) sin test cualitativo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No se mide UX",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "sectionId": "design_system",
+      "label": "P12. ¿Qué fricción de UX, si no se resuelve, hace que el usuario abandone aunque el backend funcione perfecto?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué fricción de UX, si no se resuelve, hace que el usuario "
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "UID — Design System",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "UID — Design System",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

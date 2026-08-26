@@ -1,0 +1,150 @@
+{
+  "phaseId": "03-brd",
+  "variant": "operaciones",
+  "phaseName": "BRD — Operaciones",
+  "phaseGroup": "rdd",
+  "order": 3,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "BRD — Operaciones",
+    "description": "El BRD (Business Requirements Document) traduce la necesidad de negocio en requisitos que la organización necesita satisfacer, en lenguaje de negocio (no de producto ni de sistema). Responde: ¿por qué la empresa debe invertir en esto, qué gana, qué arriesga y qué exige el entorno? Se genera en paralelo al PRD, tras el IDD, y ambos alimentan al RDD. Sin BRD, el MVP puede ser buen producto pero mala inversión.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "BRD — Operaciones",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "operaciones": {
+      "title": "2 · Operaciones",
+      "description": "¿Escala la Operación?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p05",
+      "sectionId": "operaciones",
+      "label": "P5. ¿Qué proceso operativo mejora el MVP? Describí el proceso actual (pasos, actores, tiempos, costo por transacción) y el proceso futuro con el MVP.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué proceso operativo mejora el MVP? Describí el proceso ac"
+    },
+    {
+      "id": "p06",
+      "sectionId": "operaciones",
+      "label": "P6. ¿El MVP reduce costo operativo unitario o solo agrega capacidad?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Reduce costo unitario (mismo volumen, menos costo)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Aumenta capacidad a igual costo (más volumen sin más gente)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Ambos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ninguno — es inversión sin retorno operativo directo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No medido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "sectionId": "operaciones",
+      "label": "P7. ¿Cuál es el constraint operativo que limita escalar 2x sin el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Personas (no hay capacidad humana)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Proceso manual no escalable",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Tecnología / infraestructura",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Coordinación / handoffs",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No hay constraint — se puede escalar sin el MVP",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "operaciones",
+      "label": "P8. ¿Qué métricas operativas medirán éxito? (Ej: costo por orden, tiempo de onboarding, tickets por 100 usuarios, % automatizado).",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué métricas operativas medirán éxito? (Ej: costo por orden"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "BRD — Operaciones",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "BRD — Operaciones",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

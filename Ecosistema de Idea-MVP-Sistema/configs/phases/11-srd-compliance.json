@@ -1,0 +1,144 @@
+{
+  "phaseId": "11-srd",
+  "variant": "compliance",
+  "phaseName": "SRD — Compliance",
+  "phaseGroup": "validacion",
+  "order": 11,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "SRD — Compliance",
+    "description": "El SRD (Security Requirements Document) traduce amenazas (TMD) en requisitos de seguridad verificables con owner, prioridad y test. Es el \"qué debe cumplir\" antes del \"cómo se implementa\" (SAD). Sin SRD, los controles son ad-hoc y no auditables.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "SRD — Compliance",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "compliance": {
+      "title": "3 · Proyección Compliance",
+      "description": "Proyección Compliance"
+    }
+  },
+  "fields": [
+    {
+      "id": "p10",
+      "sectionId": "compliance",
+      "label": "P10. ¿El MVP debe cumplir un framework de compliance específico?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "PCI-DSS",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "GDPR / LGPD",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "SOX / HIPAA / ISO 27001",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Múltiple / no estoy seguro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "compliance",
+      "label": "P11. Si aplica compliance: mapeá cada obligación a requisito técnico + test + evidencia automatizada. ¿Qué evidencia se genera automáticamente en el pipeline vs. manual?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica compliance: mapeá cada obligación a requisito técn"
+    },
+    {
+      "id": "p12",
+      "sectionId": "compliance",
+      "label": "P12. ¿Hay auditoría continua o solo auditoría anual?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Continua — controles con evidence automation y dashboards",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Anual con preparación manual",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No hay auditoría formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "sectionId": "compliance",
+      "label": "P13. ¿Qué requisito de seguridad, si se incumple, bloquea el go-live del MVP aunque todo lo demás funcione?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué requisito de seguridad, si se incumple, bloquea el go-l"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "SRD — Compliance",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "SRD — Compliance",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

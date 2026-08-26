@@ -1,0 +1,168 @@
+{
+  "phaseId": "02-prd",
+  "variant": "tecnico",
+  "phaseName": "PRD — Técnico",
+  "phaseGroup": "rdd",
+  "order": 2,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "PRD — Técnico",
+    "description": "El PRD (Product Requirements Document) traduce la idea validada en el IDD a un producto gestionable. Responde: ¿qué vamos a construir, para quién, por qué lo elegirían y cómo sabemos que funciona? Se genera siempre tras el IDD y antes del RDD, y alimenta directamente al diseño de requisitos. Cada lente mira el mismo producto desde un ángulo distinto; juntos evitan que el MVP sea deseable pero inviable, o viable pero nadie lo quiera.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "PRD — Técnico",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "tecnico": {
+      "title": "4 · Técnico",
+      "description": "¿Podemos Construirlo?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p15",
+      "sectionId": "tecnico",
+      "label": "P15. ¿Cuál es la factibilidad técnica del MVP con el equipo/stack actual?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Trivial — CRUD con stack conocido",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Moderada — requiere 1-2 integraciones o aprendizajes nuevos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Alta — requiere spike/POC previo (incertidumbre significativa)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Muy alta — depende de I+D o tecnología no dominada",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p16",
+      "sectionId": "tecnico",
+      "label": "P16. Describí la arquitectura candidata en 1 párrafo: estilo (monolito modular, microservicios, serverless), stack principal, integraciones externas y mayor riesgo técnico.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí la arquitectura candidata en 1 párrafo: estilo (mon"
+    },
+    {
+      "id": "p17",
+      "sectionId": "tecnico",
+      "label": "P17. ¿Qué deuda técnica asume el MVP para llegar rápido?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Ninguna — se hace bien desde el inicio",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Deuda mapeada con ADR y plan de pago en próximos sprints",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Deuda no mapeada (atajo silencioso)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p18",
+      "sectionId": "tecnico",
+      "label": "P18. ¿Cuál es la estimación t-shirt del MVP y qué nivel de confianza tenés?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "S (<2 sem) confianza alta",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "M (2-4 sem) confianza media",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "L (1-3 meses) confianza baja",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "XL (>3 meses) — no es MVP, hay que recortar",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No estimado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "PRD — Técnico",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "PRD — Técnico",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

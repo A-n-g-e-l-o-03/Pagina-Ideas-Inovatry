@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-08-23T18:28:05.324Z",
+  "version": "1.0",
+  "migrated": 4,
+  "errors": [],
+  "warnings": [],
+  "details": {
+    "configValidation": {
+      "valid": true,
+      "fieldCount": 33,
+      "sectionCount": 4
+    },
+    "legacyKeysFound": [
+      "idea-survey-theme",
+      "idea-survey-answers",
+      "idea-survey-phase-states"
+    ],
+    "theme": {
+      "migrated": 1,
+      "key": "theme"
+    },
+    "form-00-idea": {
+      "migrated": 1,
+      "key": "form-00-idea",
+      "fieldsCount": 33,
+      "missingFields": [],
+      "extraFields": []
+    },
+    "phase-states": {
+      "migrated": 1,
+      "key": "phase-states",
+      "states": {
+        "00-idea": "completed"
+      }
+    },
+    "files": {
+      "migrated": 0,
+      "key": "files"
+    },
+    "completed-phases": {
+      "migrated": 1,
+      "key": "completed-phases",
+      "phases": [
+        "00-idea"
+      ]
+    },
+    "newKeysCreated": [
+      "ecosystem-theme",
+      "ecosystem-form-00-idea",
+      "ecosystem-phase-states",
+      "ecosystem-completed-phases"
+    ]
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "phaseId": "12-iam",
+  "variant": "rbac",
+  "phaseName": "IAM — RBAC",
+  "phaseGroup": "validacion",
+  "order": 12,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IAM — RBAC",
+    "description": "El IAM Document define quién puede hacer qué, sobre qué, cuándo y cómo se verifica. Es el control de acceso del MVP — no solo login, sino autorización fina, separación de deberes (SoD), provisioning y auditoría. Un IAM mal diseñado es el vector #1 de brechas.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "IAM — RBAC",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "rbac": {
+      "title": "1 · RBAC",
+      "description": "¿Roles Bien Definidos?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "rbac",
+      "label": "P1. Listá los roles del MVP (ej: admin, editor, viewer, auditor) con permisos por recurso/acción. ¿Hay matriz rol×permiso y SoD (qué combinaciones están prohibidas)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Listá los roles del MVP (ej: admin, editor, viewer, auditor)"
+    },
+    {
+      "id": "p02",
+      "sectionId": "rbac",
+      "label": "P2. ¿Cómo se asignan y revocan roles?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Provisioning automatizado (SCIM/JIT) con deprovisioning inmediato",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Manual con ticket y SLA",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Manual sin SLA — \"cuando alguien se acuerda\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay gestión formal — todos admin",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "sectionId": "rbac",
+      "label": "P3. ¿Hay roles dinámicos o contextuales (ej: acceso temporal, por atributo ABAC, por horario/ubicación)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — ABAC / ReBAC con políticas evaluadas en runtime",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Roles estáticos con elevación manual",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo roles estáticos sin elevación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "rbac",
+      "label": "P4. ¿Se audita quién hizo qué, cuándo y desde dónde?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — log inmutable con quién/qué/cuándo/dónde/resultado, con retención y alerting",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo login/logout",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No hay auditoría de acceso",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IAM — RBAC",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IAM — RBAC",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

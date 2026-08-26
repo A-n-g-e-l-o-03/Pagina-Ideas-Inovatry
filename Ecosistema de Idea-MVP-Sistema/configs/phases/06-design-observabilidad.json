@@ -1,0 +1,129 @@
+{
+  "phaseId": "06-design",
+  "variant": "observabilidad",
+  "phaseName": "Design — Observabilidad",
+  "phaseGroup": "diseno",
+  "order": 6,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "Design — Observabilidad",
+    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase `design` del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "Design — Observabilidad",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "observabilidad": {
+      "title": "5 · Observabilidad",
+      "description": "Proyecciones Design"
+    }
+  },
+  "fields": [
+    {
+      "id": "p15",
+      "sectionId": "observabilidad",
+      "label": "P15. ¿El MVP necesita diseño de observabilidad dedicado (logging, metrics, tracing, SLOs, alerting, dashboards)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — logs básicos alcanzan",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere Design Observabilidad (06-e) con RED/USE, tracing distribuido y SLOs",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — metrics sin tracing",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro — no en MVP",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p16",
+      "sectionId": "observabilidad",
+      "label": "P16. ¿El MVP es plataforma con control plane / data plane, golden paths y multi-tenancy?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere Design Plataforma (06-f) con GitOps, upgrade y fleet management",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — multi-tenant sin control plane",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p17",
+      "sectionId": "observabilidad",
+      "label": "P17. ¿Cuál es la decisión de diseño que, si te equivocás, es más cara de revertir en 6 meses? ¿Qué ADR la documenta y qué alternativa descartaste?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Cuál es la decisión de diseño que, si te equivocás, es más "
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "Design — Observabilidad",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "Design — Observabilidad",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

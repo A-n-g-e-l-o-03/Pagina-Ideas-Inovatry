@@ -1,0 +1,135 @@
+{
+  "phaseId": "06-design",
+  "variant": "datos",
+  "phaseName": "Design — Datos",
+  "phaseGroup": "diseno",
+  "order": 6,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "Design — Datos",
+    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase `design` del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "Design — Datos",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "datos": {
+      "title": "3 · Datos",
+      "description": "¿Dónde y Cómo Viven los Datos?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p09",
+      "sectionId": "datos",
+      "label": "P9. ¿Qué estrategia de persistencia usa el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Una DB relacional única (simplicidad)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Polyglot persistence (relacional + NoSQL/cache/bus según caso)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "CQRS con read models separados",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Event Sourcing con projections",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sectionId": "datos",
+      "label": "P10. ¿Cómo se maneja consistencia y migración? Describí: transacciones (saga vs. 2PC), estrategia de migración de datos legacy y si hay CDC (change data capture).",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Cómo se maneja consistencia y migración? Describí: transacc"
+    },
+    {
+      "id": "p11",
+      "sectionId": "datos",
+      "label": "P11. ¿Hay database per service o DB compartida?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "DB per service — aislamiento y autonomía",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "DB compartida con schemas separados",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "DB compartida sin separación (acoplo)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — monolito con una DB",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "Design — Datos",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "Design — Datos",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

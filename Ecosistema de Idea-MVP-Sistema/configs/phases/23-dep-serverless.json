@@ -1,0 +1,96 @@
+{
+  "phaseId": "23-dep",
+  "variant": "serverless",
+  "phaseName": "DEP — Serverless",
+  "phaseGroup": "operaciones",
+  "order": 23,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "DEP — Serverless",
+    "description": "El DEP (Deployment Specification) define cómo el MVP llega a producción de forma repetible, segura y reversible. No es \"hacer deploy\" — es GitOps, progressive delivery, verificación y rollback. Se genera tras verify y antes de operar.",
+    "badge": "2 preguntas"
+  },
+  "form": {
+    "title": "DEP — Serverless",
+    "subtitle": "2 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "serverless": {
+      "title": "2 · Serverless",
+      "description": "¿Funciones Sin Servidores Que Cuidar?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p06",
+      "sectionId": "serverless",
+      "label": "P6. ¿El MVP usa serverless (Lambda, Cloud Functions, Cloud Run)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — solo containers/VMs",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — functions con triggers (HTTP, eventos, cron) + API Gateway",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Híbrido — parte serverless, parte containers",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Evaluando",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "sectionId": "serverless",
+      "label": "P7. Si aplica serverless: ¿qué functions, con qué triggers, qué IaC (Terraform/Pulumi/SAM), cómo se hace canary y cómo se observa (cold starts, throttles, DLQ)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica serverless: ¿qué functions, con qué triggers, qué "
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "DEP — Serverless",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "DEP — Serverless",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

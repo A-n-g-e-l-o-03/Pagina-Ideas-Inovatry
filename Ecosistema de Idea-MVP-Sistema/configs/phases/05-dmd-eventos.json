@@ -1,0 +1,138 @@
+{
+  "phaseId": "05-dmd",
+  "variant": "eventos",
+  "phaseName": "DMD — Eventos/Event Sourcing",
+  "phaseGroup": "diseno",
+  "order": 5,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "DMD — Eventos/Event Sourcing",
+    "description": "El DMD (Domain Model Document) modela el corazón del negocio — entidades, reglas invariantes y eventos— con independencia de la tecnología. Es donde DDD cobra vida: si el RDD dice qué hace el sistema, el DMD dice cómo se estructura el conocimiento del dominio para que el sistema sea correcto, expresivo y evolutivo.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "DMD — Eventos/Event Sourcing",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "eventos": {
+      "title": "2 · Eventos",
+      "description": "¿El Pasado Importa?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p07",
+      "sectionId": "eventos",
+      "label": "P7. ¿El MVP necesita event sourcing (historia completa, replay, auditoría temporal)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — auditoría, bi-temporalidad o replay son core",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Quizá — eventos útiles pero no store completo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — estado actual alcanza",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "eventos",
+      "label": "P8. Si aplica event sourcing: ¿cuáles son los 5-7 domain events fundacionales (ej: `PedidoCreado`, `PagoConfirmado`, `EnvioDespachado`)? ¿Qué projections/read models derivan de ellos?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica event sourcing: ¿cuáles son los 5-7 domain events "
+    },
+    {
+      "id": "p09",
+      "sectionId": "eventos",
+      "label": "P9. ¿Cómo manejás consistencia entre aggregates/servicios?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Transacción ACID sincrónica",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Eventual consistency con process manager / saga",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No hay consistencia cruzada — cada aggregate aislado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sectionId": "eventos",
+      "label": "P10. ¿Qué proceso de negocio cruza múltiples aggregates y requiere saga/process manager? Describí el flujo de compensación si un paso falla.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué proceso de negocio cruza múltiples aggregates y requier"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "DMD — Eventos/Event Sourcing",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "DMD — Eventos/Event Sourcing",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

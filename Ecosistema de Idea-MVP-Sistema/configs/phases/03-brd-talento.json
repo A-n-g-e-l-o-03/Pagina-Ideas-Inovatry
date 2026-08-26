@@ -1,0 +1,141 @@
+{
+  "phaseId": "03-brd",
+  "variant": "talento",
+  "phaseName": "BRD — Talento/Organización",
+  "phaseGroup": "rdd",
+  "order": 3,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "BRD — Talento/Organización",
+    "description": "El BRD (Business Requirements Document) traduce la necesidad de negocio en requisitos que la organización necesita satisfacer, en lenguaje de negocio (no de producto ni de sistema). Responde: ¿por qué la empresa debe invertir en esto, qué gana, qué arriesga y qué exige el entorno? Se genera en paralelo al PRD, tras el IDD, y ambos alimentan al RDD. Sin BRD, el MVP puede ser buen producto pero mala inversión.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "BRD — Talento/Organización",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "talento": {
+      "title": "5 · Talento",
+      "description": "¿Aplica ESG o Talento?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p17",
+      "sectionId": "talento",
+      "label": "P17. ¿El MVP tiene impacto ESG (ambiental, social, gobernanza) relevante?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Ambiental — reduce consumo, desperdicio, huella",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Social — accesibilidad, inclusión, impacto comunitario",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Gobernanza — transparencia, ética de datos, auditoría",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Múltiple — requiere BRD Sostenibilidad (03-e)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p18",
+      "sectionId": "talento",
+      "label": "P18. ¿El MVP afecta capacidades, cultura o retención de talento?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Elimina toil y mejora Developer Experience / Employee Experience",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Requiere upskilling significativo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Cambia estructura de equipo / roles",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Requiere BRD Talento (03-f)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p19",
+      "sectionId": "talento",
+      "label": "P19. Si marcaste ESG o Talento, ¿qué métrica no financiera debe acompañar al ROI para decidir? (Ej: eNPS, horas de toil eliminadas, huella de carbono, tiempo de onboarding).",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si marcaste ESG o Talento, ¿qué métrica no financiera debe a"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "BRD — Talento/Organización",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "BRD — Talento/Organización",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "phaseId": "18-sod",
+  "variant": "pipeline",
+  "phaseName": "SOD — Pipeline",
+  "phaseGroup": "mcp",
+  "order": 18,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "SOD — Pipeline",
+    "description": "El SOD (Software Orchestration Document) orquesta cómo se construye, testea, despliega y verifica el MVP de forma automatizada y trazable. Es el \"director de orquesta\" del ciclo SDD: define stages, agentes, gates, rollback y métricas DORA. Sin SOD, el delivery es manual, frágil y no repetible.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "SOD — Pipeline",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "pipeline": {
+      "title": "1 · Pipeline",
+      "description": "¿CI/CD Que Da Confianza?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "pipeline",
+      "label": "P1. ¿Qué stages tiene el pipeline del MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Lint/format → SAST/SCA → build → unit tests → integration → deploy staging → E2E → deploy prod con gates",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Build → deploy directo sin gates",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo build + tests sin deploy automático",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay pipeline — deploy manual",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "pipeline",
+      "label": "P2. Para cada stage: ¿qué agente/herramienta opera, qué gate/criterio permite avanzar, qué notifica y qué métrica DORA alimenta (deployment frequency, lead time, change failure rate, MTTR)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Para cada stage: ¿qué agente/herramienta opera, qué gate/cri"
+    },
+    {
+      "id": "p03",
+      "sectionId": "pipeline",
+      "label": "P3. ¿Cómo se hace rollback?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Automático por gate fallido o SLO breach con verificación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Manual con runbook",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No hay rollback — hotfix hacia adelante",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "pipeline",
+      "label": "P4. ¿Hay trazabilidad requisito → código → artefacto → deploy → evidencia?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cada deploy trazable a commit, requisito y test",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — commit→deploy sin requisito",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — deploy sin trazabilidad",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "SOD — Pipeline",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "SOD — Pipeline",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

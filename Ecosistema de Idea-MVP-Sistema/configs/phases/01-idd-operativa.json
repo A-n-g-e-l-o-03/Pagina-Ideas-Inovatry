@@ -1,0 +1,135 @@
+{
+  "phaseId": "01-idd",
+  "variant": "operativa",
+  "phaseName": "IDD — Operativa",
+  "phaseGroup": "idd",
+  "order": 1,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IDD — Operativa",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "IDD — Operativa",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "operativa": {
+      "title": "3 · Operativa",
+      "description": "¿Mejora el Flujo?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p09",
+      "sectionId": "operativa",
+      "label": "P9. ¿Cuál es el cuello de botella operativo que el MVP ataca?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Lead time excesivo (idea → producción)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "WIP descontrolado (demasiado en paralelo)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Handoffs / esperas entre áreas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Retrabajo / defectos / desperdicio Lean",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No hay cuello de botella claro identificado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sectionId": "operativa",
+      "label": "P10. Mapeá el flujo actual (pasos, responsables, tiempos de espera vs. trabajo real). ¿Dónde se acumula el WIP y qué desperdicio Lean (sobreproducción, espera, transporte, sobreproceso) es más...",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Mapeá el flujo actual (pasos, responsables, tiempos de esper"
+    },
+    {
+      "id": "p11",
+      "sectionId": "operativa",
+      "label": "P11. ¿El MVP reduce WIP o solo acelera un paso aislado?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Reduce WIP sistémicamente (limita paralelismo)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Acelera un paso pero el WIP total no cambia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No analizado — solo se miró velocidad local",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Empeora el WIP al agregar una herramienta más",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IDD — Operativa",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IDD — Operativa",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

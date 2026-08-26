@@ -1,0 +1,129 @@
+{
+  "phaseId": "05-dmd",
+  "variant": "anemico",
+  "phaseName": "DMD — Anémico/Transaccional",
+  "phaseGroup": "diseno",
+  "order": 5,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "DMD — Anémico/Transaccional",
+    "description": "El DMD (Domain Model Document) modela el corazón del negocio — entidades, reglas invariantes y eventos— con independencia de la tecnología. Es donde DDD cobra vida: si el RDD dice qué hace el sistema, el DMD dice cómo se estructura el conocimiento del dominio para que el sistema sea correcto, expresivo y evolutivo.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "DMD — Anémico/Transaccional",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "anemico": {
+      "title": "3 · Anemico",
+      "description": "Proyecciones DMD"
+    }
+  },
+  "fields": [
+    {
+      "id": "p11",
+      "sectionId": "anemico",
+      "label": "P11. Si el dominio es mayormente CRUD sin invariants complejos, ¿justifica modelo anémico + transaction scripts?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — DDD rico sería over-engineering",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "No — aunque sea CRUD, hay invariants ocultos que conviene modelar rico",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Híbrido — rico en el core, anémico en admin/reporting",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — dominio con lógica significativa",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "sectionId": "anemico",
+      "label": "P12. ¿El MVP es un data product en una arquitectura Data Mesh (ownership federado, self-serve platform)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — dominio transaccional tradicional",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere DMD Data Mesh (05-d) con data product, ownership y governance federada",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — expone datos pero sin mesh formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro — no en MVP",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "sectionId": "anemico",
+      "label": "P13. Para el dominio elegido, ¿qué decisión de modelado, si te equivocás, es más cara de revertir? ¿Cómo la validarías barato (event storming, prototype de modelo)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Para el dominio elegido, ¿qué decisión de modelado, si te eq"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "DMD — Anémico/Transaccional",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "DMD — Anémico/Transaccional",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

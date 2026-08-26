@@ -1,0 +1,129 @@
+{
+  "phaseId": "13-sad",
+  "variant": "zero-trust",
+  "phaseName": "SAD — Zero Trust",
+  "phaseGroup": "validacion",
+  "order": 13,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "SAD — Zero Trust",
+    "description": "El SAD (Security Architecture Document) es la arquitectura de seguridad del MVP: cómo los controles (SRD) y el modelo de amenazas (TMD) se materializan en infraestructura, identidad y flujos de datos. Es el plano que integra IAM, network, data y appsec en un todo coherente. Sin SAD, los controles son piezas sueltas.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "SAD — Zero Trust",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "zero_trust": {
+      "title": "1 · Zero Trust",
+      "description": "¿Arquitectura Sin Perímetro?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "zero_trust",
+      "label": "P1. Mapeá trust boundaries del MVP: ¿qué zonas de confianza existen, dónde están los PEPs (Policy Enforcement Points) y PDPs (Policy Decision Points), y qué flujos cruzan boundaries?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Mapeá trust boundaries del MVP: ¿qué zonas de confianza exis"
+    },
+    {
+      "id": "p02",
+      "sectionId": "zero_trust",
+      "label": "P2. ¿Cómo migra el MVP hacia zero trust si hoy no lo es?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Ya es zero trust",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Migración incremental por workload (identity-aware proxy primero, luego micro-segmentación)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Big bang — todo a la vez",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay plan de migración — perímetro actual se mantiene",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "sectionId": "zero_trust",
+      "label": "P3. ¿Identidad y dispositivo están integrados en la decisión de acceso?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — user identity + device posture + contexto (ubicación, riesgo)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo identidad sin dispositivo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo dispositivo sin identidad fuerte",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ninguno — IP whitelisting",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "SAD — Zero Trust",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "SAD — Zero Trust",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

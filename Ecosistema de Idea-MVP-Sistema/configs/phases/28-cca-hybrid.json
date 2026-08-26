@@ -1,0 +1,171 @@
+{
+  "phaseId": "28-cca",
+  "variant": "hybrid",
+  "phaseName": "CCA — Híbrido",
+  "phaseGroup": "marketing",
+  "order": 28,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "CCA — Híbrido",
+    "description": "El CCA (Cognitive Communication Agent) es el agente que comunica el MVP a cada audiencia, usando explicaciones (CED) como base. No es un chatbot genérico — es un agente con propósito, prompts, RAG, evaluación y guardrails. Es transversal y automatiza la comunicación sin perder calidad ni control.",
+    "badge": "5 preguntas"
+  },
+  "form": {
+    "title": "CCA — Híbrido",
+    "subtitle": "5 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "hybrid": {
+      "title": "3 · Proyección Híbrido",
+      "description": "Proyección Híbrido"
+    }
+  },
+  "fields": [
+    {
+      "id": "p08",
+      "sectionId": "hybrid",
+      "label": "P8. ¿Necesitás agente híbrido (estructura template + contenido LLM)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — uno de los dos alcanza",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere CCA Híbrido (28-c) con estructura determinística + generación controlada, cost control y audit trail",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — híbrido sin audit trail",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "hybrid",
+      "label": "P9. Si aplica híbrido: ¿qué parte es template (estructura, compliance, formato) y qué parte es LLM (contenido, tono, adaptación)? ¿Cómo controlás costo y cómo auditas qué generó cada parte?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica híbrido: ¿qué parte es template (estructura, compl"
+    },
+    {
+      "id": "p10",
+      "sectionId": "hybrid",
+      "label": "P10. ¿Cómo medís éxito del agente de comunicación?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Comprensión (¿el usuario entendió?), tarea completada, CSAT, costo por interacción, factualidad",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo CSAT",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo costo/tokens",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No se mide",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "hybrid",
+      "label": "P11. ¿Qué riesgo tiene el agente de comunicación si alucina o comunica mal?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Bajo — output informativo sin consecuencia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Medio — confusión de usuario / retrabajo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Alto — decisión de negocio errada / compliance breach / pérdida de confianza",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Crítico — no puede alucinar, requiere 100% factualidad",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "sectionId": "hybrid",
+      "label": "P12. ¿Qué pregunta de usuario el agente NO debe responder sin escalar a humano? ¿Cómo detecta ese caso y qué hace?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué pregunta de usuario el agente NO debe responder sin esc"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "CCA — Híbrido",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "CCA — Híbrido",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

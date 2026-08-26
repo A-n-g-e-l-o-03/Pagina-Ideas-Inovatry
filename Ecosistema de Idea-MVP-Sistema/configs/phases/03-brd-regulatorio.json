@@ -1,0 +1,168 @@
+{
+  "phaseId": "03-brd",
+  "variant": "regulatorio",
+  "phaseName": "BRD — Regulatorio",
+  "phaseGroup": "rdd",
+  "order": 3,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "BRD — Regulatorio",
+    "description": "El BRD (Business Requirements Document) traduce la necesidad de negocio en requisitos que la organización necesita satisfacer, en lenguaje de negocio (no de producto ni de sistema). Responde: ¿por qué la empresa debe invertir en esto, qué gana, qué arriesga y qué exige el entorno? Se genera en paralelo al PRD, tras el IDD, y ambos alimentan al RDD. Sin BRD, el MVP puede ser buen producto pero mala inversión.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "BRD — Regulatorio",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "regulatorio": {
+      "title": "4 · Regulatorio",
+      "description": "¿Estamos Cubiertos?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p13",
+      "sectionId": "regulatorio",
+      "label": "P13. ¿Qué marco regulatorio aplica al MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Ninguno relevante",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Protección de datos (GDPR/LGPD)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Financiero (PCI-DSS, SOX)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Salud / datos sensibles (HIPAA)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Múltiple / no estoy seguro — requiere evaluación legal",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p14",
+      "sectionId": "regulatorio",
+      "label": "P14. ¿Qué obligaciones de auditoría, retención de datos, consentimiento o trazabilidad impone el regulador sobre el MVP? ¿Quién es el owner de compliance?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué obligaciones de auditoría, retención de datos, consenti"
+    },
+    {
+      "id": "p15",
+      "sectionId": "regulatorio",
+      "label": "P15. ¿El riesgo regulatorio de NO hacer el MVP es mayor que el de hacerlo?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — hacer el MVP introduce riesgo regulatorio nuevo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Neutral",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sí — no hacerlo mantiene exposición actual (multas, auditorías fallidas)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p16",
+      "sectionId": "regulatorio",
+      "label": "P16. ¿Existe proceso de aprobación legal/compliance antes de salir a producción?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí, con checklist y sign-off formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Informal — \"le preguntamos a legal si hace falta\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No existe",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "BRD — Regulatorio",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "BRD — Regulatorio",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

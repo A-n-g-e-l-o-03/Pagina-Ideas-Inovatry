@@ -1,0 +1,162 @@
+{
+  "phaseId": "22-vsd",
+  "variant": "compliance",
+  "phaseName": "VSD — Compliance",
+  "phaseGroup": "validacion",
+  "order": 22,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "VSD — Compliance",
+    "description": "El VSD (Validation Specification Document) es la validación final: demuestra con evidencia que el MVP cumple lo que prometió (RDD), que es técnicamente sólido y que satisface obligaciones externas. Es el gate antes de liberar. Se ejecuta en fase `verify` del SDD, cierra el ciclo de validación junto a ATD y STD.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "VSD — Compliance",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "compliance": {
+      "title": "1 · Compliance",
+      "description": "¿Cumplimos con el Regulador?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "compliance",
+      "label": "P1. ¿Tenés mapa regulatorio del MVP con cada obligación mapeada a control + evidencia?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — matriz obligación→control→test→evidencia con owner y fecha",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — obligaciones listadas sin evidencia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — compliance se ve \"cuando auditen\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "compliance",
+      "label": "P2. ¿Qué evidencia de compliance genera automáticamente el pipeline del MVP (SAST/DAST, SBOM, logs inmutables, reportes) vs. qué requiere trabajo manual? ¿Cuánto tarda preparar una auditoría?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué evidencia de compliance genera automáticamente el pipel"
+    },
+    {
+      "id": "p03",
+      "sectionId": "compliance",
+      "label": "P3. ¿Hay pentest o validación externa antes del go-live?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — pentest con alcance definido y remediación antes de liberar",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo SAST/DAST sin pentest",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No hay validación externa",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "compliance",
+      "label": "P4. ¿Quién hace sign-off de compliance y con qué criterio?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Owner de compliance con checklist y evidencia trazable",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "PO sin checklist formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Nadie — se libera sin sign-off",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "VSD — Compliance",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "VSD — Compliance",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

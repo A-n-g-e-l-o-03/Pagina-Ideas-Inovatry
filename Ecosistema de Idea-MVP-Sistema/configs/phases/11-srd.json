@@ -1,0 +1,195 @@
+{
+  "phaseId": "11-srd",
+  "variant": "appsec",
+  "phaseName": "SRD — AppSec",
+  "phaseGroup": "validacion",
+  "order": 11,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "SRD — AppSec",
+    "description": "El SRD (Security Requirements Document) traduce amenazas (TMD) en requisitos de seguridad verificables con owner, prioridad y test. Es el \"qué debe cumplir\" antes del \"cómo se implementa\" (SAD). Sin SRD, los controles son ad-hoc y no auditables.",
+    "badge": "5 preguntas"
+  },
+  "form": {
+    "title": "SRD — AppSec",
+    "subtitle": "5 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "appsec": {
+      "title": "1 · AppSec",
+      "description": "¿Código Seguro?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "appsec",
+      "label": "P1. ¿Qué nivel de OWASP ASVS apunta el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Nivel 1 — mínimo para cualquier app",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Nivel 2 — estándar para apps con datos sensibles",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Nivel 3 — alta seguridad (financiero, salud)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No mapeado a ASVS",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "appsec",
+      "label": "P2. Listá 5 controles AppSec críticos para el MVP (ej: validación de input, output encoding, auth, session management, crypto, manejo de errores). ¿Cuál es el más riesgoso si se omite?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Listá 5 controles AppSec críticos para el MVP (ej: validació"
+    },
+    {
+      "id": "p03",
+      "sectionId": "appsec",
+      "label": "P3. ¿Cómo se gestionan dependencias vulnerables?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "SCA en CI (Dependabot/Renovate + Snyk/Trivy) con policy de bloqueo por CVSS",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Scanning manual periódico",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo se actualiza cuando algo explota",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No gestionado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "appsec",
+      "label": "P4. ¿Hay secure coding standards y training para el equipo?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — checklist por lenguaje + training anual + review con foco security",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Checklist sin training",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — \"cada uno sabe\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "appsec",
+      "label": "P5. ¿Qué testing gates de seguridad hay en el pipeline?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "SAST + DAST + SCA + secret scanning en CI con gates bloqueantes",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo SAST",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo manual / pentest anual",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ninguno",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "SRD — AppSec",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "SRD — AppSec",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "phaseId": "12-iam",
+  "variant": "pam",
+  "phaseName": "IAM — PAM",
+  "phaseGroup": "validacion",
+  "order": 12,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IAM — PAM",
+    "description": "El IAM Document define quién puede hacer qué, sobre qué, cuándo y cómo se verifica. Es el control de acceso del MVP — no solo login, sino autorización fina, separación de deberes (SoD), provisioning y auditoría. Un IAM mal diseñado es el vector #1 de brechas.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "IAM — PAM",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "pam": {
+      "title": "3 · Proyección PAM",
+      "description": "Proyección PAM"
+    }
+  },
+  "fields": [
+    {
+      "id": "p08",
+      "sectionId": "pam",
+      "label": "P8. ¿El MVP tiene accesos privilegiados (admin, root, break-glass, vendor)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — sin privilegios elevados",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere PAM (12-c) con JIT elevation, session recording y credential vaulting",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sí, pero sin PAM formal — credenciales compartidas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "pam",
+      "label": "P9. Si aplica PAM: ¿cómo se eleva privilegio (JIT con aprobación), cuánto dura, se graba la sesión, dónde se bóvedan credenciales y cómo funciona break-glass en emergencia?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica PAM: ¿cómo se eleva privilegio (JIT con aprobación"
+    },
+    {
+      "id": "p10",
+      "sectionId": "pam",
+      "label": "P10. ¿Qué acceso, si se compromete, causa el mayor daño? ¿Qué mitigación reduce ese blast radius aunque el atacante obtenga credenciales válidas?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué acceso, si se compromete, causa el mayor daño? ¿Qué mit"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IAM — PAM",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IAM — PAM",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

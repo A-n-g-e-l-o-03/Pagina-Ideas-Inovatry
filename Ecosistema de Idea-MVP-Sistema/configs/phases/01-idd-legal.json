@@ -1,0 +1,102 @@
+{
+  "phaseId": "01-idd",
+  "variant": "legal",
+  "phaseName": "IDD — Legal/Regulatorio",
+  "phaseGroup": "idd",
+  "order": 1,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IDD — Legal/Regulatorio",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "badge": "2 preguntas"
+  },
+  "form": {
+    "title": "IDD — Legal/Regulatorio",
+    "subtitle": "2 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "legal": {
+      "title": "Proyección Legal",
+      "description": "Datos regulados y compliance"
+    }
+  },
+  "fields": [
+    {
+      "id": "p28",
+      "sectionId": "legal",
+      "label": "P28. ¿El MVP maneja datos regulados (salud, financiero, menores, datos personales UE/Brasil)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — GDPR / LGPD",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sí — PCI-DSS / financiero",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Sí — otro marco (HIPAA, SOX, etc.)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No estoy seguro — requiere evaluación legal",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p31",
+      "sectionId": "legal",
+      "label": "P31. Para cada proyección que marcaste como \"sí\" arriba, ¿qué pregunta bloqueante debe responderse ANTES del PRD? (Ej: \"¿Podemos almacenar datos de salud en X región legalmente?\").",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Para cada proyección que marcaste como \"sí\" arriba, ¿qué pre"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IDD — Legal/Regulatorio",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IDD — Legal/Regulatorio",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

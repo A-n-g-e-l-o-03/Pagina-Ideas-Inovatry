@@ -1,0 +1,129 @@
+{
+  "phaseId": "16-aid",
+  "variant": "test-agent",
+  "phaseName": "AID — Test Agent",
+  "phaseGroup": "mcp",
+  "order": 16,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AID — Test Agent",
+    "description": "El AID (AI Instruction Document) son las instrucciones operativas que un agente de IA ejecuta para hacer su trabajo. Si el AGD es el \"qué\" (diseño del agente) y el AAD es el \"cómo se orquestan\", el AID es el manual paso a paso con workflow, estándares, gates, restricciones y manejo de incertidumbre. Es lo que hace que un agente sea predecible y auditable, no un generador aleatorio.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "AID — Test Agent",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "test_agent": {
+      "title": "2 · Test Agent",
+      "description": "¿Tests Que No Mienten?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p06",
+      "sectionId": "test_agent",
+      "label": "P6. Describí el workflow del Test Agent: ¿cómo genera tests desde specs/RDD, qué estrategia (unit/integration/E2E), cómo elige test data y cómo reporta?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí el workflow del Test Agent: ¿cómo genera tests desd"
+    },
+    {
+      "id": "p07",
+      "sectionId": "test_agent",
+      "label": "P7. ¿Qué coverage y mutation targets tiene el Test Agent?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Coverage + mutation score con umbrales bloqueantes (ej: 80% líneas, 70% mutantes muertos)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo coverage por líneas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sin target cuantitativo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No mide",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "test_agent",
+      "label": "P8. ¿Cómo maneja flakiness el Test Agent?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Protocolo formal — quarantine, re-run con seed, root cause, fix o eliminación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Re-run hasta que pase",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Ignora flaky tests",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay tests flaky (asunción optimista)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AID — Test Agent",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AID — Test Agent",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

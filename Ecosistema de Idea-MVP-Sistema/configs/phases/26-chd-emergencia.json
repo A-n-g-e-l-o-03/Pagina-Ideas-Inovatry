@@ -1,0 +1,129 @@
+{
+  "phaseId": "26-chd",
+  "variant": "emergencia",
+  "phaseName": "CHD — Emergencia",
+  "phaseGroup": "tecnico",
+  "order": 26,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "CHD — Emergencia",
+    "description": "El CHD (Change Design Document) diseña cómo se gestionan cambios en el MVP sin romper producción ni auditoría. Todo cambio —feature, fix, config, infra— pasa por diseño, impacto, aprobación, implementación, testing, rollback y comunicación. Sin CHD, los cambios son \"deploy y rezo\".",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "CHD — Emergencia",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "emergencia": {
+      "title": "2 · Emergencia",
+      "description": "¿Hotfix Sin Caos?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p05",
+      "sectionId": "emergencia",
+      "label": "P5. ¿Tenés proceso de emergencia para hotfixes/security patches?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — proceso acelerado con aprobación mínima, implementación, revisión post-hoc y audit trail",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — se hace rápido pero sin revisión posterior",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — mismo proceso lento para todo, incluso emergencias",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "sectionId": "emergencia",
+      "label": "P6. Describí el último hotfix (o simulacro): ¿cuánto tardaste desde detección a deploy, quién aprobó, cómo se testeó en emergencia y qué se revisó después?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí el último hotfix (o simulacro): ¿cuánto tardaste de"
+    },
+    {
+      "id": "p07",
+      "sectionId": "emergencia",
+      "label": "P7. ¿Los cambios de emergencia generan deuda o aprendizaje?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Ambos — se registra deuda y se hace PIR con acciones",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo deuda sin PIR",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Ni deuda ni PIR — se olvida",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay emergencias",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "CHD — Emergencia",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "CHD — Emergencia",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

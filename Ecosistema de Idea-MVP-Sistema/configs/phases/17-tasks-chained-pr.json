@@ -1,0 +1,138 @@
+{
+  "phaseId": "17-tasks",
+  "variant": "chained-pr",
+  "phaseName": "Tasks — Chained PR",
+  "phaseGroup": "mcp",
+  "order": 17,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "Tasks — Chained PR",
+    "description": "El Tasks Document descompone el diseño (Design) en trabajo ejecutable con estimación, dependencias, criterios de hecho (DoD/DoR) y mitigación de riesgos. Se genera en fase `tasks` del SDD, tras Design y antes de Apply. Sin Tasks, el MVP es una lista de deseos sin orden ni estimación.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "Tasks — Chained PR",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "chained_pr": {
+      "title": "3 · Proyección Chained PR",
+      "description": "Proyección Chained PR"
+    }
+  },
+  "fields": [
+    {
+      "id": "p08",
+      "sectionId": "chained_pr",
+      "label": "P8. ¿El MVP se entrega en chained PRs (PRs encadenados, slices revisables)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — un PR grande al final",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere Chained PR (17-c) con work units atómicos y rollback boundaries",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — PRs pequeños sin encadenamiento formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "chained_pr",
+      "label": "P9. Si aplica Chained PR: definí los slices revisables del MVP (cada slice mergeable, testeable y rollbackeable). ¿Cuál es el punto de integración y qué se hace si un slice intermedio falla?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica Chained PR: definí los slices revisables del MVP ("
+    },
+    {
+      "id": "p10",
+      "sectionId": "chained_pr",
+      "label": "P10. ¿Hay mitigación de riesgos por tarea (qué puede salir mal, probabilidad, impacto, plan B)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cada tarea de riesgo alto tiene mitigación y owner",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo para tareas críticas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — \"ya veremos\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay riesgos identificados",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "chained_pr",
+      "label": "P11. ¿Qué tarea, si se subestima 2x, retrasa todo el MVP? ¿Qué buffer o plan de recorte tenés para ese caso?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué tarea, si se subestima 2x, retrasa todo el MVP? ¿Qué bu"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "Tasks — Chained PR",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "Tasks — Chained PR",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

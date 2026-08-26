@@ -1,0 +1,180 @@
+{
+  "phaseId": "05-dmd",
+  "variant": "dominio",
+  "phaseName": "DMD — Dominio",
+  "phaseGroup": "diseno",
+  "order": 5,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "DMD — Dominio",
+    "description": "El DMD (Domain Model Document) modela el corazón del negocio — entidades, reglas invariantes y eventos— con independencia de la tecnología. Es donde DDD cobra vida: si el RDD dice qué hace el sistema, el DMD dice cómo se estructura el conocimiento del dominio para que el sistema sea correcto, expresivo y evolutivo.",
+    "badge": "6 preguntas"
+  },
+  "form": {
+    "title": "DMD — Dominio",
+    "subtitle": "6 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "dominio": {
+      "title": "1 · Dominio",
+      "description": "¿Cuál Es el Corazón del Negocio?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "dominio",
+      "label": "P1. ¿Cuál es el lenguaje ubicuo del dominio? Listá 8-12 términos de negocio que TODOS (negocio + devs) deben usar igual, con definición en 1 frase cada uno. ¿Hay glosario compartido?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Cuál es el lenguaje ubicuo del dominio? Listá 8-12 términos"
+    },
+    {
+      "id": "p02",
+      "sectionId": "dominio",
+      "label": "P2. Identificá los aggregates raíz del MVP (ej: Pedido, Suscripción, Proyecto, Ticket). Para el más crítico: ¿qué entities y value objects contiene, qué invariants debe garantizar y qué domain...",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Identificá los aggregates raíz del MVP (ej: Pedido, Suscripc"
+    },
+    {
+      "id": "p03",
+      "sectionId": "dominio",
+      "label": "P3. ¿Qué tipo de modelo de dominio necesita el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Rico — lógica en entities/aggregates, invariants fuertes, DDD completo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Anémico — entities como DTOs, lógica en services/scripts, CRUD simple",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Híbrido — núcleo rico para el core, anémico en periferia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No decidido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "dominio",
+      "label": "P4. ¿Hay bounded contexts identificados con límites explícitos?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — contextos mapeados con integración sync/async y anti-corruption layers",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Intuido pero sin límites formales",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — todo en un único modelo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — dominio trivial de 1 contexto",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "dominio",
+      "label": "P5. Describí 2 invariants críticos que, si se violan, el negocio sufre (ej: \"un pedido pagado no puede volver a borrador\", \"saldo nunca negativo\"). ¿Dónde se enforcean hoy?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí 2 invariants críticos que, si se violan, el negocio"
+    },
+    {
+      "id": "p06",
+      "sectionId": "dominio",
+      "label": "P6. ¿Los repositories exponen colecciones de aggregates o DAOs técnicos?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Aggregates — `pedidoRepo.save(pedido)` con invariants",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "DAOs — `db.save(row)` sin lógica de dominio",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Mezcla sin criterio",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "DMD — Dominio",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "DMD — Dominio",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

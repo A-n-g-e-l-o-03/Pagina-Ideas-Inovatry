@@ -1,0 +1,141 @@
+{
+  "phaseId": "01-idd",
+  "variant": "economica",
+  "phaseName": "IDD — Económica",
+  "phaseGroup": "idd",
+  "order": 1,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IDD — Económica",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "IDD — Económica",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "economica": {
+      "title": "5 · Económica",
+      "description": "¿Cierra el Número?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p15",
+      "sectionId": "economica",
+      "label": "P15. Calculá el costo de NO hacer el MVP por 6 meses: horas perdidas × costo hora + oportunidades perdidas + costo de errores. ¿Cuál es el número, aunque sea rango?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Calculá el costo de NO hacer el MVP por 6 meses: horas perdi"
+    },
+    {
+      "id": "p16",
+      "sectionId": "economica",
+      "label": "P16. ¿Cuál es el payback esperado del MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "< 3 meses",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "3-6 meses",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "6-12 meses",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": ">12 meses",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No calculado / no cierra el número",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p17",
+      "sectionId": "economica",
+      "label": "P17. ¿Qué métrica económica usás para decidir si la idea avanza?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Intuición / \"vale la pena\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Horas liberadas × costo hora",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "ROI simple (beneficio/costo)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Payback + ROI con costo de mantenimiento a 12 meses",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Modelo financiero completo (TAM/SAM/SOM, NPV)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IDD — Económica",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IDD — Económica",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

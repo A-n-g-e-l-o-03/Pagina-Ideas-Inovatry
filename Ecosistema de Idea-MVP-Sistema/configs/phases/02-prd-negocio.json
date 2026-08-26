@@ -1,0 +1,144 @@
+{
+  "phaseId": "02-prd",
+  "variant": "negocio",
+  "phaseName": "PRD — Negocio",
+  "phaseGroup": "rdd",
+  "order": 2,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "PRD — Negocio",
+    "description": "El PRD (Product Requirements Document) traduce la idea validada en el IDD a un producto gestionable. Responde: ¿qué vamos a construir, para quién, por qué lo elegirían y cómo sabemos que funciona? Se genera siempre tras el IDD y antes del RDD, y alimenta directamente al diseño de requisitos. Cada lente mira el mismo producto desde un ángulo distinto; juntos evitan que el MVP sea deseable pero inviable, o viable pero nadie lo quiera.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "PRD — Negocio",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "negocio": {
+      "title": "3 · Negocio",
+      "description": "¿Cierra la Cuenta?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p11",
+      "sectionId": "negocio",
+      "label": "P11. ¿Cuál es el modelo de monetización o captura de valor del MVP? (Venta directa, ahorro interno, upsell, retención, datos). ¿Cuál es la unidad económica (por usuario, por transacción, por asiento)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Cuál es el modelo de monetización o captura de valor del MV"
+    },
+    {
+      "id": "p12",
+      "sectionId": "negocio",
+      "label": "P12. ¿Tenés dimensionamiento TAM/SAM/SOM o equivalente interno?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No, solo intuición",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Rango estimado con fuente citable",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "TAM/SAM/SOM modelado con supuestos explícitos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — MVP interno sin mercado externo",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "sectionId": "negocio",
+      "label": "P13. ¿Qué pricing o costo interno tiene el MVP vs. alternativas (competidor, workaround, no hacer nada)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No analizado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Más caro pero con diferenciación clara",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Paridad con alternativa",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Más barato / ahorro demostrable",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Freemium / subsidio inicial",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p14",
+      "sectionId": "negocio",
+      "label": "P14. ¿Cuál es el supuesto de negocio más riesgoso? Si ese supuesto es falso, ¿el MVP pierde sentido? ¿Cómo lo testearías barato (fake door, landing test, concierge)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Cuál es el supuesto de negocio más riesgoso? Si ese supuest"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "PRD — Negocio",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "PRD — Negocio",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

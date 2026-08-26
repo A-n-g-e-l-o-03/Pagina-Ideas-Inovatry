@@ -1,0 +1,201 @@
+{
+  "phaseId": "09-uid",
+  "variant": "web",
+  "phaseName": "UID — Web",
+  "phaseGroup": "diseno",
+  "order": 9,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "UID — Web",
+    "description": "El UID (UI Design Document) define cómo el usuario ve y toca el MVP. No es \"hacerlo lindo\" — es usabilidad, accesibilidad, performance percibida y consistencia. Se genera en fase design SDD y debe estar conectado al PRD Usuario (02-a) y al journey mapeado.",
+    "badge": "5 preguntas"
+  },
+  "form": {
+    "title": "UID — Web",
+    "subtitle": "5 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "web": {
+      "title": "1 · Web",
+      "description": "¿Rápida, Accesible, Responsive?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "web",
+      "label": "P1. ¿Qué stack de frontend usa el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "SPA (React, Vue, Angular)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "SSR/SSG (Next.js, Astro, Remix)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Híbrido SSR+SPA",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido / vanilla",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "No aplica — solo API/backend",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "web",
+      "label": "P2. ¿Cuál es el target de Core Web Vitals y accesibilidad?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "LCP <2.5s, INP <200ms, CLS <0.1 + WCAG 2.1 AA",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo performance, sin a11y",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo a11y, sin performance budget",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ninguno definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "sectionId": "web",
+      "label": "P3. Describí las 3 pantallas/flujos más críticos del MVP: ¿qué ve el usuario, qué puede hacer, qué estados (loading, empty, error) maneja cada una?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí las 3 pantallas/flujos más críticos del MVP: ¿qué v"
+    },
+    {
+      "id": "p04",
+      "sectionId": "web",
+      "label": "P4. ¿Cómo se maneja estado y routing en el frontend?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "State global (Redux/Zustand) + routing con guards",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "State local + URL como fuente de verdad",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sin patrón — cada componente maneja su estado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "web",
+      "label": "P5. ¿Responsive y i18n están en el MVP o son \"después\"?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Responsive mobile-first + i18n desde día 1",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Responsive sí, i18n después",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Ninguno — desktop only en MVP",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "UID — Web",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "UID — Web",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

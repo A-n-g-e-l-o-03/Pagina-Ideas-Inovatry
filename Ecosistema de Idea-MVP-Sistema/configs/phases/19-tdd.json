@@ -1,0 +1,195 @@
+{
+  "phaseId": "19-tdd",
+  "variant": "classic",
+  "phaseName": "TDD — Clásico",
+  "phaseGroup": "mcp",
+  "order": 19,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "TDD — Clásico",
+    "description": "El TDD Document define cómo se escribe código guiado por tests en el MVP. No es \"testear después\" — es diseñar a través de tests. El TDD correcto produce código desacoplado, testeable y con regresión automática. Se ejecuta en fase `apply` del SDD.",
+    "badge": "5 preguntas"
+  },
+  "form": {
+    "title": "TDD — Clásico",
+    "subtitle": "5 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "classic": {
+      "title": "1 · Clásico",
+      "description": "¿Red-Green-Refactor Real?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "classic",
+      "label": "P1. ¿El equipo practica TDD clásico (test primero, luego código mínimo, luego refactor)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — Red-Green-Refactor estricto en cada incremento",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — tests primero en core, después en periferia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — código primero, tests después (si hay tiempo)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No se hace TDD",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "classic",
+      "label": "P2. Para el aggregate/componente más crítico del MVP: ¿cuál sería el primer test que escribirías antes de cualquier código? Escribí el nombre del test y qué aserción hace.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Para el aggregate/componente más crítico del MVP: ¿cuál serí"
+    },
+    {
+      "id": "p03",
+      "sectionId": "classic",
+      "label": "P3. ¿Qué granularidad y doubles usa el TDD del MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Tests de unidad por comportamiento (no por método) con doubles solo en boundaries (DB, API, tiempo)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Tests por método con mocks de todo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Tests de integración sin doubles",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Sin criterio — cada uno testea como quiere",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "classic",
+      "label": "P4. ¿Hay reglas de refactoring tras el Green?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — DRY, nombres, extracción, sin duplicación, sin bajar coverage",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Refactor oportunista sin reglas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No hay refactor — \"si pasa, no lo toques\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — no hay TDD",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "classic",
+      "label": "P5. ¿Cómo se trata código legacy sin tests?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Golden master / characterization tests + refactor incremental con seams",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Se reescribe desde cero sin tests previos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No se toca legacy — solo código nuevo con TDD",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay legacy en MVP",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "TDD — Clásico",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "TDD — Clásico",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

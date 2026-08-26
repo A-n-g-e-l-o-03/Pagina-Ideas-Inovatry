@@ -1,0 +1,105 @@
+{
+  "phaseId": "18-sod",
+  "variant": "hierarchical",
+  "phaseName": "SOD — Hierarchical",
+  "phaseGroup": "mcp",
+  "order": 18,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "SOD — Hierarchical",
+    "description": "El SOD (Software Orchestration Document) orquesta cómo se construye, testea, despliega y verifica el MVP de forma automatizada y trazable. Es el \"director de orquesta\" del ciclo SDD: define stages, agentes, gates, rollback y métricas DORA. Sin SOD, el delivery es manual, frágil y no repetible.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "SOD — Hierarchical",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "hierarchical": {
+      "title": "3 · Proyección Hierarchical",
+      "description": "Proyección Hierarchical"
+    }
+  },
+  "fields": [
+    {
+      "id": "p07",
+      "sectionId": "hierarchical",
+      "label": "P7. ¿Necesitás orquestación jerárquica (orchestrator → managers → workers)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — pipeline plano alcanza",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere Hierarchical (18-c) con delegation y escalation",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — 2 niveles",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "hierarchical",
+      "label": "P8. Si aplica jerarquía: ¿qué delega cada nivel, cómo escala un fallo y cómo se controla budget?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica jerarquía: ¿qué delega cada nivel, cómo escala un "
+    },
+    {
+      "id": "p09",
+      "sectionId": "hierarchical",
+      "label": "P9. ¿Qué stage del pipeline, si falla silenciosamente, deja pasar un defecto crítico a producción? ¿Cómo lo detectarías?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué stage del pipeline, si falla silenciosamente, deja pasa"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "SOD — Hierarchical",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "SOD — Hierarchical",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

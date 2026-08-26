@@ -1,0 +1,162 @@
+{
+  "phaseId": "26-chd",
+  "variant": "estandar",
+  "phaseName": "CHD — Estándar",
+  "phaseGroup": "tecnico",
+  "order": 26,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "CHD — Estándar",
+    "description": "El CHD (Change Design Document) diseña cómo se gestionan cambios en el MVP sin romper producción ni auditoría. Todo cambio —feature, fix, config, infra— pasa por diseño, impacto, aprobación, implementación, testing, rollback y comunicación. Sin CHD, los cambios son \"deploy y rezo\".",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "CHD — Estándar",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "estandar": {
+      "title": "1 · Estándar",
+      "description": "¿Cambios Con Diseño?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "estandar",
+      "label": "P1. ¿Cómo se propone un cambio en el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "RFC con contexto, alternativas, impacto, riesgo, plan de implementación y rollback",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Ticket con descripción breve",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Mensaje en chat — \"voy a cambiar X\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Sin proceso — se cambia directo",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "estandar",
+      "label": "P2. Para el próximo cambio grande del MVP: ¿qué impacto tiene (qué sistemas/equipos afecta), qué riesgo (probabilidad×impacto), quién aprueba y qué evidencia de testing exige?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Para el próximo cambio grande del MVP: ¿qué impacto tiene (q"
+    },
+    {
+      "id": "p03",
+      "sectionId": "estandar",
+      "label": "P3. ¿Cómo se comunica y documenta un cambio?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Changelog + notificación a stakeholders + ADR si es arquitectónico + PIR si fue incidente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo changelog",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo commit message",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No se comunica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "estandar",
+      "label": "P4. ¿Hay análisis de impacto y rollback antes de implementar?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cada cambio con impacto, blast radius y rollback testeado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Impacto sin rollback",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Rollback sin impacto",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Ninguno — \"si rompe, vemos\"",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "CHD — Estándar",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "CHD — Estándar",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

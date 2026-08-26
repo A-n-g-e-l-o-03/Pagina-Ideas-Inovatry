@@ -1,0 +1,150 @@
+{
+  "phaseId": "04-rdd",
+  "variant": "no-funcional",
+  "phaseName": "RDD — No Funcional",
+  "phaseGroup": "rdd",
+  "order": 4,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "RDD — No Funcional",
+    "description": "El RDD (Requirements Design Document) es la especificación de comportamiento que el diseño y el testing implementan y verifican. Traduce el PRD/BRD en requisitos trazables, sin ambigüedad, listos para SDD spec. Es el contrato entre producto y tecnología.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "RDD — No Funcional",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "no_funcional": {
+      "title": "2 · No Funcional",
+      "description": "¿Con Qué Calidad?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p08",
+      "sectionId": "no_funcional",
+      "label": "P8. ¿Qué atributo de calidad es #1 para el MVP (si solo podés elegir uno)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Performance / latencia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Escalabilidad / throughput",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Disponibilidad / resiliencia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Seguridad",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Mantenibilidad / deployability",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_f",
+          "label": "Observabilidad",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "no_funcional",
+      "label": "P9. Definí SLOs concretos para el MVP: ¿qué latencia p95, qué throughput (req/s), qué disponibilidad (%), qué RTO/RPO y con qué ventana de medición?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Definí SLOs concretos para el MVP: ¿qué latencia p95, qué th"
+    },
+    {
+      "id": "p10",
+      "sectionId": "no_funcional",
+      "label": "P10. ¿Los requisitos no funcionales tienen umbrales cuantitativos o son \"que sea rápido/escalable\"?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Cuantitativos con número, percentil y condición (ej: p95 <300ms con 500 rps)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Cualitativos con intención pero sin número",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No definidos — \"que ande bien\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Solo performance, resto no evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "no_funcional",
+      "label": "P11. ¿Qué pasa si el MVP no cumple un NFR crítico en producción? ¿Hay plan de degradación (feature flag, circuit breaker, fallback) o falla completa?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué pasa si el MVP no cumple un NFR crítico en producción? "
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "RDD — No Funcional",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "RDD — No Funcional",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

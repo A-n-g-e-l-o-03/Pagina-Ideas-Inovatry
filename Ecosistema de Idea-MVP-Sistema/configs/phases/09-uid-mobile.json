@@ -1,0 +1,135 @@
+{
+  "phaseId": "09-uid",
+  "variant": "mobile",
+  "phaseName": "UID — Mobile",
+  "phaseGroup": "diseno",
+  "order": 9,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "UID — Mobile",
+    "description": "El UID (UI Design Document) define cómo el usuario ve y toca el MVP. No es \"hacerlo lindo\" — es usabilidad, accesibilidad, performance percibida y consistencia. Se genera en fase design SDD y debe estar conectado al PRD Usuario (02-a) y al journey mapeado.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "UID — Mobile",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "mobile": {
+      "title": "2 · Mobile",
+      "description": "¿Nativo o Híbrido?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p06",
+      "sectionId": "mobile",
+      "label": "P6. ¿El MVP tiene app móvil?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — solo web",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — nativa (iOS/Android)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sí — híbrida (React Native, Flutter)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Sí — PWA",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Evaluando",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "sectionId": "mobile",
+      "label": "P7. Si aplica mobile: ¿qué capacidades nativas necesita (offline-first, push, biometrics, cámara, geolocalización, deep linking) y cómo se degrada sin ellas?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica mobile: ¿qué capacidades nativas necesita (offline"
+    },
+    {
+      "id": "p08",
+      "sectionId": "mobile",
+      "label": "P8. ¿App store compliance y platform guidelines (HIG/Material) están contemplados?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — checklist de review y guidelines seguidas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — solo lo que rompe el review",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — \"ya veremos cuando nos rechacen\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "UID — Mobile",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "UID — Mobile",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

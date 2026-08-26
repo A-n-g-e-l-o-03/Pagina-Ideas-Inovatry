@@ -1,0 +1,138 @@
+{
+  "phaseId": "19-tdd",
+  "variant": "mutation",
+  "phaseName": "TDD — Mutation Testing",
+  "phaseGroup": "mcp",
+  "order": 19,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "TDD — Mutation Testing",
+    "description": "El TDD Document define cómo se escribe código guiado por tests en el MVP. No es \"testear después\" — es diseñar a través de tests. El TDD correcto produce código desacoplado, testeable y con regresión automática. Se ejecuta en fase `apply` del SDD.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "TDD — Mutation Testing",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "mutation": {
+      "title": "3 · Proyección Mutation Testing",
+      "description": "Proyección Mutation Testing"
+    }
+  },
+  "fields": [
+    {
+      "id": "p09",
+      "sectionId": "mutation",
+      "label": "P9. ¿El MVP usa mutation testing para medir calidad real de los tests?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — requiere Mutation (19-c) con mutation score, property-based y generative",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — mutation en core sin property-based",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — solo coverage por líneas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No se mide calidad de tests",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sectionId": "mutation",
+      "label": "P10. Si aplica mutation: ¿qué mutation score exige el MVP, qué mutadores aplican y cómo manejás mutantes equivalentes?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica mutation: ¿qué mutation score exige el MVP, qué mu"
+    },
+    {
+      "id": "p11",
+      "sectionId": "mutation",
+      "label": "P11. ¿Qué le dirías a alguien que dice \"TDD ralentiza el MVP\"?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "TDD acelera — menos debugging, menos regresión, diseño emergente superior; el costo es disciplina inicial",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "TDD ralentiza pero vale la pena por calidad",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "TDD no aplica a MVP — se testea después",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No tengo posición formada",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "sectionId": "mutation",
+      "label": "P12. ¿Qué parte del MVP NO harías con TDD y por qué? (Ej: spike exploratorio, UI visual, integración con vendor sin contrato).",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué parte del MVP NO harías con TDD y por qué? (Ej: spike e"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "TDD — Mutation Testing",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "TDD — Mutation Testing",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

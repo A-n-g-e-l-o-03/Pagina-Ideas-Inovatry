@@ -1,0 +1,162 @@
+{
+  "phaseId": "04-rdd",
+  "variant": "seguridad",
+  "phaseName": "RDD — Seguridad",
+  "phaseGroup": "rdd",
+  "order": 4,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "RDD — Seguridad",
+    "description": "El RDD (Requirements Design Document) es la especificación de comportamiento que el diseño y el testing implementan y verifican. Traduce el PRD/BRD en requisitos trazables, sin ambigüedad, listos para SDD spec. Es el contrato entre producto y tecnología.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "RDD — Seguridad",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "seguridad": {
+      "title": "3 · Seguridad",
+      "description": "¿Qué Debe Resistir?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p12",
+      "sectionId": "seguridad",
+      "label": "P12. ¿Hiciste threat modeling del MVP (STRIDE, DFDs)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí, con DFDs, enumeración de amenazas, risk assessment y mitigaciones mapeadas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — lista informal de riesgos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No, pero hay requisitos de seguridad genéricos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "sectionId": "seguridad",
+      "label": "P13. Listá los 3 controles de seguridad más críticos para el MVP (ej: auth, validación de input, rate limiting, cifrado, auditoría). ¿Qué OWASP Top 10 aplica directamente?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Listá los 3 controles de seguridad más críticos para el MVP "
+    },
+    {
+      "id": "p14",
+      "sectionId": "seguridad",
+      "label": "P14. ¿Los requisitos de compliance (GDPR, PCI-DSS, etc.) están traducidos a requisitos técnicos verificables?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cada obligación tiene requisito + test + evidencia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — mapeados pero sin test",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — compliance va \"después\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica compliance",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p15",
+      "sectionId": "seguridad",
+      "label": "P15. ¿Hay requisitos de incident response (detección, contención, notificación, forense) desde el día 1?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí, con runbook y RTO de respuesta",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Definidos pero sin runbook",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — \"si pasa, vemos\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica al MVP",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "RDD — Seguridad",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "RDD — Seguridad",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

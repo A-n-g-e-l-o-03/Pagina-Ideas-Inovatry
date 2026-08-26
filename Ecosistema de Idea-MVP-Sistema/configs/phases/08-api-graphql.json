@@ -1,0 +1,96 @@
+{
+  "phaseId": "08-api",
+  "variant": "graphql",
+  "phaseName": "API — GraphQL",
+  "phaseGroup": "tecnico",
+  "order": 8,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "API — GraphQL",
+    "description": "El API Design Document define el contrato entre el MVP y sus consumidores (frontend, otros servicios, terceros). Es un contrato versionado y testeable: romperlo sin avisar es romper a tus clientes. Se genera en fase design SDD y alimenta implementación y contract testing.",
+    "badge": "2 preguntas"
+  },
+  "form": {
+    "title": "API — GraphQL",
+    "subtitle": "2 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "graphql": {
+      "title": "2 · GraphQL",
+      "description": "¿Cuándo y Cómo?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p07",
+      "sectionId": "graphql",
+      "label": "P7. ¿El MVP necesita GraphQL?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — REST cubre todos los casos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — frontend necesita fetching flexible / evitar over-fetching",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sí — federation de múltiples servicios",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Evaluando — spike necesario",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "graphql",
+      "label": "P8. Si aplica GraphQL: ¿cuál es el schema core (types, queries, mutations, subscriptions), cómo se maneja authZ a nivel campo y qué límites de complexity/depth hay para evitar queries abusivas?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica GraphQL: ¿cuál es el schema core (types, queries, "
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "API — GraphQL",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "API — GraphQL",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "phaseId": "12-iam",
+  "variant": "zero-trust",
+  "phaseName": "IAM — Zero Trust",
+  "phaseGroup": "validacion",
+  "order": 12,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IAM — Zero Trust",
+    "description": "El IAM Document define quién puede hacer qué, sobre qué, cuándo y cómo se verifica. Es el control de acceso del MVP — no solo login, sino autorización fina, separación de deberes (SoD), provisioning y auditoría. Un IAM mal diseñado es el vector #1 de brechas.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "IAM — Zero Trust",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "zero_trust": {
+      "title": "2 · Zero Trust",
+      "description": "¿Nunca Confiar, Siempre Verificar?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p05",
+      "sectionId": "zero_trust",
+      "label": "P5. ¿Qué modelo de confianza usa el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Zero trust — identity-aware proxy, device trust, PDP/PEP, verificación continua",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "VPN + perímetro",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Usuario/pass sin device trust",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "sectionId": "zero_trust",
+      "label": "P6. Describí el flujo de autenticación y autorización del MVP: IdP (OIDC/SAML), MFA, device posture, PDP/PEP, micro-segmentación. ¿Dónde se toma la decisión de acceso?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí el flujo de autenticación y autorización del MVP: I"
+    },
+    {
+      "id": "p07",
+      "sectionId": "zero_trust",
+      "label": "P7. ¿Hay verificación continua o solo en el login?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Continua — re-evaluación por riesgo, expiración corta, step-up auth",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo en login — sesión larga sin re-verificación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — sesión infinita",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IAM — Zero Trust",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IAM — Zero Trust",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

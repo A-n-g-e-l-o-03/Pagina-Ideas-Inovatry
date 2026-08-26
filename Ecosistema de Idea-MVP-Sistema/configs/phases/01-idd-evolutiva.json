@@ -1,0 +1,138 @@
+{
+  "phaseId": "01-idd",
+  "variant": "evolutiva",
+  "phaseName": "IDD — Evolutiva",
+  "phaseGroup": "idd",
+  "order": 1,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IDD — Evolutiva",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "IDD — Evolutiva",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "evolutiva": {
+      "title": "8 · Evolutiva",
+      "description": "¿Sobrevive a 12 Meses?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p24",
+      "sectionId": "evolutiva",
+      "label": "P24. ¿Cuál es el bus factor del dominio que el MVP toca?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "1 persona (si se va, se pierde conocimiento crítico)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "2 personas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "3+ personas con conocimiento compartido",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica — dominio nuevo",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p25",
+      "sectionId": "evolutiva",
+      "label": "P25. ¿Qué fundación deja el MVP aunque fracase? (Ej: modelo de datos, integración, aprendizaje validado, componente reutilizable). Si la respuesta es \"nada\", la apuesta es frágil.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué fundación deja el MVP aunque fracase? (Ej: modelo de da"
+    },
+    {
+      "id": "p26",
+      "sectionId": "evolutiva",
+      "label": "P26. ¿Qué tan reversible es la decisión de construir este MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Totalmente reversible (feature flag, sin migración)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Reversible con costo moderado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Difícil de revertir (migración de datos, contratos externos)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Irreversible (cambio regulatorio, compromiso público)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p27",
+      "sectionId": "evolutiva",
+      "label": "P27. ¿Cuánto tarda hoy onboardear a alguien nuevo en el flujo que el MVP mejora? ¿El MVP reduce ese tiempo y cómo?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Cuánto tarda hoy onboardear a alguien nuevo en el flujo que"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IDD — Evolutiva",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IDD — Evolutiva",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

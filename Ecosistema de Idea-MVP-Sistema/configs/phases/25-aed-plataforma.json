@@ -1,0 +1,96 @@
+{
+  "phaseId": "25-aed",
+  "variant": "plataforma",
+  "phaseName": "AED — Plataforma",
+  "phaseGroup": "tecnico",
+  "order": 25,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AED — Plataforma",
+    "description": "El AED (Architecture Evolution Document) planifica cómo evoluciona la arquitectura del MVP sin reescribirlo. Es el roadmap técnico: deuda, modernización, capacidad, descomposición y governance. Se genera tras operar el MVP y alimenta decisiones de inversión técnica.",
+    "badge": "2 preguntas"
+  },
+  "form": {
+    "title": "AED — Plataforma",
+    "subtitle": "2 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "plataforma": {
+      "title": "2 · Plataforma",
+      "description": "¿Plataforma Como Producto?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p06",
+      "sectionId": "plataforma",
+      "label": "P6. ¿El MVP evoluciona como plataforma (golden paths, self-service para otros equipos)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — producto standalone",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere AED Platform (25-b) con golden paths y DX",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — expone APIs sin plataforma formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "sectionId": "plataforma",
+      "label": "P7. Si aplica plataforma: ¿qué golden paths ofrece, cómo es el self-service, cómo se gestiona multi-tenancy y fleet, y cómo medís DX (time-to-first-deploy, NPS de plataforma)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica plataforma: ¿qué golden paths ofrece, cómo es el s"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AED — Plataforma",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AED — Plataforma",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

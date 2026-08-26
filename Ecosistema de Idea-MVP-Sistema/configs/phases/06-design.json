@@ -1,0 +1,183 @@
+{
+  "phaseId": "06-design",
+  "variant": "arquitectura",
+  "phaseName": "Design — Arquitectura",
+  "phaseGroup": "diseno",
+  "order": 6,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "Design — Arquitectura",
+    "description": "El Design Document es el plano maestro técnico del MVP. Se genera en fase `design` del SDD, tras RDD/DMD y antes de Tasks. Define decisiones irreversibles o costosas (ADRs) y orquesta los documentos especializados (DBD, API, UID, TMD, etc.). Sin Design, cada dev improvisa arquitectura.",
+    "badge": "5 preguntas"
+  },
+  "form": {
+    "title": "Design — Arquitectura",
+    "subtitle": "5 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "arquitectura": {
+      "title": "1 · Arquitectura",
+      "description": "¿Qué Estilo y Por Qué?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "arquitectura",
+      "label": "P1. ¿Qué estilo arquitectónico elige el MVP y por qué atributo de calidad?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Monolito modular — simplicidad, deploy único, transacciones ACID",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Microservicios — escalabilidad independiente, equipos autónomos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Event-driven — desacoplo temporal, audit trail",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Serverless — costo variable, sin ops",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Híbrido — justificado por quality attributes, no por hype",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "arquitectura",
+      "label": "P2. Priorizá los quality attributes ISO 25010 para el MVP (performance, escalabilidad, disponibilidad, seguridad, mantenibilidad, deployability, observabilidad) en orden 1-7. ¿Qué trade-off...",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Priorizá los quality attributes ISO 25010 para el MVP (perfo"
+    },
+    {
+      "id": "p03",
+      "sectionId": "arquitectura",
+      "label": "P3. ¿Hay ADRs (Architecture Decision Records) para decisiones irreversibles/costosas?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — cada ADR con contexto, alternativas, decisión, consecuencias y estado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Algunas decisiones documentadas informalmente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — decisiones en la cabeza del tech lead",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay decisiones irreversibles en el MVP",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "arquitectura",
+      "label": "P4. Mapeá bounded contexts a dominios de negocio: ¿cuántos contextos, cómo se integran (sync REST/gRPC vs. async eventos), dónde hay anti-corruption layers?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Mapeá bounded contexts a dominios de negocio: ¿cuántos conte"
+    },
+    {
+      "id": "p05",
+      "sectionId": "arquitectura",
+      "label": "P5. ¿Qué principios de diseño rigen el MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "SOLID + DDD + hexagonal/clean",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "CQRS/ES + event-first",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "API-first + contract-first",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Sin principios explícitos — \"lo que salga\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Combinación justificada",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "Design — Arquitectura",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "Design — Arquitectura",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

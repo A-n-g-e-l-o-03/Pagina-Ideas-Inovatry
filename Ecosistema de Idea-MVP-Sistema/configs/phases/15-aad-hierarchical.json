@@ -1,0 +1,129 @@
+{
+  "phaseId": "15-aad",
+  "variant": "hierarchical",
+  "phaseName": "AAD — Hierarchical",
+  "phaseGroup": "mcp",
+  "order": 15,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AAD — Hierarchical",
+    "description": "El AAD (Agent Architecture Document) define cómo se orquestan múltiples agentes para construir el MVP. Si el AGD diseña un agente, el AAD diseña el sistema de agentes: quién hace qué, en qué orden, cómo se comunican y cómo se recuperan de fallos.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "AAD — Hierarchical",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "hierarchical": {
+      "title": "3 · Proyección Hierarchical",
+      "description": "Proyección Hierarchical"
+    }
+  },
+  "fields": [
+    {
+      "id": "p07",
+      "sectionId": "hierarchical",
+      "label": "P7. ¿Necesitás jerarquía orchestrator → managers → workers?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — pipeline plano alcanza",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere Hierarchical (15-c) con delegation, escalation y budget por nivel",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — 2 niveles (orchestrator + workers)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "hierarchical",
+      "label": "P8. Si aplica jerarquía: ¿qué decide el orchestrator, qué delega a managers, cómo escala un worker cuando se bloquea y cómo se controla budget/costo por nivel?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica jerarquía: ¿qué decide el orchestrator, qué delega"
+    },
+    {
+      "id": "p09",
+      "sectionId": "hierarchical",
+      "label": "P9. ¿Hay gobernanza y observabilidad de la orquestación (quién hizo qué, cuánto costó, cuánto tardó, por qué falló)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — trace por agente con costo, latencia y razón de fallo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo logs sin correlación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — caja negra",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AAD — Hierarchical",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AAD — Hierarchical",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

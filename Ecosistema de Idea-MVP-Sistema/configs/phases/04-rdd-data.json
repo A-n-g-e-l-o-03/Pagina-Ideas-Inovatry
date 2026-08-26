@@ -1,0 +1,129 @@
+{
+  "phaseId": "04-rdd",
+  "variant": "data",
+  "phaseName": "RDD — Data/ML",
+  "phaseGroup": "rdd",
+  "order": 4,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "RDD — Data/ML",
+    "description": "El RDD (Requirements Design Document) es la especificación de comportamiento que el diseño y el testing implementan y verifican. Traduce el PRD/BRD en requisitos trazables, sin ambigüedad, listos para SDD spec. Es el contrato entre producto y tecnología.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "RDD — Data/ML",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "data": {
+      "title": "4 · Data",
+      "description": "¿Aplica Plataforma o Data?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p16",
+      "sectionId": "data",
+      "label": "P16. ¿El MVP expone golden paths, self-service o contratos multi-tenant para otros equipos?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere RDD Plataforma (04-d)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — expone APIs pero sin golden path formal",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro — no en MVP pero en roadmap",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p17",
+      "sectionId": "data",
+      "label": "P17. ¿El MVP tiene requisitos de pipelines, modelos ML, features, governance o SLAs de datos?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — datos transaccionales simples",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere RDD Data/ML (04-e) con pipelines y feature store",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Híbrido — genera datos que alimentarán ML futuro",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p18",
+      "sectionId": "data",
+      "label": "P18. Si aplica plataforma o data, ¿qué SLA o contrato no podés romper sin avisar a consumidores? ¿Cómo versionás ese contrato?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica plataforma o data, ¿qué SLA o contrato no podés ro"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "RDD — Data/ML",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "RDD — Data/ML",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

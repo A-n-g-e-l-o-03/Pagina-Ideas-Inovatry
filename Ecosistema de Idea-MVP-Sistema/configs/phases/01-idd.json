@@ -1,0 +1,177 @@
+{
+  "phaseId": "01-idd",
+  "variant": "mercado",
+  "phaseName": "IDD — Mercado",
+  "phaseGroup": "idd",
+  "order": 1,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "IDD — Mercado",
+    "description": "El IDD (Idea Design Document) es el primer documento formal del flujo `IDEA → IDD → PRD/BRD`. Toma la idea cruda y la filtra a través de 8 lentes obligatorios (y 5 proyectados bajo demanda) para decidir si vale la pena avanzar a relevamiento. Cada lente responde la misma pregunta —¿vale la pena esta idea?— pero desde una perspectiva distinta e independiente. Sin IDD, el PRD se construye sobre supuestos no desafiados.",
+    "badge": "5 preguntas"
+  },
+  "form": {
+    "title": "IDD — Mercado",
+    "subtitle": "5 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "mercado": {
+      "title": "1 · Mercado",
+      "description": "¿El Dolor Existe y Alguien Paga?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "mercado",
+      "label": "P1. ¿Tenés evidencia de que el problema del MVP existe fuera de tu percepción interna?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Solo opinión interna del equipo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "1-2 conversaciones informales",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "5-9 entrevistas estructuradas (Mom Test)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "10-15+ entrevistas convergentes + señal cuantitativa",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Evidencia externa citable (competidor monetizando, dato de mercado con fuente)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "mercado",
+      "label": "P2. Definí en 2-3 frases: ¿cuál es el problema en lenguaje del cliente (no de la solución), quién lo sufre, con qué frecuencia y cuánto le cuesta hoy resolverlo con workarounds?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Definí en 2-3 frases: ¿cuál es el problema en lenguaje del c"
+    },
+    {
+      "id": "p03",
+      "sectionId": "mercado",
+      "label": "P3. ¿Podés describir la primera entrega observable del MVP en ≤4 semanas con criterio de éxito medible?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí, con métrica clara (verbo+objeto+métrica+valor)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí, pero sin métrica anclada",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No, la idea aún es aspiracional / vaga",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No, requiere más de 4 semanas para cualquier entrega observable",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "sectionId": "mercado",
+      "label": "P4. Listá 3 a 5 cosas que el MVP explícitamente NO hará en su primera versión (test de exclusión). Si no podés listar exclusiones concretas, la idea aún no tiene alcance real.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Listá 3 a 5 cosas que el MVP explícitamente NO hará en su pr"
+    },
+    {
+      "id": "p05",
+      "sectionId": "mercado",
+      "label": "P5. ¿Qué tipo de preguntas abiertas bloqueantes tenés hoy?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Ninguna — todo está claro para avanzar a PRD",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo informativas (se pueden diferir)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Materiales (afectan prioridad pero no viabilidad)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Bloqueantes — si la respuesta es negativa, la idea se invalida y deben cerrarse ANTES del PRD",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "IDD — Mercado",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "IDD — Mercado",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

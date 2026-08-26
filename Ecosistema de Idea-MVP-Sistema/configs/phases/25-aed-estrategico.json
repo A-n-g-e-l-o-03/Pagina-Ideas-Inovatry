@@ -1,0 +1,138 @@
+{
+  "phaseId": "25-aed",
+  "variant": "estrategico",
+  "phaseName": "AED — Estratégico",
+  "phaseGroup": "tecnico",
+  "order": 25,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AED — Estratégico",
+    "description": "El AED (Architecture Evolution Document) planifica cómo evoluciona la arquitectura del MVP sin reescribirlo. Es el roadmap técnico: deuda, modernización, capacidad, descomposición y governance. Se genera tras operar el MVP y alimenta decisiones de inversión técnica.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "AED — Estratégico",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "estrategico": {
+      "title": "3 · Proyección Estratégico",
+      "description": "Proyección Estratégico"
+    }
+  },
+  "fields": [
+    {
+      "id": "p08",
+      "sectionId": "estrategico",
+      "label": "P8. ¿La evolución arquitectónica está alineada a estrategia de negocio a 12-24 meses?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — requiere AED Strategic (25-c) con technology radar, moats y roadmap alineado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — roadmap técnico sin alineación explícita a negocio",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — arquitectura y estrategia desconectadas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "estrategico",
+      "label": "P9. Si aplica estratégico: ¿qué technology radar, qué foso competitivo construye la arquitectura, qué regulación futura la afecta y qué talento necesita para evolucionar?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica estratégico: ¿qué technology radar, qué foso compe"
+    },
+    {
+      "id": "p10",
+      "sectionId": "estrategico",
+      "label": "P10. ¿Tenés governance de evolución (quién aprueba cambios arquitectónicos, con qué criterio y ADRs)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — RFC/ADR con comité o owner y criterios de aprobación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Informal — \"lo charlamos en el equipo\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — cada uno cambia arquitectura sin aprobación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay arquitectura que gobernar",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "estrategico",
+      "label": "P11. ¿Qué decisión de evolución, si la postergás 6 meses, se vuelve 10x más cara? ¿Qué harías hoy para evitarlo?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué decisión de evolución, si la postergás 6 meses, se vuel"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AED — Estratégico",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AED — Estratégico",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

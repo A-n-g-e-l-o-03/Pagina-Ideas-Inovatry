@@ -1,0 +1,129 @@
+{
+  "phaseId": "24-mdd",
+  "variant": "business",
+  "phaseName": "MDD — Business",
+  "phaseGroup": "operaciones",
+  "order": 24,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "MDD — Business",
+    "description": "El MDD (Monitoring & Diagnostics Document) define cómo sabés que el MVP está vivo, sano y generando valor — y qué hacés cuando no. Es observabilidad accionable, no dashboards bonitos. Se genera tras deploy y alimenta la operación continua.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "MDD — Business",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "business": {
+      "title": "2 · Business",
+      "description": "¿Genera Valor Medible?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p07",
+      "sectionId": "business",
+      "label": "P7. ¿Cuál es la North Star metric del MVP y su funnel?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "North Star definida + funnel con conversión por etapa + cohort analysis",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Funnel sin North Star",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo métricas de vanidad (registros, visitas)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay métricas de negocio",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "business",
+      "label": "P8. Definí el funnel del MVP (ej: visita→registro→activación→retención→revenue) con conversión actual o esperada por etapa. ¿Dónde está el mayor drop y qué hipótesis lo explica?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Definí el funnel del MVP (ej: visita→registro→activación→ret"
+    },
+    {
+      "id": "p09",
+      "sectionId": "business",
+      "label": "P9. ¿Tenés dashboards ejecutivos y de customer health?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — ejecutivo (revenue, adoption, churn) + customer health (uso, soporte, NPS)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo técnico (SRE) sin negocio",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Solo negocio sin SRE",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay dashboards",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "MDD — Business",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "MDD — Business",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

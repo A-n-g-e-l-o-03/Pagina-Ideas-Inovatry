@@ -1,0 +1,641 @@
+{
+  "phaseId": "00-idea",
+  "phaseName": "Encuesta de Génesis de Ideas",
+  "phaseGroup": "idd",
+  "order": 0,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "Encuesta de Génesis de Ideas",
+    "description": "El documento IDEA es el punto cero del ciclo Specification-to-Software. No describe una solución, sino el fenómeno previo a ella: bajo qué circunstancias nace una idea, cómo se forma, evoluciona, muere o genera descendencia. Propone registrar cada idea como una entidad dinámica con origen, naturaleza, evolución, descendencia e impacto/riesgo, y construir a partir de ese registro una base de conocimiento para detectar patrones estadísticos e hipótesis causales.",
+    "badge": "23 preguntas"
+  },
+  "form": {
+    "title": "Cuestionario de Génesis",
+    "subtitle": "23 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "origen": {
+      "title": "1 · Origen",
+      "description": "Circunstancias del Surgimiento"
+    },
+    "naturaleza": {
+      "title": "2 · Naturaleza",
+      "description": "Qué Es la Idea"
+    },
+    "evolucion": {
+      "title": "3 · Evolución",
+      "description": "Qué Pasó Después del Surgimiento"
+    },
+    "descendencia": {
+      "title": "4 · Descendencia",
+      "description": "Linaje de Ideas"
+    },
+    "impacto_riesgo_y_escalabilidad_pre_mvp": {
+      "title": "5 · Impacto, Riesgo y Escalabilidad Pre-MVP",
+      "description": "Impacto, Riesgo y Escalabilidad Pre-MVP"
+    },
+    "registro_y_trazabilidad": {
+      "title": "6 · Registro y Trazabilidad",
+      "description": "Registro y Trazabilidad"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "origen",
+      "label": "P1. ¿Dónde y cuándo surgió exactamente la idea del MVP? Describí lugar, fecha aproximada, actividad que estabas haciendo y quiénes estaban involucrados.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Dónde y cuándo surgió exactamente la idea del MVP? Describí"
+    },
+    {
+      "id": "p02",
+      "sectionId": "origen",
+      "label": "P2. ¿Cuál fue el desencadenante principal que hizo aparecer la idea?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Un problema concreto que sufrías o veías sufrir",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Una necesidad insatisfecha de un cliente/usuario",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Una curiosidad o pregunta sin respuesta",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Una oportunidad de mercado detectada",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Una observación de un comportamiento o anomalía",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_f",
+          "label": "Una asociación entre dos conceptos previos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_g",
+          "label": "Otro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "sectionId": "origen",
+      "label": "P3. ¿Qué experiencias, conocimientos previos o interacciones sociales influyeron directamente en que esta idea apareciera en ese momento y no antes?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué experiencias, conocimientos previos o interacciones soc"
+    },
+    {
+      "id": "p04",
+      "sectionId": "origen",
+      "label": "P4. ¿Cuál era tu estado cognitivo/emocional al momento del surgimiento?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Foco profundo y concentración",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Dispersión / navegación libre",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Presión / urgencia por resolver algo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Relajación / ocio / ducha / caminata",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Colaboración / conversación activa",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_f",
+          "label": "Frustración por una fricción repetida",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_g",
+          "label": "No lo recuerdo con precisión",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "sectionId": "origen",
+      "label": "P5. ¿Qué estímulos concretos (una conversación, un dato, un producto competidor, un ticket, una métrica) actuaron como chispa? ¿Podrías reconstruir la secuencia de 2-3 eventos previos?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué estímulos concretos (una conversación, un dato, un prod"
+    },
+    {
+      "id": "p06",
+      "sectionId": "naturaleza",
+      "label": "P6. En una frase, ¿qué ES la idea del MVP y qué HACE por quien la use? (Sin describir tecnología, solo el cambio que produce).",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "En una frase, ¿qué ES la idea del MVP y qué HACE por quien l"
+    },
+    {
+      "id": "p07",
+      "sectionId": "naturaleza",
+      "label": "P7. ¿La idea es completamente nueva o deriva de ideas anteriores?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Totalmente nueva, no tiene antecedente directo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Evolución / refinamiento de una idea previa propia",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Combinación de dos o más ideas previas (hibridación)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Inspiración directa de un producto/servicio existente con giro propio",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Variación de una idea que había sido descartada (zombie)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "naturaleza",
+      "label": "P8. ¿Cómo calificarías la complejidad inicial de la idea?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Simple — se puede explicar en 1 frase y prototipar en días",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Moderada — requiere 2-3 conceptos y semanas de trabajo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Compleja — involucra múltiples dominios, actores y sistemas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Muy compleja — es sistémica y requiere descomposición previa",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "naturaleza",
+      "label": "P9. ¿Qué problema o dolor específico resuelve la idea? ¿Para quién duele HOY y cuánto le cuesta no resolverlo (tiempo, dinero, frustración)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué problema o dolor específico resuelve la idea? ¿Para qui"
+    },
+    {
+      "id": "p10",
+      "sectionId": "naturaleza",
+      "label": "P10. En una escala de 1 a 5, ¿qué tan original sentís que es la idea y cuánto tiene tu marca personal?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "1 - Genérica, cualquiera podría haberla tenido",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "2 - Poco original, variante menor de algo existente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "3 - Moderadamente original, con un giro distintivo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "4 - Muy original, combina elementos de forma novedosa",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "5 - Altamente original, no conozco equivalente directo",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sectionId": "evolucion",
+      "label": "P11. Desde que surgió, ¿qué estado atraviesa hoy la idea?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Permanece activa y se está estructurando",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Se transformó significativamente respecto a la versión inicial",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Está en pausa / archivada temporalmente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Murió / fue descartada conscientemente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Ya generó descendencia (otras ideas derivadas)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "sectionId": "evolucion",
+      "label": "P12. ¿Fue validada de alguna forma? Describí si hubo validación interna (coherencia lógica), con pares (feedback de colegas) o de mercado (usuarios reales, landing, entrevistas) y qué evidencia tenés.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Fue validada de alguna forma? Describí si hubo validación i"
+    },
+    {
+      "id": "p13",
+      "sectionId": "evolucion",
+      "label": "P13. ¿Qué factor principal provocó que la idea se transformara desde su versión inicial?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Feedback de usuarios/clientes potenciales",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Feedback de pares o equipo técnico",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Descubrimiento de una limitación técnica o regulatoria",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Aparición de un competidor o alternativa",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Nueva información de mercado o datos",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_f",
+          "label": "No se transformó, sigue igual",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p14",
+      "sectionId": "evolucion",
+      "label": "P14. Si la idea muriera mañana, ¿cuál sería la causa más probable? ¿Qué supuestos, si se demuestran falsos, la invalidan por completo?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si la idea muriera mañana, ¿cuál sería la causa más probable"
+    },
+    {
+      "id": "p15",
+      "sectionId": "descendencia",
+      "label": "P15. ¿Esta idea ya generó otras ideas derivadas?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No, es la primera y única",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí, 1-2 ideas derivadas directas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Sí, 3 o más ideas derivadas (familia activa)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Sí, y alguna derivada a su vez generó nuevas ideas (segunda generación)",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p16",
+      "sectionId": "descendencia",
+      "label": "P16. Si tiene descendencia, describí brevemente qué ideas derivaron de ella y en qué se diferencian de la idea madre. ¿Alguna derivada es más prometedora que la original?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si tiene descendencia, describí brevemente qué ideas derivar"
+    },
+    {
+      "id": "p17",
+      "sectionId": "descendencia",
+      "label": "P17. Si la idea deriva de múltiples progenitoras (hibridación), ¿cuál es el tipo de combinación?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No aplica — tiene una sola progenitora",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Refinamiento — mejora una idea existente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Combinación — fusiona dos ideas previas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Contradicción — invierte o discute una idea previa",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Analogía — traslada un concepto de otro dominio",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p18",
+      "sectionId": "impacto_riesgo_y_escalabilidad_pre_mvp",
+      "label": "P18. ¿Qué impacto esperás que genere el MVP si funciona? (Usuarios afectados, revenue potencial, tiempo ahorrado, cambio de comportamiento). Sé específico con números aunque sean estimados.",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué impacto esperás que genere el MVP si funciona? (Usuario"
+    },
+    {
+      "id": "p19",
+      "sectionId": "impacto_riesgo_y_escalabilidad_pre_mvp",
+      "label": "P19. ¿Cuál es el riesgo dominante que podría hacer fracasar la idea antes del MVP?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Riesgo de mercado — nadie lo quiere/paga lo suficiente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Riesgo técnico — no sabemos cómo construirlo o escalarlo",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Riesgo de ejecución — falta equipo, tiempo o capital",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Riesgo regulatorio/legal — compliance, privacidad, licencias",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Riesgo de timing — demasiado temprano o demasiado tarde",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p20",
+      "sectionId": "impacto_riesgo_y_escalabilidad_pre_mvp",
+      "label": "P20. Pre-MVP, ¿qué potencial de escalabilidad le ves?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Bajo — depende 100% del fundador, costo unitario no baja con volumen",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Medio — replicable con esfuerzo moderado a otro segmento/geografía",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Alto — margen estructural positivo, efecto de red o datos, no depende del fundador",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No evaluado aún",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p21",
+      "sectionId": "impacto_riesgo_y_escalabilidad_pre_mvp",
+      "label": "P21. ¿Qué necesitarías para considerar que esta idea está lista para promover a IDD (siguiente etapa)? ¿Qué pregunta bloqueante, si no se responde, te impide avanzar?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué necesitarías para considerar que esta idea está lista p"
+    },
+    {
+      "id": "p22",
+      "sectionId": "registro_y_trazabilidad",
+      "label": "P22. ¿Cuánto tiempo pasó entre que la idea surgió y que la registraste por escrito?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Menos de 1 hora",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Entre 1 y 24 horas",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Entre 1 y 7 días",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Más de 7 días",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_e",
+          "label": "Más de 30 días / no recuerdo",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p23",
+      "sectionId": "registro_y_trazabilidad",
+      "label": "P23. ¿Qué harías para no olvidar ideas futuras en el momento exacto en que aparecen? ¿Qué sistema de captura inmediata (móvil, nota de voz, template) estarías dispuesto a usar?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué harías para no olvidar ideas futuras en el momento exac"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "Encuesta de Génesis de Ideas",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "Encuesta de Génesis de Ideas",
+      "descriptionTemplate": "{{summary}}",
+      "fields": []
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

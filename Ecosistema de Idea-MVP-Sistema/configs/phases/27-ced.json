@@ -1,0 +1,129 @@
+{
+  "phaseId": "27-ced",
+  "variant": "tecnico",
+  "phaseName": "CED — Técnico",
+  "phaseGroup": "marketing",
+  "order": 27,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "CED — Técnico",
+    "description": "El CED (Cognitive Explanation Document) es la capa de explicación del MVP: traduce lo técnico a cada audiencia sin perder precisión ni generar falsa simplicidad. Es transversal a todo el ciclo — cada documento técnico necesita su explicación cognitiva. Sin CED, el conocimiento queda atrapado en el equipo técnico.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "CED — Técnico",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "tecnico": {
+      "title": "1 · Técnico",
+      "description": "¿Explicación Que un Senior Respeta?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p01",
+      "sectionId": "tecnico",
+      "label": "P1. ¿Tenés explicaciones técnicas del MVP para devs que no participaron en su construcción?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — doc con arquitectura, decisiones, trade-offs, código de referencia y debugging guide",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — README con overview sin trade-offs",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — \"que lean el código\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay doc técnico explicativo",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "sectionId": "tecnico",
+      "label": "P2. Explicá el trade-off técnico más importante del MVP (ej: consistencia vs. disponibilidad, monolito vs. microservicios, SQL vs. NoSQL) con contexto, alternativas descartadas y consecuencias....",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Explicá el trade-off técnico más importante del MVP (ej: con"
+    },
+    {
+      "id": "p03",
+      "sectionId": "tecnico",
+      "label": "P3. ¿Las explicaciones técnicas incluyen cómo debuggear el MVP cuando falla?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — guía de debugging con logs, traces, queries y runbook",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — algunos tips sin guía estructurada",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — \"que miren logs\"",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "CED — Técnico",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "CED — Técnico",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

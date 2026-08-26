@@ -1,0 +1,105 @@
+{
+  "phaseId": "16-aid",
+  "variant": "review-agent",
+  "phaseName": "AID — Review Agent",
+  "phaseGroup": "mcp",
+  "order": 16,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "AID — Review Agent",
+    "description": "El AID (AI Instruction Document) son las instrucciones operativas que un agente de IA ejecuta para hacer su trabajo. Si el AGD es el \"qué\" (diseño del agente) y el AAD es el \"cómo se orquestan\", el AID es el manual paso a paso con workflow, estándares, gates, restricciones y manejo de incertidumbre. Es lo que hace que un agente sea predecible y auditable, no un generador aleatorio.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "AID — Review Agent",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "review_agent": {
+      "title": "3 · Proyección Review Agent",
+      "description": "Proyección Review Agent"
+    }
+  },
+  "fields": [
+    {
+      "id": "p09",
+      "sectionId": "review_agent",
+      "label": "P9. ¿Necesitás instrucciones para un Review Agent?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "No — review humano alcanza",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Sí — requiere AID Review Agent (16-c) con dimensiones, reglas y auto-fix policy",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Parcial — solo reglas de linting",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "Futuro",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sectionId": "review_agent",
+      "label": "P10. Si aplica Review Agent: ¿qué dimensiones revisa (seguridad, performance, arquitectura, mantenibilidad), cómo clasifica severidad, cuándo hace auto-fix vs. solo reporta y cómo aprende de...",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Si aplica Review Agent: ¿qué dimensiones revisa (seguridad, "
+    },
+    {
+      "id": "p11",
+      "sectionId": "review_agent",
+      "label": "P11. ¿Qué instrucción, si el agente la ignora, causa el mayor daño? ¿Cómo verificás que la cumple (test, gate, auditoría)?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "¿Qué instrucción, si el agente la ignora, causa el mayor dañ"
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "AID — Review Agent",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "AID — Review Agent",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

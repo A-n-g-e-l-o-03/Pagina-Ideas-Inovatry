@@ -1,0 +1,162 @@
+{
+  "phaseId": "11-srd",
+  "variant": "infra",
+  "phaseName": "SRD — Infra",
+  "phaseGroup": "validacion",
+  "order": 11,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "SRD — Infra",
+    "description": "El SRD (Security Requirements Document) traduce amenazas (TMD) en requisitos de seguridad verificables con owner, prioridad y test. Es el \"qué debe cumplir\" antes del \"cómo se implementa\" (SAD). Sin SRD, los controles son ad-hoc y no auditables.",
+    "badge": "4 preguntas"
+  },
+  "form": {
+    "title": "SRD — Infra",
+    "subtitle": "4 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "infra": {
+      "title": "2 · Infra",
+      "description": "¿Infraestructura Blindada?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p06",
+      "sectionId": "infra",
+      "label": "P6. Describí controles de infra para el MVP: network (segmentación, WAF, DDoS), host/container (hardening, CIS benchmarks), k8s (RBAC, network policies, PodSecurity), cloud (IAM, logging,...",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Describí controles de infra para el MVP: network (segmentaci"
+    },
+    {
+      "id": "p07",
+      "sectionId": "infra",
+      "label": "P7. ¿Cómo se gestionan secrets (API keys, certs, passwords)?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Vault / Secrets Manager con rotación automática y sin secretos en código/env",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Env vars con rotación manual",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Hardcodeados en código o config",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay secrets sensibles",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "sectionId": "infra",
+      "label": "P8. ¿Supply chain de artefactos (imágenes, pipelines) está asegurada?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — imágenes firmadas (Sigstore/Cosign), SBOM, pipeline con provenance (SLSA)",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — solo scanning de imágenes",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — imágenes `latest` sin firma",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No aplica",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "sectionId": "infra",
+      "label": "P9. ¿Data protection (clasificación, cifrado, retención, borrado) está definido?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — clasificación por sensibilidad + cifrado at-rest/transit + retención y derecho al olvido",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Solo cifrado sin clasificación",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No definido",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay datos sensibles",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "SRD — Infra",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "SRD — Infra",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "phaseId": "20-atd",
+  "variant": "exploratory",
+  "phaseName": "ATD — Exploratory",
+  "phaseGroup": "validacion",
+  "order": 20,
+  "schemaVersion": 1,
+  "hero": {
+    "title": "ATD — Exploratory",
+    "description": "El ATD (Acceptance Test Definition) define cómo se demuestra que el MVP hace lo que promete, en lenguaje que negocio y tecnología comparten. Es la validación de aceptación: si los ATD pasan, el MVP es aceptable para el usuario. Se ejecuta en fase `verify` del SDD.",
+    "badge": "3 preguntas"
+  },
+  "form": {
+    "title": "ATD — Exploratory",
+    "subtitle": "3 preguntas — Marca con * las obligatorias."
+  },
+  "sections": {
+    "exploratory": {
+      "title": "2 · Exploratory",
+      "description": "¿Lo Que los Scripts No Ven?"
+    }
+  },
+  "fields": [
+    {
+      "id": "p05",
+      "sectionId": "exploratory",
+      "label": "P5. ¿Hacés exploratory testing además de automatizado?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Sí — session-based con charters, time-box y debrief",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Parcial — \"pruebo un poco a mano\" sin charter",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "No — solo automatizado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No se testea aceptación formalmente",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "sectionId": "exploratory",
+      "label": "P6. Definí un charter de exploratory para el MVP: misión, alcance, heurística (HICCUPPS/SFDPOT), datos de prueba y criterio de cierre. ¿Qué bug crítico solo aparecería explorando?",
+      "type": "textarea",
+      "required": true,
+      "fullWidth": true,
+      "placeholder": "Definí un charter de exploratory para el MVP: misión, alcanc"
+    },
+    {
+      "id": "p07",
+      "sectionId": "exploratory",
+      "label": "P7. ¿Cómo se hace handoff de hallazgos exploratory a automatización?",
+      "type": "radio",
+      "required": true,
+      "options": [
+        {
+          "value": "opt_a",
+          "label": "Hallazgo → bug con repro + nuevo escenario Gherkin automatizado",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_b",
+          "label": "Hallazgo → bug sin automatización",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_c",
+          "label": "Hallazgo se comenta verbalmente",
+          "disabled": false,
+          "selected": false
+        },
+        {
+          "value": "opt_d",
+          "label": "No hay handoff",
+          "disabled": false,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "webhook": {
+    "url": "https://discord.com/api/webhooks/REEMPLAZAR_AL_DEPLOYAR",
+    "username": "ATD — Exploratory",
+    "avatarUrl": "https://inovatrysolutions.com/assets/img/logo.webp",
+    "embeds": {
+      "title": "ATD — Exploratory",
+      "descriptionTemplate": "{{summary}}",
+      "fields": [
+        {
+          "name": "Variante",
+          "valueTemplate": "{{variant}}",
+          "inline": true
+        },
+        {
+          "name": "Fase",
+          "valueTemplate": "{{phaseId}}",
+          "inline": true
+        }
+      ]
+    }
+  },
+  "maxTotalBytes": 8388608,
+  "allowedTypes": [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".csv"
+  ]
+}
