@@ -4,6 +4,11 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  ECOSISTEMA_NEW_ENGINE = "true"
+  ECOSISTEMA_MD_GENERATION = "true"
+  ECOSISTEMA_FILE_UPLOAD = "true"
+  ECOSISTEMA_HIGH_CONTRAST = "true"
+  ECOSISTEMA_DEMO_UNLOCK_ALL = "true"
 
 # SPA fallback - history API
 [[redirects]]

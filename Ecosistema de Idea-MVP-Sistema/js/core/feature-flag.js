@@ -23,18 +23,40 @@ export class FeatureFlag {
     const newEngineValue = this.resolveFlagValue('new-engine', 'ECOSISTEMA_NEW_ENGINE', true);
     this.flags.set('new-engine', newEngineValue);
 
-    // Flags adicionales
+    // Flags adicionales — en Netlify van todos activos (aunque UI oculta)
     const additionalFlags = [
-      { name: 'md-generation', env: 'ECOSISTEMA_MD_GENERATION', default: false },
-      { name: 'high-contrast', env: 'ECOSISTEMA_HIGH_CONTRAST', default: false },
-      { name: 'file-upload', env: 'ECOSISTEMA_FILE_UPLOAD', default: false },
-      { name: 'demo-unlock-all', env: 'ECOSISTEMA_DEMO_UNLOCK_ALL', default: false }
+      { name: 'md-generation', env: 'ECOSISTEMA_MD_GENERATION', default: true },
+      { name: 'high-contrast', env: 'ECOSISTEMA_HIGH_CONTRAST', default: true },
+      { name: 'file-upload', env: 'ECOSISTEMA_FILE_UPLOAD', default: true },
+      { name: 'demo-unlock-all', env: 'ECOSISTEMA_DEMO_UNLOCK_ALL', default: true }
     ];
 
     for (const flag of additionalFlags) {
       const value = this.resolveFlagValue(flag.name, flag.env, flag.default);
       this.flags.set(flag.name, value);
     }
+
+    // Upgrade: si el usuario tenía "false" guardado con el default viejo, en Netlify queremos true
+    try {
+      const host = typeof window !== 'undefined' ? window.location.hostname : '';
+      const isNetlify = host.includes('netlify') || host.includes('netlify.app') || host === '';
+      const forceTrue = ['md-generation', 'file-upload', 'high-contrast', 'demo-unlock-all'];
+      for (const fname of forceTrue) {
+        const sk = `ECOSISTEMA_${fname.toUpperCase().replace(/-/g, '_')}`;
+        const stored = typeof localStorage !== 'undefined' ? localStorage.getItem(sk) : null;
+        // En Netlify o si el flag estaba en false por default viejo, forzar a true
+        if (stored === 'false' && (isNetlify || this.flags.get(fname) === true)) {
+          this.flags.set(fname, true);
+          try { localStorage.setItem(sk, 'true'); } catch(e) {}
+        }
+      }
+      // Asegurar que new-engine siempre quede true (no más deadlock)
+      const newEngineStored = typeof localStorage !== 'undefined' ? localStorage.getItem('ECOSISTEMA_NEW_ENGINE') : null;
+      if (newEngineStored === 'false') {
+        this.flags.set('new-engine', true);
+        try { localStorage.setItem('ECOSISTEMA_NEW_ENGINE', 'true'); } catch(e) {}
+      }
+    } catch(e) {}
 
     this.initialized = true;
   }
